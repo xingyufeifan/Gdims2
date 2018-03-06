@@ -11,6 +11,7 @@
 #define NDUSER_TYPE_KEY     @"NDUserType"
 @interface NDUserInfo : NSObject
 @property(nonatomic,strong) NSString *mobile;
+@property(nonatomic,strong) NSString *name;
 @property (nonatomic, assign) NDUserType type;
 @property (nonatomic, assign, readonly) NDRouterType routerType;
 + (instancetype)sharedInstance;
