@@ -114,6 +114,15 @@
 		684210B3204E863400DC1BAD /* NDMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDMenuCell.h; sourceTree = "<group>"; };
 		684210B4204E863400DC1BAD /* NDMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDMenuCell.m; sourceTree = "<group>"; };
 		684210B5204E863400DC1BAD /* NDMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDMenuCell.xib; sourceTree = "<group>"; };
+		684210BD204E876A00DC1BAD /* NDDailyUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDDailyUploadViewController.h; sourceTree = "<group>"; };
+		684210BE204E876A00DC1BAD /* NDDailyUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDDailyUploadViewController.m; sourceTree = "<group>"; };
+		684210BF204E876A00DC1BAD /* NDDailyUploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDDailyUploadViewController.xib; sourceTree = "<group>"; };
+		684210C0204E876A00DC1BAD /* NDGarrisonManViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDGarrisonManViewController.h; sourceTree = "<group>"; };
+		684210C1204E876A00DC1BAD /* NDGarrisonManViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDGarrisonManViewController.m; sourceTree = "<group>"; };
+		684210C2204E876A00DC1BAD /* NDGarrisonManViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDGarrisonManViewController.xib; sourceTree = "<group>"; };
+		684210C4204E876A00DC1BAD /* NDMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMenuCell.h; sourceTree = "<group>"; };
+		684210C5204E876A00DC1BAD /* NDMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMenuCell.m; sourceTree = "<group>"; };
+		684210C6204E876A00DC1BAD /* NDMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMenuCell.xib; sourceTree = "<group>"; };
 		68CCFF3B2047E6F1002E72D0 /* Gdims2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gdims2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CCFF3E2047E6F1002E72D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68CCFF3F2047E6F1002E72D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -273,6 +282,30 @@
 			path = VIew;
 			sourceTree = "<group>";
 		};
+		684210BC204E876A00DC1BAD /* NDGarrisonManModule */ = {
+			isa = PBXGroup;
+			children = (
+				684210BD204E876A00DC1BAD /* NDDailyUploadViewController.h */,
+				684210BE204E876A00DC1BAD /* NDDailyUploadViewController.m */,
+				684210BF204E876A00DC1BAD /* NDDailyUploadViewController.xib */,
+				684210C0204E876A00DC1BAD /* NDGarrisonManViewController.h */,
+				684210C1204E876A00DC1BAD /* NDGarrisonManViewController.m */,
+				684210C2204E876A00DC1BAD /* NDGarrisonManViewController.xib */,
+				684210C3204E876A00DC1BAD /* VIew */,
+			);
+			path = NDGarrisonManModule;
+			sourceTree = "<group>";
+		};
+		684210C3204E876A00DC1BAD /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				684210C4204E876A00DC1BAD /* NDMenuCell.h */,
+				684210C5204E876A00DC1BAD /* NDMenuCell.m */,
+				684210C6204E876A00DC1BAD /* NDMenuCell.xib */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
 		68CCFF322047E6F1002E72D0 = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +328,7 @@
 		68CCFF3D2047E6F1002E72D0 /* Gdims2 */ = {
 			isa = PBXGroup;
 			children = (
+				684210BC204E876A00DC1BAD /* NDGarrisonManModule */,
 				18A9379E204D3D0800E890E2 /* NDSettingModule */,
 				18A93798204D2C1E00E890E2 /* NDQCQFModule */,
 				18A93794204D2A9F00E890E2 /* NDHomePageViewController */,
