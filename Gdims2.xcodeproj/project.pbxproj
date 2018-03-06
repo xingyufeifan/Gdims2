@@ -52,6 +52,8 @@
 		68DFE01220491FC50076B228 /* NDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68DFE01020491FC50076B228 /* NDLoginViewController.xib */; };
 		68DFE015204920230076B228 /* NDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DFE014204920230076B228 /* NDRouter.m */; };
 		A025C16E204E900E00B1A5E5 /* NDLocationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A025C16D204E900E00B1A5E5 /* NDLocationUtils.m */; };
+		A025C173204E915500B1A5E5 /* NDAreaOfficerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A025C171204E915500B1A5E5 /* NDAreaOfficerViewController.m */; };
+		A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A025C172204E915500B1A5E5 /* NDAreaOfficerViewController.xib */; };
 		A5391E3DA1CBE29299BF12F8 /* libPods-Gdims2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +138,9 @@
 		68DFE014204920230076B228 /* NDRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDRouter.m; sourceTree = "<group>"; };
 		A025C16C204E900E00B1A5E5 /* NDLocationUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDLocationUtils.h; sourceTree = "<group>"; };
 		A025C16D204E900E00B1A5E5 /* NDLocationUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDLocationUtils.m; sourceTree = "<group>"; };
+		A025C170204E915500B1A5E5 /* NDAreaOfficerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDAreaOfficerViewController.h; sourceTree = "<group>"; };
+		A025C171204E915500B1A5E5 /* NDAreaOfficerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDAreaOfficerViewController.m; sourceTree = "<group>"; };
+		A025C172204E915500B1A5E5 /* NDAreaOfficerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDAreaOfficerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +296,7 @@
 		68CCFF3D2047E6F1002E72D0 /* Gdims2 */ = {
 			isa = PBXGroup;
 			children = (
+				A025C16F204E90EC00B1A5E5 /* NDAreaOfficerModule */,
 				684210DB204E8B9400DC1BAD /* NDGarrisonManModule */,
 				18A9379E204D3D0800E890E2 /* NDSettingModule */,
 				18A93798204D2C1E00E890E2 /* NDQCQFModule */,
@@ -348,6 +354,16 @@
 			name = NDLoginModule;
 			path = Gdims2/NDLoginModule;
 			sourceTree = SOURCE_ROOT;
+		};
+		A025C16F204E90EC00B1A5E5 /* NDAreaOfficerModule */ = {
+			isa = PBXGroup;
+			children = (
+				A025C170204E915500B1A5E5 /* NDAreaOfficerViewController.h */,
+				A025C171204E915500B1A5E5 /* NDAreaOfficerViewController.m */,
+				A025C172204E915500B1A5E5 /* NDAreaOfficerViewController.xib */,
+			);
+			path = NDAreaOfficerModule;
+			sourceTree = "<group>";
 		};
 		DCC9B7CE205CF90C530B5A4F /* Frameworks */ = {
 			isa = PBXGroup;
@@ -427,6 +443,7 @@
 				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
 				684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */,
 				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
+				A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */,
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
 				684210EF204E8C5900DC1BAD /* NDDailyListViewController.xib in Resources */,
 				68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */,
@@ -518,6 +535,7 @@
 				68DFE015204920230076B228 /* NDRouter.m in Sources */,
 				189E42BE204E49C100D3DF4B /* NSString+NDTimeString.m in Sources */,
 				18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */,
+				A025C173204E915500B1A5E5 /* NDAreaOfficerViewController.m in Sources */,
 				18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */,
 				189E42C2204E6C8D00D3DF4B /* NDHomeCheckItemCell.m in Sources */,
 				684210EE204E8C5900DC1BAD /* NDDailyListViewController.m in Sources */,
