@@ -23,7 +23,7 @@
 
 @implementation NDQCQFViewController
 - (IBAction)btnRecordClick {
-    
+    //todo
 }
 /**
  灾害点-定量检测数据分组
@@ -110,4 +110,50 @@
     }
     [self.tableView reloadData];
 }
+#pragma mark tableView数据源方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    if (self.arrMacroList && self.arrMacroList.count > 0) {
+        return self.arrMacroList.count;
+    }
+    return 0;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (self.tapIndex == section) {
+        NDMacroListModel * model = self.arrMacroList[section];
+        if (model.zxExand) {
+            NDMacroListModel * macroListModel = self.arrMacroList[section];
+            return 1 + [macroListModel.monitorList count];
+        }
+    }
+    return 0;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    NDHomeListHeader * header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"NDHomeListHeader"];
+    header.delegate = self;
+    [header reloadData:self.arrMacroList[section] sectionIndex:section];
+    return header;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NDHomeCheckItemCell * cell = [tableView dequeueReusableCellWithIdentifier:@"NDHomeCheckItemCell" forIndexPath:indexPath];
+    cell.lblTitle.text = @"";
+    cell.delegate = self;
+    if (indexPath.row == 0) {
+        cell.lblTitle.text = @"宏观观测";
+    } else {
+        NSInteger index = indexPath.row - 1;
+        if (index >=0 ) {
+            NDMacroListModel * macroListModel = self.arrMacroList[indexPath.section];
+            NDMonitorModel * model = macroListModel.monitorList[index];
+            cell.lblTitle.text = [NSString stringWithFormat:@"定量监测-%@",model.monPointName];
+        }
+        
+    }
+    return cell;
+}
+#pragma mark tableView代理方法
+
+
+
+
+
 @end
