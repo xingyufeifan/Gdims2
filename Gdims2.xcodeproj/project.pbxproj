@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		187BEE732049403B008796E6 /* UIColor+ND.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BEE722049403B008796E6 /* UIColor+ND.m */; };
+		189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42A5204E1EF700D3DF4B /* NDSlideInAnimationController.m */; };
+		189E42A9204E1F8500D3DF4B /* NDSlideOutAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42A8204E1F8500D3DF4B /* NDSlideOutAnimationController.m */; };
+		189E42AC204E1FAA00D3DF4B /* NDDimmingPresentaionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42AB204E1FAA00D3DF4B /* NDDimmingPresentaionController.m */; };
+		189E42B0204E3D7100D3DF4B /* NDHomeListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42AF204E3D7100D3DF4B /* NDHomeListHeader.m */; };
+		189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189E42B1204E3D8B00D3DF4B /* NDHomeListHeader.xib */; };
+		189E42B5204E482100D3DF4B /* NDMacroListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42B4204E482100D3DF4B /* NDMacroListModel.m */; };
+		189E42B8204E486600D3DF4B /* NDMonitorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42B7204E486600D3DF4B /* NDMonitorModel.m */; };
+		189E42BB204E493100D3DF4B /* NDFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42BA204E493100D3DF4B /* NDFileUtils.m */; };
+		189E42BE204E49C100D3DF4B /* NSString+NDTimeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42BD204E49C100D3DF4B /* NSString+NDTimeString.m */; };
+		189E42C2204E6C8D00D3DF4B /* NDHomeCheckItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42C0204E6C8D00D3DF4B /* NDHomeCheckItemCell.m */; };
+		189E42C3204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189E42C1204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib */; };
+		18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A0632E204920DB0038E256 /* NDLoginViewController.xib */; };
+		18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A93786204CD6FC00E890E2 /* NDUserInfo.m */; };
+		18A9378B204CD8DC00E890E2 /* NDNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9378A204CD8DC00E890E2 /* NDNetwork.m */; };
+		18A9378E204CDCE200E890E2 /* NDRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9378D204CDCE200E890E2 /* NDRequestApi.m */; };
+		18A93790204CF6F600E890E2 /* HUD.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A9378F204CF6F600E890E2 /* HUD.xcassets */; };
+		18A93793204D263400E890E2 /* NDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A93792204D263400E890E2 /* NDViewController.m */; };
+		18A93797204D2ACC00E890E2 /* NDHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A93796204D2ACC00E890E2 /* NDHomePageViewController.m */; };
+		18A9379C204D2DF800E890E2 /* NDQCQFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9379A204D2DF800E890E2 /* NDQCQFViewController.m */; };
+		18A9379D204D2DF800E890E2 /* NDQCQFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9379B204D2DF800E890E2 /* NDQCQFViewController.xib */; };
+		18A937A2204D3D4300E890E2 /* NDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A937A0204D3D4300E890E2 /* NDSettingViewController.m */; };
+		18A937A3204D3D4300E890E2 /* NDSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A937A1204D3D4300E890E2 /* NDSettingViewController.xib */; };
+		18A937A8204D467800E890E2 /* NDSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A937A6204D467800E890E2 /* NDSettingCell.m */; };
+		18A937A9204D467800E890E2 /* NDSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A937A7204D467800E890E2 /* NDSettingCell.xib */; };
+		18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A937B3204D48DF00E890E2 /* NDSettingHeaderCell.m */; };
+		18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A937B5204D490E00E890E2 /* NDSettingHeaderCell.xib */; };
+		68CCFF402047E6F1002E72D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF3F2047E6F1002E72D0 /* AppDelegate.m */; };
+		68CCFF492047E6F1002E72D0 /* Gdims2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF472047E6F1002E72D0 /* Gdims2.xcdatamodeld */; };
+		68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CCFF4A2047E6F1002E72D0 /* Assets.xcassets */; };
+		68CCFF4E2047E6F1002E72D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CCFF4C2047E6F1002E72D0 /* LaunchScreen.storyboard */; };
+		68CCFF512047E6F1002E72D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF502047E6F1002E72D0 /* main.m */; };
+		68CCFF5A2047F8D0002E72D0 /* NDHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF592047F8D0002E72D0 /* NDHUD.m */; };
+		68DFE01120491FC50076B228 /* NDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DFE00F20491FC50076B228 /* NDLoginViewController.m */; };
+		68DFE01220491FC50076B228 /* NDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68DFE01020491FC50076B228 /* NDLoginViewController.xib */; };
+		68DFE015204920230076B228 /* NDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DFE014204920230076B228 /* NDRouter.m */; };
+		A5391E3DA1CBE29299BF12F8 /* libPods-Gdims2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		041CC65576F1B5D02A82D434 /* Pods-Gdims2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.release.xcconfig"; sourceTree = "<group>"; };
+		187BEE712049403B008796E6 /* UIColor+ND.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ND.h"; sourceTree = "<group>"; };
+		187BEE722049403B008796E6 /* UIColor+ND.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ND.m"; sourceTree = "<group>"; };
+		189E42A4204E1EF700D3DF4B /* NDSlideInAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSlideInAnimationController.h; sourceTree = "<group>"; };
+		189E42A5204E1EF700D3DF4B /* NDSlideInAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSlideInAnimationController.m; sourceTree = "<group>"; };
+		189E42A7204E1F8500D3DF4B /* NDSlideOutAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSlideOutAnimationController.h; sourceTree = "<group>"; };
+		189E42A8204E1F8500D3DF4B /* NDSlideOutAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSlideOutAnimationController.m; sourceTree = "<group>"; };
+		189E42AA204E1FAA00D3DF4B /* NDDimmingPresentaionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDDimmingPresentaionController.h; sourceTree = "<group>"; };
+		189E42AB204E1FAA00D3DF4B /* NDDimmingPresentaionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDDimmingPresentaionController.m; sourceTree = "<group>"; };
+		189E42AE204E3D7100D3DF4B /* NDHomeListHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDHomeListHeader.h; sourceTree = "<group>"; };
+		189E42AF204E3D7100D3DF4B /* NDHomeListHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDHomeListHeader.m; sourceTree = "<group>"; };
+		189E42B1204E3D8B00D3DF4B /* NDHomeListHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDHomeListHeader.xib; sourceTree = "<group>"; };
+		189E42B3204E482100D3DF4B /* NDMacroListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMacroListModel.h; sourceTree = "<group>"; };
+		189E42B4204E482100D3DF4B /* NDMacroListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMacroListModel.m; sourceTree = "<group>"; };
+		189E42B6204E486600D3DF4B /* NDMonitorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMonitorModel.h; sourceTree = "<group>"; };
+		189E42B7204E486600D3DF4B /* NDMonitorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMonitorModel.m; sourceTree = "<group>"; };
+		189E42B9204E493100D3DF4B /* NDFileUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDFileUtils.h; sourceTree = "<group>"; };
+		189E42BA204E493100D3DF4B /* NDFileUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDFileUtils.m; sourceTree = "<group>"; };
+		189E42BC204E49C100D3DF4B /* NSString+NDTimeString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+NDTimeString.h"; sourceTree = "<group>"; };
+		189E42BD204E49C100D3DF4B /* NSString+NDTimeString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+NDTimeString.m"; sourceTree = "<group>"; };
+		189E42BF204E6C8D00D3DF4B /* NDHomeCheckItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDHomeCheckItemCell.h; sourceTree = "<group>"; };
+		189E42C0204E6C8D00D3DF4B /* NDHomeCheckItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDHomeCheckItemCell.m; sourceTree = "<group>"; };
+		189E42C1204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDHomeCheckItemCell.xib; sourceTree = "<group>"; };
+		18A0632E204920DB0038E256 /* NDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NDLoginViewController.xib; path = Gdims2/NDLoginModule/NDLoginViewController.xib; sourceTree = "<group>"; };
+		18A93785204CD6FC00E890E2 /* NDUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDUserInfo.h; sourceTree = "<group>"; };
+		18A93786204CD6FC00E890E2 /* NDUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDUserInfo.m; sourceTree = "<group>"; };
+		18A93789204CD8DC00E890E2 /* NDNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDNetwork.h; sourceTree = "<group>"; };
+		18A9378A204CD8DC00E890E2 /* NDNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDNetwork.m; sourceTree = "<group>"; };
+		18A9378C204CDCE200E890E2 /* NDRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDRequestApi.h; sourceTree = "<group>"; };
+		18A9378D204CDCE200E890E2 /* NDRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDRequestApi.m; sourceTree = "<group>"; };
+		18A9378F204CF6F600E890E2 /* HUD.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HUD.xcassets; sourceTree = "<group>"; };
+		18A93791204D263400E890E2 /* NDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDViewController.h; sourceTree = "<group>"; };
+		18A93792204D263400E890E2 /* NDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDViewController.m; sourceTree = "<group>"; };
+		18A93795204D2ACC00E890E2 /* NDHomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDHomePageViewController.h; sourceTree = "<group>"; };
+		18A93796204D2ACC00E890E2 /* NDHomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDHomePageViewController.m; sourceTree = "<group>"; };
+		18A93799204D2DF800E890E2 /* NDQCQFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDQCQFViewController.h; sourceTree = "<group>"; };
+		18A9379A204D2DF800E890E2 /* NDQCQFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDQCQFViewController.m; sourceTree = "<group>"; };
+		18A9379B204D2DF800E890E2 /* NDQCQFViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDQCQFViewController.xib; sourceTree = "<group>"; };
+		18A9379F204D3D4300E890E2 /* NDSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSettingViewController.h; sourceTree = "<group>"; };
+		18A937A0204D3D4300E890E2 /* NDSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSettingViewController.m; sourceTree = "<group>"; };
+		18A937A1204D3D4300E890E2 /* NDSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDSettingViewController.xib; sourceTree = "<group>"; };
+		18A937A5204D467800E890E2 /* NDSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSettingCell.h; sourceTree = "<group>"; };
+		18A937A6204D467800E890E2 /* NDSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSettingCell.m; sourceTree = "<group>"; };
+		18A937A7204D467800E890E2 /* NDSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDSettingCell.xib; sourceTree = "<group>"; };
+		18A937B2204D48DF00E890E2 /* NDSettingHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSettingHeaderCell.h; sourceTree = "<group>"; };
+		18A937B3204D48DF00E890E2 /* NDSettingHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSettingHeaderCell.m; sourceTree = "<group>"; };
+		18A937B5204D490E00E890E2 /* NDSettingHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDSettingHeaderCell.xib; sourceTree = "<group>"; };
+		26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gdims2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.debug.xcconfig"; sourceTree = "<group>"; };
+		68CCFF3B2047E6F1002E72D0 /* Gdims2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gdims2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68CCFF3E2047E6F1002E72D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		68CCFF3F2047E6F1002E72D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		68CCFF482047E6F1002E72D0 /* Gdims2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gdims2.xcdatamodel; sourceTree = "<group>"; };
+		68CCFF4A2047E6F1002E72D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68CCFF4D2047E6F1002E72D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68CCFF4F2047E6F1002E72D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68CCFF502047E6F1002E72D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68CCFF582047F8D0002E72D0 /* NDHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDHUD.h; sourceTree = "<group>"; };
+		68CCFF592047F8D0002E72D0 /* NDHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDHUD.m; sourceTree = "<group>"; };
+		68CCFF5B2047F97D002E72D0 /* NDDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDDefine.h; sourceTree = "<group>"; };
+		68DFE00C2048DD220076B228 /* NDPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDPrefixHeader.pch; sourceTree = "<group>"; };
+		68DFE00E20491FC50076B228 /* NDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDLoginViewController.h; sourceTree = "<group>"; };
+		68DFE00F20491FC50076B228 /* NDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDLoginViewController.m; sourceTree = "<group>"; };
+		68DFE01020491FC50076B228 /* NDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDLoginViewController.xib; sourceTree = "<group>"; };
+		68DFE013204920230076B228 /* NDRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDRouter.h; sourceTree = "<group>"; };
+		68DFE014204920230076B228 /* NDRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDRouter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68CCFF382047E6F1002E72D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5391E3DA1CBE29299BF12F8 /* libPods-Gdims2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		187BEE7020493FE1008796E6 /* NDCommon */ = {
+			isa = PBXGroup;
+			children = (
+				187BEE712049403B008796E6 /* UIColor+ND.h */,
+				187BEE722049403B008796E6 /* UIColor+ND.m */,
+				189E42A4204E1EF700D3DF4B /* NDSlideInAnimationController.h */,
+				189E42A5204E1EF700D3DF4B /* NDSlideInAnimationController.m */,
+				189E42A7204E1F8500D3DF4B /* NDSlideOutAnimationController.h */,
+				189E42A8204E1F8500D3DF4B /* NDSlideOutAnimationController.m */,
+				189E42AA204E1FAA00D3DF4B /* NDDimmingPresentaionController.h */,
+				189E42AB204E1FAA00D3DF4B /* NDDimmingPresentaionController.m */,
+			);
+			path = NDCommon;
+			sourceTree = "<group>";
+		};
+		189E42AD204E3CBD00D3DF4B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				189E42AE204E3D7100D3DF4B /* NDHomeListHeader.h */,
+				189E42AF204E3D7100D3DF4B /* NDHomeListHeader.m */,
+				189E42B1204E3D8B00D3DF4B /* NDHomeListHeader.xib */,
+				189E42BF204E6C8D00D3DF4B /* NDHomeCheckItemCell.h */,
+				189E42C0204E6C8D00D3DF4B /* NDHomeCheckItemCell.m */,
+				189E42C1204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		18A063312049219C0038E256 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				18A0632E204920DB0038E256 /* NDLoginViewController.xib */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		18A93788204CD7B000E890E2 /* NDModel */ = {
+			isa = PBXGroup;
+			children = (
+				189E42B3204E482100D3DF4B /* NDMacroListModel.h */,
+				189E42B4204E482100D3DF4B /* NDMacroListModel.m */,
+				189E42B6204E486600D3DF4B /* NDMonitorModel.h */,
+				189E42B7204E486600D3DF4B /* NDMonitorModel.m */,
+			);
+			path = NDModel;
+			sourceTree = "<group>";
+		};
+		18A93794204D2A9F00E890E2 /* NDHomePageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18A93795204D2ACC00E890E2 /* NDHomePageViewController.h */,
+				18A93796204D2ACC00E890E2 /* NDHomePageViewController.m */,
+			);
+			path = NDHomePageViewController;
+			sourceTree = "<group>";
+		};
+		18A93798204D2C1E00E890E2 /* NDQCQFModule */ = {
+			isa = PBXGroup;
+			children = (
+				189E42AD204E3CBD00D3DF4B /* view */,
+				18A93799204D2DF800E890E2 /* NDQCQFViewController.h */,
+				18A9379A204D2DF800E890E2 /* NDQCQFViewController.m */,
+				18A9379B204D2DF800E890E2 /* NDQCQFViewController.xib */,
+			);
+			path = NDQCQFModule;
+			sourceTree = "<group>";
+		};
+		18A9379E204D3D0800E890E2 /* NDSettingModule */ = {
+			isa = PBXGroup;
+			children = (
+				18A937A4204D465400E890E2 /* view */,
+				18A9379F204D3D4300E890E2 /* NDSettingViewController.h */,
+				18A937A0204D3D4300E890E2 /* NDSettingViewController.m */,
+				18A937A1204D3D4300E890E2 /* NDSettingViewController.xib */,
+			);
+			path = NDSettingModule;
+			sourceTree = "<group>";
+		};
+		18A937A4204D465400E890E2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				18A937A5204D467800E890E2 /* NDSettingCell.h */,
+				18A937A6204D467800E890E2 /* NDSettingCell.m */,
+				18A937A7204D467800E890E2 /* NDSettingCell.xib */,
+				18A937B2204D48DF00E890E2 /* NDSettingHeaderCell.h */,
+				18A937B3204D48DF00E890E2 /* NDSettingHeaderCell.m */,
+				18A937B5204D490E00E890E2 /* NDSettingHeaderCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		3C911B0272553A5D0EEA65B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */,
+				041CC65576F1B5D02A82D434 /* Pods-Gdims2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		68CCFF322047E6F1002E72D0 = {
+			isa = PBXGroup;
+			children = (
+				68CCFF3D2047E6F1002E72D0 /* Gdims2 */,
+				68CCFF3C2047E6F1002E72D0 /* Products */,
+				3C911B0272553A5D0EEA65B6 /* Pods */,
+				DCC9B7CE205CF90C530B5A4F /* Frameworks */,
+				18A063312049219C0038E256 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		68CCFF3C2047E6F1002E72D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68CCFF3B2047E6F1002E72D0 /* Gdims2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68CCFF3D2047E6F1002E72D0 /* Gdims2 */ = {
+			isa = PBXGroup;
+			children = (
+				18A9379E204D3D0800E890E2 /* NDSettingModule */,
+				18A93798204D2C1E00E890E2 /* NDQCQFModule */,
+				18A93794204D2A9F00E890E2 /* NDHomePageViewController */,
+				18A93788204CD7B000E890E2 /* NDModel */,
+				187BEE7020493FE1008796E6 /* NDCommon */,
+				68DFE00D20491FC50076B228 /* NDLoginModule */,
+				68CCFF572047F893002E72D0 /* NDUtils */,
+				68CCFF3E2047E6F1002E72D0 /* AppDelegate.h */,
+				68CCFF3F2047E6F1002E72D0 /* AppDelegate.m */,
+				68CCFF4A2047E6F1002E72D0 /* Assets.xcassets */,
+				68CCFF4C2047E6F1002E72D0 /* LaunchScreen.storyboard */,
+				68CCFF4F2047E6F1002E72D0 /* Info.plist */,
+				68CCFF502047E6F1002E72D0 /* main.m */,
+				68CCFF472047E6F1002E72D0 /* Gdims2.xcdatamodeld */,
+				68DFE00C2048DD220076B228 /* NDPrefixHeader.pch */,
+				18A93791204D263400E890E2 /* NDViewController.h */,
+				18A93792204D263400E890E2 /* NDViewController.m */,
+			);
+			path = Gdims2;
+			sourceTree = "<group>";
+		};
+		68CCFF572047F893002E72D0 /* NDUtils */ = {
+			isa = PBXGroup;
+			children = (
+				68DFE013204920230076B228 /* NDRouter.h */,
+				68DFE014204920230076B228 /* NDRouter.m */,
+				68CCFF582047F8D0002E72D0 /* NDHUD.h */,
+				68CCFF592047F8D0002E72D0 /* NDHUD.m */,
+				68CCFF5B2047F97D002E72D0 /* NDDefine.h */,
+				18A93785204CD6FC00E890E2 /* NDUserInfo.h */,
+				18A93786204CD6FC00E890E2 /* NDUserInfo.m */,
+				18A93789204CD8DC00E890E2 /* NDNetwork.h */,
+				18A9378A204CD8DC00E890E2 /* NDNetwork.m */,
+				18A9378C204CDCE200E890E2 /* NDRequestApi.h */,
+				18A9378D204CDCE200E890E2 /* NDRequestApi.m */,
+				18A9378F204CF6F600E890E2 /* HUD.xcassets */,
+				189E42B9204E493100D3DF4B /* NDFileUtils.h */,
+				189E42BA204E493100D3DF4B /* NDFileUtils.m */,
+				189E42BC204E49C100D3DF4B /* NSString+NDTimeString.h */,
+				189E42BD204E49C100D3DF4B /* NSString+NDTimeString.m */,
+			);
+			path = NDUtils;
+			sourceTree = "<group>";
+		};
+		68DFE00D20491FC50076B228 /* NDLoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				68DFE00E20491FC50076B228 /* NDLoginViewController.h */,
+				68DFE00F20491FC50076B228 /* NDLoginViewController.m */,
+				68DFE01020491FC50076B228 /* NDLoginViewController.xib */,
+			);
+			name = NDLoginModule;
+			path = Gdims2/NDLoginModule;
+			sourceTree = SOURCE_ROOT;
+		};
+		DCC9B7CE205CF90C530B5A4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68CCFF3A2047E6F1002E72D0 /* Gdims2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68CCFF542047E6F1002E72D0 /* Build configuration list for PBXNativeTarget "Gdims2" */;
+			buildPhases = (
+				A07987B551B1ED1CA5A29416 /* [CP] Check Pods Manifest.lock */,
+				68CCFF372047E6F1002E72D0 /* Sources */,
+				68CCFF382047E6F1002E72D0 /* Frameworks */,
+				68CCFF392047E6F1002E72D0 /* Resources */,
+				46B376DD3540F1B64885AC63 /* [CP] Embed Pods Frameworks */,
+				FCC83DAE2168E351396FCB50 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gdims2;
+			productName = Gdims2;
+			productReference = 68CCFF3B2047E6F1002E72D0 /* Gdims2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68CCFF332047E6F1002E72D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ND;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = name;
+				TargetAttributes = {
+					68CCFF3A2047E6F1002E72D0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 68CCFF362047E6F1002E72D0 /* Build configuration list for PBXProject "Gdims2" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68CCFF322047E6F1002E72D0;
+			productRefGroup = 68CCFF3C2047E6F1002E72D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68CCFF3A2047E6F1002E72D0 /* Gdims2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68CCFF392047E6F1002E72D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68DFE01220491FC50076B228 /* NDLoginViewController.xib in Resources */,
+				18A937A3204D3D4300E890E2 /* NDSettingViewController.xib in Resources */,
+				18A937A9204D467800E890E2 /* NDSettingCell.xib in Resources */,
+				68CCFF4E2047E6F1002E72D0 /* LaunchScreen.storyboard in Resources */,
+				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
+				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
+				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
+				68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */,
+				189E42C3204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib in Resources */,
+				18A93790204CF6F600E890E2 /* HUD.xcassets in Resources */,
+				18A9379D204D2DF800E890E2 /* NDQCQFViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		46B376DD3540F1B64885AC63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A07987B551B1ED1CA5A29416 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gdims2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCC83DAE2168E351396FCB50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68CCFF372047E6F1002E72D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18A9379C204D2DF800E890E2 /* NDQCQFViewController.m in Sources */,
+				18A937A2204D3D4300E890E2 /* NDSettingViewController.m in Sources */,
+				187BEE732049403B008796E6 /* UIColor+ND.m in Sources */,
+				18A937A8204D467800E890E2 /* NDSettingCell.m in Sources */,
+				189E42B8204E486600D3DF4B /* NDMonitorModel.m in Sources */,
+				189E42AC204E1FAA00D3DF4B /* NDDimmingPresentaionController.m in Sources */,
+				189E42B0204E3D7100D3DF4B /* NDHomeListHeader.m in Sources */,
+				68DFE01120491FC50076B228 /* NDLoginViewController.m in Sources */,
+				18A9378E204CDCE200E890E2 /* NDRequestApi.m in Sources */,
+				68CCFF492047E6F1002E72D0 /* Gdims2.xcdatamodeld in Sources */,
+				189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */,
+				189E42B5204E482100D3DF4B /* NDMacroListModel.m in Sources */,
+				68DFE015204920230076B228 /* NDRouter.m in Sources */,
+				189E42BE204E49C100D3DF4B /* NSString+NDTimeString.m in Sources */,
+				18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */,
+				18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */,
+				189E42C2204E6C8D00D3DF4B /* NDHomeCheckItemCell.m in Sources */,
+				68CCFF5A2047F8D0002E72D0 /* NDHUD.m in Sources */,
+				68CCFF512047E6F1002E72D0 /* main.m in Sources */,
+				18A93797204D2ACC00E890E2 /* NDHomePageViewController.m in Sources */,
+				18A93793204D263400E890E2 /* NDViewController.m in Sources */,
+				189E42A9204E1F8500D3DF4B /* NDSlideOutAnimationController.m in Sources */,
+				18A9378B204CD8DC00E890E2 /* NDNetwork.m in Sources */,
+				68CCFF402047E6F1002E72D0 /* AppDelegate.m in Sources */,
+				189E42BB204E493100D3DF4B /* NDFileUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		68CCFF4C2047E6F1002E72D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68CCFF4D2047E6F1002E72D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68CCFF522047E6F1002E72D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68CCFF532047E6F1002E72D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68CCFF552047E6F1002E72D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X75YXM4C3;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
+				INFOPLIST_FILE = Gdims2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nandi.Gdims2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68CCFF562047E6F1002E72D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 041CC65576F1B5D02A82D434 /* Pods-Gdims2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X75YXM4C3;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
+				INFOPLIST_FILE = Gdims2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nandi.Gdims2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68CCFF362047E6F1002E72D0 /* Build configuration list for PBXProject "Gdims2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68CCFF522047E6F1002E72D0 /* Debug */,
+				68CCFF532047E6F1002E72D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68CCFF542047E6F1002E72D0 /* Build configuration list for PBXNativeTarget "Gdims2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68CCFF552047E6F1002E72D0 /* Debug */,
+				68CCFF562047E6F1002E72D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		68CCFF472047E6F1002E72D0 /* Gdims2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68CCFF482047E6F1002E72D0 /* Gdims2.xcdatamodel */,
+			);
+			currentVersion = 68CCFF482047E6F1002E72D0 /* Gdims2.xcdatamodel */;
+			path = Gdims2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 68CCFF332047E6F1002E72D0 /* Project object */;
+}
