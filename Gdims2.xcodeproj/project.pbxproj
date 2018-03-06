@@ -34,6 +34,14 @@
 		18A937A9204D467800E890E2 /* NDSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A937A7204D467800E890E2 /* NDSettingCell.xib */; };
 		18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A937B3204D48DF00E890E2 /* NDSettingHeaderCell.m */; };
 		18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A937B5204D490E00E890E2 /* NDSettingHeaderCell.xib */; };
+		684210DF204E8BDC00DC1BAD /* NDGarrisonManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210DD204E8BDC00DC1BAD /* NDGarrisonManViewController.m */; };
+		684210E0204E8BDC00DC1BAD /* NDGarrisonManViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684210DE204E8BDC00DC1BAD /* NDGarrisonManViewController.xib */; };
+		684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210E2204E8C0A00DC1BAD /* NDDailyUploadViewController.m */; };
+		684210E5204E8C0A00DC1BAD /* NDDailyUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684210E3204E8C0A00DC1BAD /* NDDailyUploadViewController.xib */; };
+		684210E9204E8C3B00DC1BAD /* NDDisasterUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210E7204E8C3B00DC1BAD /* NDDisasterUploadViewController.m */; };
+		684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684210E8204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib */; };
+		684210EE204E8C5900DC1BAD /* NDDailyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210EC204E8C5900DC1BAD /* NDDailyListViewController.m */; };
+		684210EF204E8C5900DC1BAD /* NDDailyListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684210ED204E8C5900DC1BAD /* NDDailyListViewController.xib */; };
 		68CCFF402047E6F1002E72D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF3F2047E6F1002E72D0 /* AppDelegate.m */; };
 		68CCFF492047E6F1002E72D0 /* Gdims2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF472047E6F1002E72D0 /* Gdims2.xcdatamodeld */; };
 		68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CCFF4A2047E6F1002E72D0 /* Assets.xcassets */; };
@@ -96,6 +104,18 @@
 		18A937B5204D490E00E890E2 /* NDSettingHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDSettingHeaderCell.xib; sourceTree = "<group>"; };
 		26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gdims2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.debug.xcconfig"; sourceTree = "<group>"; };
+		684210DC204E8BDC00DC1BAD /* NDGarrisonManViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDGarrisonManViewController.h; sourceTree = "<group>"; };
+		684210DD204E8BDC00DC1BAD /* NDGarrisonManViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDGarrisonManViewController.m; sourceTree = "<group>"; };
+		684210DE204E8BDC00DC1BAD /* NDGarrisonManViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDGarrisonManViewController.xib; sourceTree = "<group>"; };
+		684210E1204E8C0A00DC1BAD /* NDDailyUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDDailyUploadViewController.h; sourceTree = "<group>"; };
+		684210E2204E8C0A00DC1BAD /* NDDailyUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDDailyUploadViewController.m; sourceTree = "<group>"; };
+		684210E3204E8C0A00DC1BAD /* NDDailyUploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDDailyUploadViewController.xib; sourceTree = "<group>"; };
+		684210E6204E8C3B00DC1BAD /* NDDisasterUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDDisasterUploadViewController.h; sourceTree = "<group>"; };
+		684210E7204E8C3B00DC1BAD /* NDDisasterUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDDisasterUploadViewController.m; sourceTree = "<group>"; };
+		684210E8204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDDisasterUploadViewController.xib; sourceTree = "<group>"; };
+		684210EB204E8C5900DC1BAD /* NDDailyListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDDailyListViewController.h; sourceTree = "<group>"; };
+		684210EC204E8C5900DC1BAD /* NDDailyListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDDailyListViewController.m; sourceTree = "<group>"; };
+		684210ED204E8C5900DC1BAD /* NDDailyListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDDailyListViewController.xib; sourceTree = "<group>"; };
 		68CCFF3B2047E6F1002E72D0 /* Gdims2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gdims2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CCFF3E2047E6F1002E72D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68CCFF3F2047E6F1002E72D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -227,6 +247,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		684210DB204E8B9400DC1BAD /* NDGarrisonManModule */ = {
+			isa = PBXGroup;
+			children = (
+				684210DC204E8BDC00DC1BAD /* NDGarrisonManViewController.h */,
+				684210DD204E8BDC00DC1BAD /* NDGarrisonManViewController.m */,
+				684210DE204E8BDC00DC1BAD /* NDGarrisonManViewController.xib */,
+				684210E1204E8C0A00DC1BAD /* NDDailyUploadViewController.h */,
+				684210E2204E8C0A00DC1BAD /* NDDailyUploadViewController.m */,
+				684210E3204E8C0A00DC1BAD /* NDDailyUploadViewController.xib */,
+				684210E6204E8C3B00DC1BAD /* NDDisasterUploadViewController.h */,
+				684210E7204E8C3B00DC1BAD /* NDDisasterUploadViewController.m */,
+				684210E8204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib */,
+				684210EB204E8C5900DC1BAD /* NDDailyListViewController.h */,
+				684210EC204E8C5900DC1BAD /* NDDailyListViewController.m */,
+				684210ED204E8C5900DC1BAD /* NDDailyListViewController.xib */,
+			);
+			path = NDGarrisonManModule;
+			sourceTree = "<group>";
+		};
 		68CCFF322047E6F1002E72D0 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +288,7 @@
 		68CCFF3D2047E6F1002E72D0 /* Gdims2 */ = {
 			isa = PBXGroup;
 			children = (
+				684210DB204E8B9400DC1BAD /* NDGarrisonManModule */,
 				18A9379E204D3D0800E890E2 /* NDSettingModule */,
 				18A93798204D2C1E00E890E2 /* NDQCQFModule */,
 				18A93794204D2A9F00E890E2 /* NDHomePageViewController */,
@@ -376,15 +416,19 @@
 			files = (
 				68DFE01220491FC50076B228 /* NDLoginViewController.xib in Resources */,
 				18A937A3204D3D4300E890E2 /* NDSettingViewController.xib in Resources */,
+				684210E0204E8BDC00DC1BAD /* NDGarrisonManViewController.xib in Resources */,
 				18A937A9204D467800E890E2 /* NDSettingCell.xib in Resources */,
 				68CCFF4E2047E6F1002E72D0 /* LaunchScreen.storyboard in Resources */,
 				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
+				684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */,
 				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
+				684210EF204E8C5900DC1BAD /* NDDailyListViewController.xib in Resources */,
 				68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */,
 				189E42C3204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib in Resources */,
 				18A93790204CF6F600E890E2 /* HUD.xcassets in Resources */,
 				18A9379D204D2DF800E890E2 /* NDQCQFViewController.xib in Resources */,
+				684210E5204E8C0A00DC1BAD /* NDDailyUploadViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,10 +496,13 @@
 			files = (
 				18A9379C204D2DF800E890E2 /* NDQCQFViewController.m in Sources */,
 				18A937A2204D3D4300E890E2 /* NDSettingViewController.m in Sources */,
+				684210DF204E8BDC00DC1BAD /* NDGarrisonManViewController.m in Sources */,
 				187BEE732049403B008796E6 /* UIColor+ND.m in Sources */,
 				18A937A8204D467800E890E2 /* NDSettingCell.m in Sources */,
+				684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */,
 				189E42B8204E486600D3DF4B /* NDMonitorModel.m in Sources */,
 				189E42AC204E1FAA00D3DF4B /* NDDimmingPresentaionController.m in Sources */,
+				684210E9204E8C3B00DC1BAD /* NDDisasterUploadViewController.m in Sources */,
 				189E42B0204E3D7100D3DF4B /* NDHomeListHeader.m in Sources */,
 				68DFE01120491FC50076B228 /* NDLoginViewController.m in Sources */,
 				18A9378E204CDCE200E890E2 /* NDRequestApi.m in Sources */,
@@ -467,6 +514,7 @@
 				18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */,
 				18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */,
 				189E42C2204E6C8D00D3DF4B /* NDHomeCheckItemCell.m in Sources */,
+				684210EE204E8C5900DC1BAD /* NDDailyListViewController.m in Sources */,
 				68CCFF5A2047F8D0002E72D0 /* NDHUD.m in Sources */,
 				68CCFF512047E6F1002E72D0 /* main.m in Sources */,
 				18A93797204D2ACC00E890E2 /* NDHomePageViewController.m in Sources */,
