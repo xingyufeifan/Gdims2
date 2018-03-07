@@ -38,6 +38,12 @@
 		18EB36E7204F7FAD008B66B8 /* NDLocationSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB36E5204F7FAD008B66B8 /* NDLocationSettingViewController.xib */; };
 		18EB36EC204F8E2A008B66B8 /* NDMacroUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB36EA204F8E2A008B66B8 /* NDMacroUploadViewController.m */; };
 		18EB36ED204F8E2A008B66B8 /* NDMacroUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB36EB204F8E2A008B66B8 /* NDMacroUploadViewController.xib */; };
+		18EB36F2204FBDF0008B66B8 /* NDMacroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB36F0204FBDF0008B66B8 /* NDMacroCell.m */; };
+		18EB36F3204FBDF0008B66B8 /* NDMacroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB36F1204FBDF0008B66B8 /* NDMacroCell.xib */; };
+		18EB36F8204FC4DA008B66B8 /* NDMonitorUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB36F6204FC4DA008B66B8 /* NDMonitorUploadViewController.m */; };
+		18EB36F9204FC4DA008B66B8 /* NDMonitorUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB36F7204FC4DA008B66B8 /* NDMonitorUploadViewController.xib */; };
+		18EB36FE204FC73F008B66B8 /* NDMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB36FC204FC73F008B66B8 /* NDMonitorCell.m */; };
+		18EB36FF204FC73F008B66B8 /* NDMonitorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB36FD204FC73F008B66B8 /* NDMonitorCell.xib */; };
 		684210DF204E8BDC00DC1BAD /* NDGarrisonManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210DD204E8BDC00DC1BAD /* NDGarrisonManViewController.m */; };
 		684210E0204E8BDC00DC1BAD /* NDGarrisonManViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684210DE204E8BDC00DC1BAD /* NDGarrisonManViewController.xib */; };
 		684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210E2204E8C0A00DC1BAD /* NDDailyUploadViewController.m */; };
@@ -118,6 +124,15 @@
 		18EB36E9204F8E2A008B66B8 /* NDMacroUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMacroUploadViewController.h; sourceTree = "<group>"; };
 		18EB36EA204F8E2A008B66B8 /* NDMacroUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMacroUploadViewController.m; sourceTree = "<group>"; };
 		18EB36EB204F8E2A008B66B8 /* NDMacroUploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMacroUploadViewController.xib; sourceTree = "<group>"; };
+		18EB36EF204FBDF0008B66B8 /* NDMacroCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMacroCell.h; sourceTree = "<group>"; };
+		18EB36F0204FBDF0008B66B8 /* NDMacroCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMacroCell.m; sourceTree = "<group>"; };
+		18EB36F1204FBDF0008B66B8 /* NDMacroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMacroCell.xib; sourceTree = "<group>"; };
+		18EB36F5204FC4DA008B66B8 /* NDMonitorUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMonitorUploadViewController.h; sourceTree = "<group>"; };
+		18EB36F6204FC4DA008B66B8 /* NDMonitorUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMonitorUploadViewController.m; sourceTree = "<group>"; };
+		18EB36F7204FC4DA008B66B8 /* NDMonitorUploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMonitorUploadViewController.xib; sourceTree = "<group>"; };
+		18EB36FB204FC73F008B66B8 /* NDMonitorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMonitorCell.h; sourceTree = "<group>"; };
+		18EB36FC204FC73F008B66B8 /* NDMonitorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMonitorCell.m; sourceTree = "<group>"; };
+		18EB36FD204FC73F008B66B8 /* NDMonitorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMonitorCell.xib; sourceTree = "<group>"; };
 		26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gdims2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.debug.xcconfig"; sourceTree = "<group>"; };
 		684210DC204E8BDC00DC1BAD /* NDGarrisonManViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDGarrisonManViewController.h; sourceTree = "<group>"; };
@@ -234,6 +249,7 @@
 		18A93798204D2C1E00E890E2 /* NDQCQFModule */ = {
 			isa = PBXGroup;
 			children = (
+				18EB36F4204FC499008B66B8 /* NDMonitorUploadModule */,
 				18EB36E8204F8DD2008B66B8 /* NDMacroUploadModule */,
 				189E42AD204E3CBD00D3DF4B /* view */,
 				18A93799204D2DF800E890E2 /* NDQCQFViewController.h */,
@@ -281,11 +297,43 @@
 		18EB36E8204F8DD2008B66B8 /* NDMacroUploadModule */ = {
 			isa = PBXGroup;
 			children = (
+				18EB36EE204FBDC3008B66B8 /* view */,
 				18EB36E9204F8E2A008B66B8 /* NDMacroUploadViewController.h */,
 				18EB36EA204F8E2A008B66B8 /* NDMacroUploadViewController.m */,
 				18EB36EB204F8E2A008B66B8 /* NDMacroUploadViewController.xib */,
 			);
 			path = NDMacroUploadModule;
+			sourceTree = "<group>";
+		};
+		18EB36EE204FBDC3008B66B8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				18EB36EF204FBDF0008B66B8 /* NDMacroCell.h */,
+				18EB36F0204FBDF0008B66B8 /* NDMacroCell.m */,
+				18EB36F1204FBDF0008B66B8 /* NDMacroCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		18EB36F4204FC499008B66B8 /* NDMonitorUploadModule */ = {
+			isa = PBXGroup;
+			children = (
+				18EB36FA204FC71D008B66B8 /* view */,
+				18EB36F5204FC4DA008B66B8 /* NDMonitorUploadViewController.h */,
+				18EB36F6204FC4DA008B66B8 /* NDMonitorUploadViewController.m */,
+				18EB36F7204FC4DA008B66B8 /* NDMonitorUploadViewController.xib */,
+			);
+			path = NDMonitorUploadModule;
+			sourceTree = "<group>";
+		};
+		18EB36FA204FC71D008B66B8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				18EB36FB204FC73F008B66B8 /* NDMonitorCell.h */,
+				18EB36FC204FC73F008B66B8 /* NDMonitorCell.m */,
+				18EB36FD204FC73F008B66B8 /* NDMonitorCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		3C911B0272553A5D0EEA65B6 /* Pods */ = {
@@ -488,11 +536,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EB36F3204FBDF0008B66B8 /* NDMacroCell.xib in Resources */,
 				68DFE01220491FC50076B228 /* NDLoginViewController.xib in Resources */,
 				18A937A3204D3D4300E890E2 /* NDSettingViewController.xib in Resources */,
 				684210E0204E8BDC00DC1BAD /* NDGarrisonManViewController.xib in Resources */,
 				18A937A9204D467800E890E2 /* NDSettingCell.xib in Resources */,
 				68CCFF4E2047E6F1002E72D0 /* LaunchScreen.storyboard in Resources */,
+				18EB36FF204FC73F008B66B8 /* NDMonitorCell.xib in Resources */,
 				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
 				68A16291204F77260093D4FA /* NDMenuCell.xib in Resources */,
 				684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */,
@@ -502,6 +552,7 @@
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
 				684210EF204E8C5900DC1BAD /* NDDailyListViewController.xib in Resources */,
 				68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */,
+				18EB36F9204FC4DA008B66B8 /* NDMonitorUploadViewController.xib in Resources */,
 				189E42C3204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib in Resources */,
 				18A93790204CF6F600E890E2 /* HUD.xcassets in Resources */,
 				18A9379D204D2DF800E890E2 /* NDQCQFViewController.xib in Resources */,
@@ -576,6 +627,7 @@
 				18A937A2204D3D4300E890E2 /* NDSettingViewController.m in Sources */,
 				684210DF204E8BDC00DC1BAD /* NDGarrisonManViewController.m in Sources */,
 				187BEE732049403B008796E6 /* UIColor+ND.m in Sources */,
+				18EB36F2204FBDF0008B66B8 /* NDMacroCell.m in Sources */,
 				18A937A8204D467800E890E2 /* NDSettingCell.m in Sources */,
 				68778F42204F7FAF005FA697 /* NDGarrisonModel.m in Sources */,
 				684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */,
@@ -597,12 +649,14 @@
 				18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */,
 				A025C173204E915500B1A5E5 /* NDAreaOfficerViewController.m in Sources */,
 				18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */,
+				18EB36FE204FC73F008B66B8 /* NDMonitorCell.m in Sources */,
 				189E42C2204E6C8D00D3DF4B /* NDHomeCheckItemCell.m in Sources */,
 				684210EE204E8C5900DC1BAD /* NDDailyListViewController.m in Sources */,
 				68CCFF5A2047F8D0002E72D0 /* NDHUD.m in Sources */,
 				68CCFF512047E6F1002E72D0 /* main.m in Sources */,
 				18A93797204D2ACC00E890E2 /* NDHomePageViewController.m in Sources */,
 				18A93793204D263400E890E2 /* NDViewController.m in Sources */,
+				18EB36F8204FC4DA008B66B8 /* NDMonitorUploadViewController.m in Sources */,
 				189E42A9204E1F8500D3DF4B /* NDSlideOutAnimationController.m in Sources */,
 				18A9378B204CD8DC00E890E2 /* NDNetwork.m in Sources */,
 				68CCFF402047E6F1002E72D0 /* AppDelegate.m in Sources */,
