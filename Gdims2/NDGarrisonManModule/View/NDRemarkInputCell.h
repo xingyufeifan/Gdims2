@@ -7,8 +7,9 @@
 //
 
 #import "NDTableViewCell.h"
-
+#import "NDMonitorCell.h"
 @interface NDRemarkInputCell : NDTableViewCell  <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *txtContent;
+@property (weak,nonatomic) id<NDMonitorCellDelegate> delegate;
 
 @end
