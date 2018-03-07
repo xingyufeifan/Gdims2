@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +19,70 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cCb-e9-c9y">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VhQ-AG-xI5">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4F-ZN-etx">
+                            <rect key="frame" x="20" y="10" width="157.5" height="40"/>
+                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="ttr-P4-arV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="保存"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aek-sv-EdR">
+                            <rect key="frame" x="197.5" y="10" width="157.5" height="40"/>
+                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="1a7-Kb-7Qf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="上传"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-fp-GoU">
+                            <rect key="frame" x="20" y="10" width="157.5" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="YKY-8y-d0z"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="删除">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Vgx-fp-GoU" firstAttribute="centerY" secondItem="Y4F-ZN-etx" secondAttribute="centerY" id="1QW-qy-dJX"/>
+                        <constraint firstItem="Vgx-fp-GoU" firstAttribute="width" secondItem="Y4F-ZN-etx" secondAttribute="width" id="4aK-N5-guD"/>
+                        <constraint firstItem="Y4F-ZN-etx" firstAttribute="leading" secondItem="VhQ-AG-xI5" secondAttribute="leading" constant="20" id="CY3-8P-Ygx"/>
+                        <constraint firstItem="Aek-sv-EdR" firstAttribute="leading" secondItem="Y4F-ZN-etx" secondAttribute="trailing" constant="20" id="J3e-7w-DXw"/>
+                        <constraint firstAttribute="height" constant="60" id="J4i-eg-Puz"/>
+                        <constraint firstItem="Aek-sv-EdR" firstAttribute="centerY" secondItem="Y4F-ZN-etx" secondAttribute="centerY" id="o4v-AO-9t8"/>
+                        <constraint firstItem="Y4F-ZN-etx" firstAttribute="centerY" secondItem="VhQ-AG-xI5" secondAttribute="centerY" id="oI4-U2-AXJ"/>
+                        <constraint firstItem="Aek-sv-EdR" firstAttribute="width" secondItem="Y4F-ZN-etx" secondAttribute="width" id="rtN-RY-9Nx"/>
+                        <constraint firstAttribute="trailing" secondItem="Aek-sv-EdR" secondAttribute="trailing" constant="20" id="tXm-nx-ddo"/>
+                        <constraint firstItem="Vgx-fp-GoU" firstAttribute="leading" secondItem="Y4F-ZN-etx" secondAttribute="leading" id="w3C-Ia-ib7"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="cCb-e9-c9y" secondAttribute="bottom" constant="60" id="EAQ-Gy-gcn"/>
+                <constraint firstItem="VhQ-AG-xI5" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Ju1-G3-Vcd"/>
+                <constraint firstItem="cCb-e9-c9y" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="LTA-aL-lhx"/>
+                <constraint firstItem="cCb-e9-c9y" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="SOJ-Fb-pYQ"/>
+                <constraint firstItem="VhQ-AG-xI5" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="UKO-Fh-FSs"/>
+                <constraint firstItem="VhQ-AG-xI5" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="dVy-9z-k7i"/>
+                <constraint firstItem="cCb-e9-c9y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xRs-yK-ECD"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="42.5" y="68.5"/>
         </view>
     </objects>
 </document>
