@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 @class NDMacroListModel;
 @class NDMonitorModel;
+@class NDGarrisonDailyModel;
+
 typedef enum: NSUInteger{
     NDUserTypeQCQF = 0,
     NDUserTypeZS = 1,
@@ -69,4 +71,24 @@ typedef enum: NSUInteger{
                              phone:(NSString *)phone
                           userType:(NDUserType)type
                         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
+/**
+ 驻守人员-工作日志上报
+ 
+ @param userName userName description
+ @param workType 工作类型
+ @param situation 在岗情况
+ @param logContent logContent description
+ @param remark remark description
+ @param recordTime recordTime description
+ @param phoneNum phoneNum description
+ @param completion completion description
+ */
++ (void)garrison_SaveDailyByName:(NSString *)userName
+                        workType:(NSString *)workType
+                       situation:(NSString *)situation
+                      logContent:(NSString *)logContent
+                          remark:(NSString *)remark
+                      recordTime:(NSString *)recordTime
+                        phoneNum:(NSString *)phoneNum
+                      completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
 @end

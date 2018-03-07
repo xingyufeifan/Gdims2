@@ -19,6 +19,7 @@
 #import "NSString+NDTimeString.h"
 #import "NDFileUtils.h"
 #import "NDLocationUtils.h"
+#import "NDAlertUtils.h"
 
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
