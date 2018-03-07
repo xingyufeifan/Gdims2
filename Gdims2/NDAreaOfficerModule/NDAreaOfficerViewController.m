@@ -10,12 +10,20 @@
 
 @interface NDAreaOfficerViewController ()
 
+@property (weak, nonatomic) IBOutlet UITableView *tabList;
+@property (weak, nonatomic) IBOutlet UIButton *btnVideoUpload;
+
 @end
 
 @implementation NDAreaOfficerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.btnVideoUpload.backgroundColor = [UIColor nd_tintColor];
+    self.btnVideoUpload.layer.cornerRadius = 5;
+    
+    self.tabList.backgroundColor = [UIColor clearColor];
     
 }
 
@@ -25,13 +33,15 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+ * 应急视频按钮点击事件
+ */
+- (IBAction)videoUploadAction:(id)sender {
+    
 }
-*/
+
+#pragma mark - UITableView
+
+
+
 
 @end
