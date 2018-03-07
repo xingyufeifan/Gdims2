@@ -71,6 +71,16 @@ typedef enum: NSUInteger{
                              phone:(NSString *)phone
                           userType:(NDUserType)type
                         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
+
+
+/**
+ 驻守人员 日报列表
+ 
+ @param mobile mobile description
+ @param completion completion description
+ */
++ (void)garrison_DaliyListByMobile:(NSString *)mobile
+                        completion:(void(^)(BOOL success, NSArray<NDGarrisonDailyModel * > * list, NSString *errorMsg))completion;
 /**
  驻守人员-工作日志上报
  

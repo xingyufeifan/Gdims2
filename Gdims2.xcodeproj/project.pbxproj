@@ -55,6 +55,8 @@
 		68778F42204F7FAF005FA697 /* NDGarrisonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68778F41204F7FAF005FA697 /* NDGarrisonModel.m */; };
 		68A16290204F77260093D4FA /* NDMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A1628E204F77260093D4FA /* NDMenuCell.m */; };
 		68A16291204F77260093D4FA /* NDMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68A1628F204F77260093D4FA /* NDMenuCell.xib */; };
+		68B4FC4C204FEAA800D84AA0 /* NDRemarkInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B4FC4A204FEAA800D84AA0 /* NDRemarkInputCell.m */; };
+		68B4FC4D204FEAA800D84AA0 /* NDRemarkInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B4FC4B204FEAA800D84AA0 /* NDRemarkInputCell.xib */; };
 		68CCFF402047E6F1002E72D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF3F2047E6F1002E72D0 /* AppDelegate.m */; };
 		68CCFF492047E6F1002E72D0 /* Gdims2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF472047E6F1002E72D0 /* Gdims2.xcdatamodeld */; };
 		68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CCFF4A2047E6F1002E72D0 /* Assets.xcassets */; };
@@ -63,10 +65,12 @@
 		68CCFF5A2047F8D0002E72D0 /* NDHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CCFF592047F8D0002E72D0 /* NDHUD.m */; };
 		68D790A1204FBC6B00626671 /* NDAlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D790A0204FBC6B00626671 /* NDAlertUtils.m */; };
 		68D790A4204FC2B900626671 /* NDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D790A3204FC2B900626671 /* NDTableViewCell.m */; };
-		68D790A8204FC30900626671 /* NDRemarkInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D790A6204FC30900626671 /* NDRemarkInputCell.m */; };
-		68D790A9204FC30900626671 /* NDRemarkInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D790A7204FC30900626671 /* NDRemarkInputCell.xib */; };
 		68D790AF204FC7E200626671 /* NDSingleTextHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D790AE204FC7E200626671 /* NDSingleTextHeader.m */; };
 		68D790B1204FC7FD00626671 /* NDSingleTextHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D790B0204FC7FD00626671 /* NDSingleTextHeader.xib */; };
+		68D790B5204FD74200626671 /* NDUnSafeHouseNumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D790B3204FD74200626671 /* NDUnSafeHouseNumCell.m */; };
+		68D790B6204FD74200626671 /* NDUnSafeHouseNumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D790B4204FD74200626671 /* NDUnSafeHouseNumCell.xib */; };
+		68D790BA204FDE0700626671 /* NDDailyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D790B8204FDE0700626671 /* NDDailyListCell.m */; };
+		68D790BB204FDE0700626671 /* NDDailyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D790B9204FDE0700626671 /* NDDailyListCell.xib */; };
 		68DFE01120491FC50076B228 /* NDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DFE00F20491FC50076B228 /* NDLoginViewController.m */; };
 		68DFE01220491FC50076B228 /* NDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68DFE01020491FC50076B228 /* NDLoginViewController.xib */; };
 		68DFE015204920230076B228 /* NDRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DFE014204920230076B228 /* NDRouter.m */; };
@@ -158,6 +162,9 @@
 		68A1628D204F77260093D4FA /* NDMenuCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMenuCell.h; sourceTree = "<group>"; };
 		68A1628E204F77260093D4FA /* NDMenuCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMenuCell.m; sourceTree = "<group>"; };
 		68A1628F204F77260093D4FA /* NDMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMenuCell.xib; sourceTree = "<group>"; };
+		68B4FC49204FEAA800D84AA0 /* NDRemarkInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDRemarkInputCell.h; sourceTree = "<group>"; };
+		68B4FC4A204FEAA800D84AA0 /* NDRemarkInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDRemarkInputCell.m; sourceTree = "<group>"; };
+		68B4FC4B204FEAA800D84AA0 /* NDRemarkInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDRemarkInputCell.xib; sourceTree = "<group>"; };
 		68CCFF3B2047E6F1002E72D0 /* Gdims2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gdims2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CCFF3E2047E6F1002E72D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68CCFF3F2047E6F1002E72D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -173,12 +180,15 @@
 		68D790A0204FBC6B00626671 /* NDAlertUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDAlertUtils.m; sourceTree = "<group>"; };
 		68D790A2204FC2B900626671 /* NDTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDTableViewCell.h; sourceTree = "<group>"; };
 		68D790A3204FC2B900626671 /* NDTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDTableViewCell.m; sourceTree = "<group>"; };
-		68D790A5204FC30900626671 /* NDRemarkInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDRemarkInputCell.h; sourceTree = "<group>"; };
-		68D790A6204FC30900626671 /* NDRemarkInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDRemarkInputCell.m; sourceTree = "<group>"; };
-		68D790A7204FC30900626671 /* NDRemarkInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDRemarkInputCell.xib; sourceTree = "<group>"; };
 		68D790AD204FC7E200626671 /* NDSingleTextHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSingleTextHeader.h; sourceTree = "<group>"; };
 		68D790AE204FC7E200626671 /* NDSingleTextHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSingleTextHeader.m; sourceTree = "<group>"; };
 		68D790B0204FC7FD00626671 /* NDSingleTextHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDSingleTextHeader.xib; sourceTree = "<group>"; };
+		68D790B2204FD74200626671 /* NDUnSafeHouseNumCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDUnSafeHouseNumCell.h; sourceTree = "<group>"; };
+		68D790B3204FD74200626671 /* NDUnSafeHouseNumCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDUnSafeHouseNumCell.m; sourceTree = "<group>"; };
+		68D790B4204FD74200626671 /* NDUnSafeHouseNumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDUnSafeHouseNumCell.xib; sourceTree = "<group>"; };
+		68D790B7204FDE0700626671 /* NDDailyListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDDailyListCell.h; sourceTree = "<group>"; };
+		68D790B8204FDE0700626671 /* NDDailyListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDDailyListCell.m; sourceTree = "<group>"; };
+		68D790B9204FDE0700626671 /* NDDailyListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDDailyListCell.xib; sourceTree = "<group>"; };
 		68DFE00C2048DD220076B228 /* NDPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDPrefixHeader.pch; sourceTree = "<group>"; };
 		68DFE00E20491FC50076B228 /* NDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDLoginViewController.h; sourceTree = "<group>"; };
 		68DFE00F20491FC50076B228 /* NDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDLoginViewController.m; sourceTree = "<group>"; };
@@ -389,12 +399,18 @@
 				68A1628D204F77260093D4FA /* NDMenuCell.h */,
 				68A1628E204F77260093D4FA /* NDMenuCell.m */,
 				68A1628F204F77260093D4FA /* NDMenuCell.xib */,
-				68D790A5204FC30900626671 /* NDRemarkInputCell.h */,
-				68D790A6204FC30900626671 /* NDRemarkInputCell.m */,
-				68D790A7204FC30900626671 /* NDRemarkInputCell.xib */,
 				68D790AD204FC7E200626671 /* NDSingleTextHeader.h */,
 				68D790AE204FC7E200626671 /* NDSingleTextHeader.m */,
 				68D790B0204FC7FD00626671 /* NDSingleTextHeader.xib */,
+				68D790B2204FD74200626671 /* NDUnSafeHouseNumCell.h */,
+				68D790B3204FD74200626671 /* NDUnSafeHouseNumCell.m */,
+				68D790B4204FD74200626671 /* NDUnSafeHouseNumCell.xib */,
+				68D790B7204FDE0700626671 /* NDDailyListCell.h */,
+				68D790B8204FDE0700626671 /* NDDailyListCell.m */,
+				68D790B9204FDE0700626671 /* NDDailyListCell.xib */,
+				68B4FC49204FEAA800D84AA0 /* NDRemarkInputCell.h */,
+				68B4FC4A204FEAA800D84AA0 /* NDRemarkInputCell.m */,
+				68B4FC4B204FEAA800D84AA0 /* NDRemarkInputCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -572,20 +588,22 @@
 				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
 				68D790B1204FC7FD00626671 /* NDSingleTextHeader.xib in Resources */,
 				68A16291204F77260093D4FA /* NDMenuCell.xib in Resources */,
+				68B4FC4D204FEAA800D84AA0 /* NDRemarkInputCell.xib in Resources */,
 				684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */,
 				18EB36E7204F7FAD008B66B8 /* NDLocationSettingViewController.xib in Resources */,
 				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
 				A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */,
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
 				684210EF204E8C5900DC1BAD /* NDDailyListViewController.xib in Resources */,
+				68D790B6204FD74200626671 /* NDUnSafeHouseNumCell.xib in Resources */,
 				68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */,
 				18EB36F9204FC4DA008B66B8 /* NDMonitorUploadViewController.xib in Resources */,
 				189E42C3204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib in Resources */,
 				18A93790204CF6F600E890E2 /* HUD.xcassets in Resources */,
 				18A9379D204D2DF800E890E2 /* NDQCQFViewController.xib in Resources */,
 				18EB36ED204F8E2A008B66B8 /* NDMacroUploadViewController.xib in Resources */,
-				68D790A9204FC30900626671 /* NDRemarkInputCell.xib in Resources */,
 				684210E5204E8C0A00DC1BAD /* NDDailyUploadViewController.xib in Resources */,
+				68D790BB204FDE0700626671 /* NDDailyListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +675,7 @@
 				187BEE732049403B008796E6 /* UIColor+ND.m in Sources */,
 				18EB36F2204FBDF0008B66B8 /* NDMacroCell.m in Sources */,
 				18A937A8204D467800E890E2 /* NDSettingCell.m in Sources */,
+				68B4FC4C204FEAA800D84AA0 /* NDRemarkInputCell.m in Sources */,
 				68778F42204F7FAF005FA697 /* NDGarrisonModel.m in Sources */,
 				684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */,
 				68D790A4204FC2B900626671 /* NDTableViewCell.m in Sources */,
@@ -675,6 +694,7 @@
 				189E42B5204E482100D3DF4B /* NDMacroListModel.m in Sources */,
 				68DFE015204920230076B228 /* NDRouter.m in Sources */,
 				189E42BE204E49C100D3DF4B /* NSString+NDTimeString.m in Sources */,
+				68D790BA204FDE0700626671 /* NDDailyListCell.m in Sources */,
 				18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */,
 				A025C173204E915500B1A5E5 /* NDAreaOfficerViewController.m in Sources */,
 				18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */,
@@ -690,6 +710,7 @@
 				189E42A9204E1F8500D3DF4B /* NDSlideOutAnimationController.m in Sources */,
 				68D790A1204FBC6B00626671 /* NDAlertUtils.m in Sources */,
 				18A9378B204CD8DC00E890E2 /* NDNetwork.m in Sources */,
+				68D790B5204FD74200626671 /* NDUnSafeHouseNumCell.m in Sources */,
 				68CCFF402047E6F1002E72D0 /* AppDelegate.m in Sources */,
 				189E42BB204E493100D3DF4B /* NDFileUtils.m in Sources */,
 			);

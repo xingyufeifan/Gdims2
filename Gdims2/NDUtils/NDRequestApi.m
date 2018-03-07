@@ -170,6 +170,35 @@
     }];
 }
 
++ (void)garrison_DaliyListByMobile:(NSString *)mobile
+                        completion:(void (^)(BOOL, NSArray<NDGarrisonDailyModel *> *, NSString *))completion {
+    NSMutableDictionary * dicp = [NSMutableDictionary dictionary];
+    dicp[@"mobile"] = mobile ? mobile : @"";
+    dicp[@"type"] = @"1";
+    [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_DAILY_WEEK_LIST, NDApiCommonType) params:dicp method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            id info = [[content objectForKey:@"data"] mj_JSONObject];
+            if ([info isKindOfClass:[NSArray class]] && [info count] > 0) {
+                NSMutableArray * arrList = [NSMutableArray array];
+                for (id obj in info) {
+                    [arrList addObject:[NDGarrisonDailyModel mj_objectWithKeyValues:obj]];
+                }
+                if (completion) {
+                    completion(true, arrList, @"");
+                }
+            } else {
+                if (completion) {
+                    completion(true, @[], @"无相关日志记录");
+                }
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
+            }
+        }
+    }];
+}
+
 + (void)garrison_SaveDailyByName:(NSString *)userName
                         workType:(NSString *)workType
                        situation:(NSString *)situation

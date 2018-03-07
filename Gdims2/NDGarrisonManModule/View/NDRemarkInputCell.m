@@ -22,11 +22,9 @@
     self.txtContent.layer.borderWidth = 1;
 }
 
-
 - (void)textViewDidEndEditing:(UITextView *)textView {
     if (_delegate && [_delegate respondsToSelector:@selector(ndMonitorCell:inputDoneWtih:)]) {
         [_delegate ndMonitorCell:self inputDoneWtih:textView.text];
     }
 }
-
 @end
