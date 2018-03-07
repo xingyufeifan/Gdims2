@@ -10,6 +10,7 @@
 #import <MJExtension/MJExtension.h>
 #import "NDMacroListModel.h"
 #import "NDMonitorModel.h"
+#import "NDGarrisonModel.h"
 @implementation NDRequestApi
 +(void)loginWithMobile:(NSString *)mobile userType:(NDUserType)type completion:(void (^)(BOOL, NSString *))completion{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -164,6 +165,35 @@
         } else {
             if (completion) {
                 completion(status, false, errorMsg);
+            }
+        }
+    }];
+}
+
++ (void)garrison_SaveDailyByName:(NSString *)userName
+                        workType:(NSString *)workType
+                       situation:(NSString *)situation
+                      logContent:(NSString *)logContent
+                          remark:(NSString *)remark
+                      recordTime:(NSString *)recordTime
+                        phoneNum:(NSString *)phoneNum
+                      completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    NSMutableDictionary * dicP = [NSMutableDictionary dictionary];
+    [dicP setObject:userName ? : @"" forKey:@"userName"];
+    [dicP setObject:workType ? : @"" forKey:@"workType"];
+    [dicP setObject:situation ? : @"" forKey:@"situation"];
+    [dicP setObject:logContent ? : @"" forKey:@"logContent"];
+    [dicP setObject:remark ? : @"" forKey:@"remarks"];
+    [dicP setObject:recordTime ? : @"" forKey:@"recordTime"];
+    [dicP setObject:phoneNum ? : @"" forKey:@"phoneNum"];
+    [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_GARRISON_SAVE_DAILY, NDApiTypeLog) params:dicP method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            if (completion) {
+                completion(status,true,@"");
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
             }
         }
     }];
