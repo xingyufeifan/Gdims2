@@ -27,8 +27,8 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <outlet property="dataSource" destination="i5M-Pr-FkT" id="KJX-ff-tKr"/>
-                        <outlet property="delegate" destination="i5M-Pr-FkT" id="yqL-9p-hpo"/>
+                        <outlet property="dataSource" destination="-1" id="KDo-CE-iDD"/>
+                        <outlet property="delegate" destination="-1" id="uSI-Wb-5zA"/>
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2M-ay-iM1" userLabel="Btn Video">
