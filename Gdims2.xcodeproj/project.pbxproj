@@ -75,6 +75,11 @@
 		A025C16E204E900E00B1A5E5 /* NDLocationUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A025C16D204E900E00B1A5E5 /* NDLocationUtils.m */; };
 		A025C173204E915500B1A5E5 /* NDAreaOfficerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A025C171204E915500B1A5E5 /* NDAreaOfficerViewController.m */; };
 		A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A025C172204E915500B1A5E5 /* NDAreaOfficerViewController.xib */; };
+		A02BDF7D204FBD1100ECFDDA /* NDWeekLogUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02BDF7B204FBD1100ECFDDA /* NDWeekLogUploadViewController.m */; };
+		A02BDF7E204FBD1100ECFDDA /* NDWeekLogUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02BDF7C204FBD1100ECFDDA /* NDWeekLogUploadViewController.xib */; };
+		A02BDF81204FBDE500ECFDDA /* NDAreaWeekModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A02BDF80204FBDE500ECFDDA /* NDAreaWeekModel.m */; };
+		A02BDF85204FD9A400ECFDDA /* NDWeekLogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02BDF83204FD9A400ECFDDA /* NDWeekLogListViewController.m */; };
+		A02BDF86204FD9A400ECFDDA /* NDWeekLogListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A02BDF84204FD9A400ECFDDA /* NDWeekLogListViewController.xib */; };
 		A5391E3DA1CBE29299BF12F8 /* libPods-Gdims2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */; };
 /* End PBXBuildFile section */
 
@@ -196,6 +201,14 @@
 		A025C170204E915500B1A5E5 /* NDAreaOfficerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDAreaOfficerViewController.h; sourceTree = "<group>"; };
 		A025C171204E915500B1A5E5 /* NDAreaOfficerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDAreaOfficerViewController.m; sourceTree = "<group>"; };
 		A025C172204E915500B1A5E5 /* NDAreaOfficerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDAreaOfficerViewController.xib; sourceTree = "<group>"; };
+		A02BDF7A204FBD1100ECFDDA /* NDWeekLogUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDWeekLogUploadViewController.h; sourceTree = "<group>"; };
+		A02BDF7B204FBD1100ECFDDA /* NDWeekLogUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDWeekLogUploadViewController.m; sourceTree = "<group>"; };
+		A02BDF7C204FBD1100ECFDDA /* NDWeekLogUploadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDWeekLogUploadViewController.xib; sourceTree = "<group>"; };
+		A02BDF7F204FBDE500ECFDDA /* NDAreaWeekModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDAreaWeekModel.h; sourceTree = "<group>"; };
+		A02BDF80204FBDE500ECFDDA /* NDAreaWeekModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDAreaWeekModel.m; sourceTree = "<group>"; };
+		A02BDF82204FD9A400ECFDDA /* NDWeekLogListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDWeekLogListViewController.h; sourceTree = "<group>"; };
+		A02BDF83204FD9A400ECFDDA /* NDWeekLogListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDWeekLogListViewController.m; sourceTree = "<group>"; };
+		A02BDF84204FD9A400ECFDDA /* NDWeekLogListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDWeekLogListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +272,8 @@
 				189E42B7204E486600D3DF4B /* NDMonitorModel.m */,
 				68778F40204F7FAF005FA697 /* NDGarrisonModel.h */,
 				68778F41204F7FAF005FA697 /* NDGarrisonModel.m */,
+				A02BDF7F204FBDE500ECFDDA /* NDAreaWeekModel.h */,
+				A02BDF80204FBDE500ECFDDA /* NDAreaWeekModel.m */,
 			);
 			path = NDModel;
 			sourceTree = "<group>";
@@ -498,6 +513,12 @@
 				A025C170204E915500B1A5E5 /* NDAreaOfficerViewController.h */,
 				A025C171204E915500B1A5E5 /* NDAreaOfficerViewController.m */,
 				A025C172204E915500B1A5E5 /* NDAreaOfficerViewController.xib */,
+				A02BDF7A204FBD1100ECFDDA /* NDWeekLogUploadViewController.h */,
+				A02BDF7B204FBD1100ECFDDA /* NDWeekLogUploadViewController.m */,
+				A02BDF7C204FBD1100ECFDDA /* NDWeekLogUploadViewController.xib */,
+				A02BDF82204FD9A400ECFDDA /* NDWeekLogListViewController.h */,
+				A02BDF83204FD9A400ECFDDA /* NDWeekLogListViewController.m */,
+				A02BDF84204FD9A400ECFDDA /* NDWeekLogListViewController.xib */,
 			);
 			path = NDAreaOfficerModule;
 			sourceTree = "<group>";
@@ -586,6 +607,8 @@
 				18EB36E7204F7FAD008B66B8 /* NDLocationSettingViewController.xib in Resources */,
 				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
 				A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */,
+				A02BDF86204FD9A400ECFDDA /* NDWeekLogListViewController.xib in Resources */,
+				A02BDF7E204FBD1100ECFDDA /* NDWeekLogUploadViewController.xib in Resources */,
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
 				684210EF204E8C5900DC1BAD /* NDDailyListViewController.xib in Resources */,
 				68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */,
@@ -670,6 +693,7 @@
 				68D790A8204FC30900626671 /* NDRemarkInputCell.m in Sources */,
 				18A937A8204D467800E890E2 /* NDSettingCell.m in Sources */,
 				68778F42204F7FAF005FA697 /* NDGarrisonModel.m in Sources */,
+				A02BDF81204FBDE500ECFDDA /* NDAreaWeekModel.m in Sources */,
 				684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */,
 				68D790A4204FC2B900626671 /* NDTableViewCell.m in Sources */,
 				A025C16E204E900E00B1A5E5 /* NDLocationUtils.m in Sources */,
@@ -685,11 +709,13 @@
 				68A16290204F77260093D4FA /* NDMenuCell.m in Sources */,
 				189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */,
 				189E42B5204E482100D3DF4B /* NDMacroListModel.m in Sources */,
+				A02BDF85204FD9A400ECFDDA /* NDWeekLogListViewController.m in Sources */,
 				68DFE015204920230076B228 /* NDRouter.m in Sources */,
 				189E42BE204E49C100D3DF4B /* NSString+NDTimeString.m in Sources */,
 				18EB3702204FD8D8008B66B8 /* NDImagePickerUtils.m in Sources */,
 				18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */,
 				A025C173204E915500B1A5E5 /* NDAreaOfficerViewController.m in Sources */,
+				A02BDF7D204FBD1100ECFDDA /* NDWeekLogUploadViewController.m in Sources */,
 				18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */,
 				18EB36FE204FC73F008B66B8 /* NDMonitorCell.m in Sources */,
 				189E42C2204E6C8D00D3DF4B /* NDHomeCheckItemCell.m in Sources */,
