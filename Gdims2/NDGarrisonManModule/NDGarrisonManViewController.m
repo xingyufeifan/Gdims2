@@ -26,7 +26,7 @@
     self.btnVideoUpload.backgroundColor = [UIColor nd_tintColor];
     self.btnVideoUpload.layer.cornerRadius = 5;
     self.tblList.backgroundColor = [UIColor clearColor];
-    [self.tblList registerNib:[UINib nibWithNibName:@"ZXMenuCell" bundle:nil] forCellReuseIdentifier:@"ZXMenuCell"];
+    [self.tblList registerNib:[UINib nibWithNibName:@"NDMenuCell" bundle:nil] forCellReuseIdentifier:@"NDMenuCell"];
 }
 - (IBAction)videoUpload:(id)sender {
     

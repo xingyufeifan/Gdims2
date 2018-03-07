@@ -12,6 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NDDailyUploadViewController">
             <connections>
+                <outlet property="bottomControlView" destination="VhQ-AG-xI5" id="42q-OP-0WS"/>
+                <outlet property="bottomOffset" destination="EAQ-Gy-gcn" id="j1x-XF-SJa"/>
+                <outlet property="btnDelete" destination="Vgx-fp-GoU" id="QRL-lA-Qaa"/>
+                <outlet property="btnSave" destination="Y4F-ZN-etx" id="mUB-wP-alp"/>
+                <outlet property="btnUpload" destination="Y4F-ZN-etx" id="Kib-j7-whN"/>
+                <outlet property="tblList" destination="cCb-e9-c9y" id="dYT-I8-C8B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
