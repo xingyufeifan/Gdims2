@@ -143,6 +143,32 @@
     }];
 }
 
++(void)uploadLoactionWithLatitude:(NSString *)latitude
+                        longitude:(NSString *)longitude
+                            phone:(NSString *)phone
+                         userType:(NDUserType)type
+                       completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    NSString *url = NDAPI_Address(NDAPI_UPLAOD_LOCATION, NDApiCommonType);
+    if (type == NDUserTypeZS) {
+        url = NDAPI_Address(NDAPI_UPLAOD_LOCATION2, NDApiCommonType);
+    }else if(type == NDUserTypePQ){
+        url = NDAPI_Address(NDAPI_UPLAOD_LOCATION3, NDApiCommonType);
+    }
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"phone"] = phone ? phone : @"";
+    param[@"lon"] = longitude ? longitude : @"";
+    param[@"lat"] = latitude ? latitude : @"";
+    [NDNetwork asycnRequestWithURL:url params:param method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            completion(status, true, errorMsg);
+        } else {
+            if (completion) {
+                completion(status, false, errorMsg);
+            }
+        }
+    }];
+}
+
 + (NSString *)errorMessageBy:(NSInteger)code {
     switch (code) {
         case 900900:

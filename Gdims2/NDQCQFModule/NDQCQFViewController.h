@@ -9,5 +9,5 @@
 #import "NDViewController.h"
 
 @interface NDQCQFViewController : NDViewController
-
+@property (nonatomic, strong) CLLocation * location;
 @end

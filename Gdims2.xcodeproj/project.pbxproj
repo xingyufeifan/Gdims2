@@ -34,6 +34,8 @@
 		18A937A9204D467800E890E2 /* NDSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A937A7204D467800E890E2 /* NDSettingCell.xib */; };
 		18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A937B3204D48DF00E890E2 /* NDSettingHeaderCell.m */; };
 		18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A937B5204D490E00E890E2 /* NDSettingHeaderCell.xib */; };
+		18EB36E6204F7FAD008B66B8 /* NDLocationSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB36E4204F7FAD008B66B8 /* NDLocationSettingViewController.m */; };
+		18EB36E7204F7FAD008B66B8 /* NDLocationSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB36E5204F7FAD008B66B8 /* NDLocationSettingViewController.xib */; };
 		684210DF204E8BDC00DC1BAD /* NDGarrisonManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210DD204E8BDC00DC1BAD /* NDGarrisonManViewController.m */; };
 		684210E0204E8BDC00DC1BAD /* NDGarrisonManViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684210DE204E8BDC00DC1BAD /* NDGarrisonManViewController.xib */; };
 		684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210E2204E8C0A00DC1BAD /* NDDailyUploadViewController.m */; };
@@ -105,6 +107,9 @@
 		18A937B2204D48DF00E890E2 /* NDSettingHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSettingHeaderCell.h; sourceTree = "<group>"; };
 		18A937B3204D48DF00E890E2 /* NDSettingHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSettingHeaderCell.m; sourceTree = "<group>"; };
 		18A937B5204D490E00E890E2 /* NDSettingHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDSettingHeaderCell.xib; sourceTree = "<group>"; };
+		18EB36E3204F7FAD008B66B8 /* NDLocationSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDLocationSettingViewController.h; sourceTree = "<group>"; };
+		18EB36E4204F7FAD008B66B8 /* NDLocationSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDLocationSettingViewController.m; sourceTree = "<group>"; };
+		18EB36E5204F7FAD008B66B8 /* NDLocationSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDLocationSettingViewController.xib; sourceTree = "<group>"; };
 		26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gdims2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.debug.xcconfig"; sourceTree = "<group>"; };
 		684210DC204E8BDC00DC1BAD /* NDGarrisonManViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDGarrisonManViewController.h; sourceTree = "<group>"; };
@@ -225,6 +230,7 @@
 		18A9379E204D3D0800E890E2 /* NDSettingModule */ = {
 			isa = PBXGroup;
 			children = (
+				18EB36E2204F7F48008B66B8 /* NDLocationSetting */,
 				18A937A4204D465400E890E2 /* view */,
 				18A9379F204D3D4300E890E2 /* NDSettingViewController.h */,
 				18A937A0204D3D4300E890E2 /* NDSettingViewController.m */,
@@ -244,6 +250,16 @@
 				18A937B5204D490E00E890E2 /* NDSettingHeaderCell.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		18EB36E2204F7F48008B66B8 /* NDLocationSetting */ = {
+			isa = PBXGroup;
+			children = (
+				18EB36E3204F7FAD008B66B8 /* NDLocationSettingViewController.h */,
+				18EB36E4204F7FAD008B66B8 /* NDLocationSettingViewController.m */,
+				18EB36E5204F7FAD008B66B8 /* NDLocationSettingViewController.xib */,
+			);
+			path = NDLocationSetting;
 			sourceTree = "<group>";
 		};
 		3C911B0272553A5D0EEA65B6 /* Pods */ = {
@@ -442,6 +458,7 @@
 				68CCFF4E2047E6F1002E72D0 /* LaunchScreen.storyboard in Resources */,
 				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
 				684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */,
+				18EB36E7204F7FAD008B66B8 /* NDLocationSettingViewController.xib in Resources */,
 				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
 				A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */,
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
@@ -528,6 +545,7 @@
 				684210E9204E8C3B00DC1BAD /* NDDisasterUploadViewController.m in Sources */,
 				189E42B0204E3D7100D3DF4B /* NDHomeListHeader.m in Sources */,
 				68DFE01120491FC50076B228 /* NDLoginViewController.m in Sources */,
+				18EB36E6204F7FAD008B66B8 /* NDLocationSettingViewController.m in Sources */,
 				18A9378E204CDCE200E890E2 /* NDRequestApi.m in Sources */,
 				68CCFF492047E6F1002E72D0 /* Gdims2.xcdatamodeld in Sources */,
 				189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */,
@@ -676,7 +694,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X75YXM4C3;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = /Users/baohongyan/IOSProjects/Gdims2/Gdims2/NDPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
 				INFOPLIST_FILE = Gdims2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -694,7 +712,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X75YXM4C3;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = /Users/baohongyan/IOSProjects/Gdims2/Gdims2/NDPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
 				INFOPLIST_FILE = Gdims2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -10,16 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
-            <connections>
-                <outlet property="backContent" destination="sJz-SC-UY0" id="BHg-06-ng0"/>
-                <outlet property="imgArrow" destination="Zvf-vS-MC8" id="u92-TR-uv7"/>
-                <outlet property="lblDisName" destination="K5g-zf-Wbh" id="rjj-Bd-hKO"/>
-                <outlet property="lblDisType" destination="w5n-Ql-GBr" id="7pA-hU-doy"/>
-                <outlet property="lblLatitude" destination="oaC-yx-QnP" id="EUc-MB-z16"/>
-                <outlet property="lblLongitude" destination="ajR-O0-3O0" id="JrN-Zh-PMk"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="AQY-Wd-PSW" userLabel="HomeListHeader" customClass="NDHomeListHeader">
             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
@@ -149,6 +140,14 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Fce-jo-MMR"/>
+            <connections>
+                <outlet property="backContent" destination="sJz-SC-UY0" id="m9G-Lh-3UV"/>
+                <outlet property="imgArrow" destination="Zvf-vS-MC8" id="TdU-Ge-7VT"/>
+                <outlet property="lblDisName" destination="K5g-zf-Wbh" id="vWP-8m-1L0"/>
+                <outlet property="lblDisType" destination="w5n-Ql-GBr" id="yAT-2I-AZs"/>
+                <outlet property="lblLatitude" destination="oaC-yx-QnP" id="Glw-Mb-96M"/>
+                <outlet property="lblLongitude" destination="ajR-O0-3O0" id="onk-EP-Tts"/>
+            </connections>
             <point key="canvasLocation" x="-45.5" y="-22"/>
         </view>
     </objects>
