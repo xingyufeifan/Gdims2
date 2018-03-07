@@ -8,11 +8,12 @@
 
 #import "NDDailyUploadViewController.h"
 #import "NDGarrisonModel.h"
-#import "NDRemarkInputCell.h"
 #import "NDSingleTextHeader.h"
+#import "NDMonitorCell.h"
+#import "NDRemarkInputCell.h"
 
 @interface NDDailyUploadViewController ()
-<UITableViewDelegate,UITableViewDataSource>
+<UITableViewDelegate,UITableViewDataSource,NDMonitorCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tblList;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomOffset;
 @property (weak, nonatomic) IBOutlet UIView *bottomControlView;
@@ -36,7 +37,7 @@
     self.btnSave.layer.cornerRadius = 5;
     
     [self.tblList setBackgroundColor:[UIColor nd_backgroundColor]];
-    [self.tblList registerNib:[UINib nibWithNibName:@"ZXMonitorCell" bundle:nil] forCellReuseIdentifier:@"ZXMonitorCell"];
+    [self.tblList registerNib:[UINib nibWithNibName:@"NDMonitorCell" bundle:nil] forCellReuseIdentifier:@"NDMonitorCell"];
     [self.tblList registerNib:[UINib nibWithNibName:@"NDRemarkInputCell" bundle:nil] forCellReuseIdentifier:@"NDRemarkInputCell"];
     [self.tblList registerNib:[UINib nibWithNibName:@"NDSingleTextHeader" bundle:nil] forHeaderFooterViewReuseIdentifier:@"NDSingleTextHeader"];
     
@@ -125,7 +126,196 @@
     }
 }
 
+#pragma mark - UITabbleView
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+            return 50;
+            break;
+        case 1:
+            return 130;
+            break;
+        case 2:
+            return 70;
+            break;
+        default:
+            break;
+    }
+    return 0;
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return 30;
+            break;
+        case 1:
+            return 50;
+            break;
+        case 2:
+            return 50;
+            break;
+        default:
+            break;
+    }
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return 3;
+            break;
+        case 1:
+            return 1;
+            break;
+        case 2:
+            return 1;
+            break;
+        default:
+            break;
+    }
+    return 0;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0:
+        {
+            NDMonitorCell * cell = [self.tblList dequeueReusableCellWithIdentifier:@"NDMonitorCell" forIndexPath:indexPath];
+            cell.delegate = self;
+            switch (indexPath.row) {
+                case 0:
+                    if (self.type == NDDailyVCTypeRemoteReview) {
+                        [cell reloadLeftText:@"记录人员:" rightText:self.model.user_name type:NDMonitorCellTypeLRLabel];
+                        
+                    } else {
+                        [cell reloadLeftText:@"记录人员:" rightText:self.model.user_name type:NDMonitorCellTypeTextField];
+                        
+                    }
+                    break;
+                case 1:
+                    if (self.type == NDDailyVCTypeRemoteReview) {
+                        [cell reloadLeftText:@"工作类型:" rightText:self.model.work_type type:NDMonitorCellTypeLRLabel];
+                    } else {
+                        [cell reloadLeftText:@"工作类型:" rightText:self.model.work_type type:NDMonitorCellTypeTextField];
+                    }
+                    break;
+                case 2:
+                    if (self.type == NDDailyVCTypeRemoteReview) {
+                        [cell reloadLeftText:@"在岗情况:" rightText:self.model.situation type:NDMonitorCellTypeLRLabel];
+                    } else {
+                        [cell reloadLeftText:@"在岗情况:" rightText:self.model.situation type:NDMonitorCellTypeTextField];
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return cell;
+        }
+            break;
+        case 1:
+        {
+            NDRemarkInputCell * cell = [self.tblList dequeueReusableCellWithIdentifier:@"NDRemarkInputCell" forIndexPath:indexPath];
+            cell.delegate = self;
+            cell.txtContent.text = self.model.log_content;
+            if (self.type == NDDailyVCTypeRemoteReview) {
+                [cell.txtContent setEditable:false];
+            } else {
+                [cell.txtContent setEditable:true];
+            }
+            return cell;
+        }
+            break;
+            
+        case 2:
+        {
+            NDRemarkInputCell * cell = [self.tblList dequeueReusableCellWithIdentifier:@"NDRemarkInputCell" forIndexPath:indexPath];
+            cell.txtContent.text = self.model.remarks;
+            cell.delegate = self;
+            if (self.type == NDDailyVCTypeRemoteReview) {
+                [cell.txtContent setEditable:false];
+            } else {
+                [cell.txtContent setEditable:true];
+            }
+            return cell;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    return [[UITableViewCell alloc] init];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NDSingleTextHeader * header = [self.tblList dequeueReusableHeaderFooterViewWithIdentifier:@"NDSingleTextHeader"];
+    header.lbText.textAlignment = NSTextAlignmentLeft;
+    header.lbText.font = [UIFont systemFontOfSize:16];
+    [header.lbLine setHidden:true];
+    switch (section) {
+        case 0:
+            [header.lbLine setHidden:false];
+            header.lbText.textAlignment = NSTextAlignmentRight;
+            header.lbText.font = [UIFont systemFontOfSize:12];
+            header.lbText.text = [NSString stringWithFormat:@"记录时间: %@",self.model.record_time];
+            break;
+        case 1:
+            header.lbText.text = @"日志类容";
+            break;
+        case 2:
+            header.lbText.text = @"备注";
+            break;
+        default:
+            break;
+    }
+    return header;
+}
+
+#pragma mark -
+- (void)ndMonitorCell:(UITableViewCell *)cell inputDoneWtih:(NSString *)text {
+    NSIndexPath * indexPath = [self.tblList indexPathForCell:cell];
+    if ([cell isKindOfClass:[NDMonitorCell class]]) {
+        if (indexPath.section == 0) {
+            switch (indexPath.row) {
+                case 0://记录人员
+                {
+                    self.model.user_name = text;
+                    self.memberInfo.user_name = text;
+                }
+                    break;
+                case 1://工作类型
+                {
+                    self.model.work_type = text;
+                    self.memberInfo.work_type = text;
+                }
+                    break;
+                case 2://在岗情况
+                {
+                    self.model.situation = text;
+                    self.memberInfo.situation = text;
+                }
+                    break;
+                default:
+                    break;
+            }
+        }
+    } else if ([cell isKindOfClass:[NDRemarkInputCell class]]) {
+        if (indexPath.section == 1) {//日报
+            self.model.log_content = text;
+        } else if (indexPath.section == 2) {//备注
+            self.model.remarks = text;
+        }
+    }
+}
 
 @end

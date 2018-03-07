@@ -35,7 +35,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case 0:
-      
+        {
+            NDDailyUploadViewController * dailyUploadVC = [[NDDailyUploadViewController alloc] init];
+            dailyUploadVC.model = nil;
+            dailyUploadVC.type = NDDailyVCTypeUpload;
+            [self.navigationController pushViewController:dailyUploadVC animated:true];
+        }
             break;
         case 1:
         {

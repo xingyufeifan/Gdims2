@@ -142,6 +142,12 @@
     }
     return _settingVC;
 }
+-(NDGarrisonManViewController *)garrisonManModule{
+    if (_garrisonManModule == nil) {
+        _garrisonManModule = [[NDGarrisonManViewController alloc] init];
+    }
+    return _garrisonManModule;
+}
 -(void)leftMenuButtonAction{
     [self presentViewController:self.settingVC animated:YES completion:nil];
 }
