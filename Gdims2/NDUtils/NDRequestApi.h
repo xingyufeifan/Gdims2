@@ -54,4 +54,19 @@ typedef enum: NSUInteger{
 + (void)getMonitorListByMobile:(NSString *)mobile
                           userType:(NDUserType)type
                     completion:(void(^)(BOOL success,NSArray<NDMonitorModel *> * list,NSString * errorMsg))completion;
+
+/**
+ 上传定位
+ 
+ @param latitude latitude description
+ @param longitude longitude description
+ @param phone phone description
+ @param type 用户类型不一样，接口地址不一样
+ @param completion completion description
+ */
++ (void)uploadLoactionWithLatitude:(NSString *)latitude
+                         longitude:(NSString *)longitude
+                             phone:(NSString *)phone
+                          userType:(NDUserType)type
+                        completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
 @end
