@@ -27,8 +27,8 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <outlet property="dataSource" destination="i5M-Pr-FkT" id="wdK-IN-5dX"/>
-                        <outlet property="delegate" destination="i5M-Pr-FkT" id="fCI-CZ-vBk"/>
+                        <outlet property="dataSource" destination="-1" id="jJ7-sG-1q9"/>
+                        <outlet property="delegate" destination="-1" id="WPS-yw-9Rc"/>
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJI-LU-QNw">
@@ -57,7 +57,7 @@
                 <constraint firstItem="ZEs-wn-BVl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uXa-8m-euE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="-225" y="-421"/>
         </view>
     </objects>
 </document>

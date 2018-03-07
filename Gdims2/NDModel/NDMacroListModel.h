@@ -25,7 +25,7 @@
 
 @end
 
-@interface ZXMacroModel : NSObject
+@interface NDMacroModel : NSObject
 @property (nonatomic, assign)   BOOL checked;//是否异常
 @property (nonatomic, copy)     NSString * name;
 @property (nonatomic, copy)     NSString * imageFileName;

@@ -10,6 +10,7 @@
 #import <MJExtension/MJExtension.h>
 #import "NDMacroListModel.h"
 #import "NDMonitorModel.h"
+#import "NDGarrisonModel.h"
 @implementation NDRequestApi
 +(void)loginWithMobile:(NSString *)mobile userType:(NDUserType)type completion:(void (^)(BOOL, NSString *))completion{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -138,6 +139,61 @@
                     errorMsg =  @"获取电话号码失败";
                 }
                 completion(false, errorMsg);
+            }
+        }
+    }];
+}
+
++(void)uploadLoactionWithLatitude:(NSString *)latitude
+                        longitude:(NSString *)longitude
+                            phone:(NSString *)phone
+                         userType:(NDUserType)type
+                       completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    NSString *url = NDAPI_Address(NDAPI_UPLAOD_LOCATION, NDApiCommonType);
+    if (type == NDUserTypeZS) {
+        url = NDAPI_Address(NDAPI_UPLAOD_LOCATION2, NDApiCommonType);
+    }else if(type == NDUserTypePQ){
+        url = NDAPI_Address(NDAPI_UPLAOD_LOCATION3, NDApiCommonType);
+    }
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"phone"] = phone ? phone : @"";
+    param[@"lon"] = longitude ? longitude : @"";
+    param[@"lat"] = latitude ? latitude : @"";
+    [NDNetwork asycnRequestWithURL:url params:param method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            completion(status, true, errorMsg);
+        } else {
+            if (completion) {
+                completion(status, false, errorMsg);
+            }
+        }
+    }];
+}
+
++ (void)garrison_SaveDailyByName:(NSString *)userName
+                        workType:(NSString *)workType
+                       situation:(NSString *)situation
+                      logContent:(NSString *)logContent
+                          remark:(NSString *)remark
+                      recordTime:(NSString *)recordTime
+                        phoneNum:(NSString *)phoneNum
+                      completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    NSMutableDictionary * dicP = [NSMutableDictionary dictionary];
+    [dicP setObject:userName ? : @"" forKey:@"userName"];
+    [dicP setObject:workType ? : @"" forKey:@"workType"];
+    [dicP setObject:situation ? : @"" forKey:@"situation"];
+    [dicP setObject:logContent ? : @"" forKey:@"logContent"];
+    [dicP setObject:remark ? : @"" forKey:@"remarks"];
+    [dicP setObject:recordTime ? : @"" forKey:@"recordTime"];
+    [dicP setObject:phoneNum ? : @"" forKey:@"phoneNum"];
+    [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_GARRISON_SAVE_DAILY, NDApiTypeLog) params:dicP method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            if (completion) {
+                completion(status,true,@"");
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
             }
         }
     }];

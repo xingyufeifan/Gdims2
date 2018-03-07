@@ -28,7 +28,7 @@
 }
 @end
 
-@implementation ZXMacroModel
+@implementation NDMacroModel
 
 
 - (void)loadCache {

@@ -12,6 +12,7 @@
 #import "NDSlideInAnimationController.h"
 #import "NDSlideOutAnimationController.h"
 #import "NDDimmingPresentaionController.h"
+#import "NDLocationSettingViewController.h"
 @interface NDSettingViewController ()<UIViewControllerTransitioningDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *lblAccount;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -123,7 +124,11 @@
                         
                         break;
                     case 2://定位设置
-                        
+                    {
+                        NDLocationSettingViewController *locationController = [[NDLocationSettingViewController alloc] init];
+                        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:locationController];
+                        [self presentViewController:nvc animated:YES completion:nil];
+                    }
                         break;
                     default:
                         break;

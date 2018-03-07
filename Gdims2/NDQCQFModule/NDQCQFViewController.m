@@ -152,7 +152,44 @@
 }
 #pragma mark tableView代理方法
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 100;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+#pragma mark - NDHeaderDelegate
+- (void)ndHomeListHeader:(NDHomeListHeader *)header tappedAt:(NSInteger)index {
+    if (self.tapIndex == -1) {
+        self.tapIndex = index;
+    } else {
+        if (self.tapIndex != index) {
+            NDMacroListModel * model = self.arrMacroList[self.tapIndex];
+            model.zxExand = false;
+        }
+        self.tapIndex = index;
+    }
+    [self.tableView reloadData];
+    
+}
+#pragma mark - NDHomeCheckHeaderDelegate填报
+- (void)ndHomeCheckItemCellReportAction:(NDHomeCheckItemCell *)cell{
+    
+}
+#pragma mark - NDHomeCheckHeaderDelegate查看
+- (void)ndHomeCheckItemCellReviewAction:(NDHomeCheckItemCell *)cell{
+    
+}
+//#pragma mark - ZXSettingDelegate
+//
+//- (void)zxSettingViewControllerDismissed {
+//    [self setNeedsStatusBarAppearanceUpdate];
+//}
 
 
 

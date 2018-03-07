@@ -36,6 +36,22 @@
             rootVC = [[NDNavigationController alloc] initWithRootViewController:home];
         }
             break;
+        case NDRouterTypePQ:
+        {
+            [[NDUserInfo sharedInstance] setType:NDUserTypePQ];
+            NDHomePageViewController *home = [[NDHomePageViewController alloc] init];
+            home.routerType = type;
+            rootVC = [[NDNavigationController alloc] initWithRootViewController:home];
+        }
+            break;
+        case NDRouterTypeZS:
+        {
+            [[NDUserInfo sharedInstance] setType:NDUserTypeZS];
+            NDHomePageViewController *home = [[NDHomePageViewController alloc] init];
+            home.routerType = type;
+            rootVC = [[NDNavigationController alloc] initWithRootViewController:home];
+        }
+            break;
         default:
             break;
     }
