@@ -20,7 +20,7 @@
 #import "NDFileUtils.h"
 #import "NDLocationUtils.h"
 #import "NDAlertUtils.h"
-
+#import "NDImagePickerUtils.h"
 #import <MJExtension/MJExtension.h>
 #import <MJRefresh/MJRefresh.h>
 #endif /* NDPrefixHeader_pch */

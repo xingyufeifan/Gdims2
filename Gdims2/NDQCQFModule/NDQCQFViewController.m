@@ -11,6 +11,7 @@
 #import "NDHomeCheckItemCell.h"
 #import "NDMacroListModel.h"
 #import "NDMonitorModel.h"
+#import "NDMonitorUploadViewController.h"
 #import <MJRefresh/MJRefresh.h>
 @interface NDQCQFViewController ()<UITableViewDelegate,UITableViewDataSource,NDHomeListHeaderDelegate,NDHomeCheckItemCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -179,7 +180,23 @@
 }
 #pragma mark - NDHomeCheckHeaderDelegate填报
 - (void)ndHomeCheckItemCellReportAction:(NDHomeCheckItemCell *)cell{
-    
+    NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
+    if (indexPath.row == 0) {//宏观观测
+//        ZXMacroUploadViewController * macroUpload = [[ZXMacroUploadViewController alloc] init];
+//        macroUpload.location = self.location;
+//        macroUpload.listModel = self.arrMacroList[indexPath.section];
+//        [self.navigationController pushViewController:macroUpload animated:true];
+    } else {//定量监测
+        NSInteger index = indexPath.row - 1;
+        if (index >= 0) {
+            NDMacroListModel * model = self.arrMacroList[indexPath.section];
+            NDMonitorUploadViewController * monitorUpload = [[NDMonitorUploadViewController alloc] init];
+            monitorUpload.location = self.location;
+            monitorUpload.macroModel = model;
+            monitorUpload.monitorModel = model.monitorList[index];
+            [self.navigationController pushViewController:monitorUpload animated:true];
+        }
+    }
 }
 #pragma mark - NDHomeCheckHeaderDelegate查看
 - (void)ndHomeCheckItemCellReviewAction:(NDHomeCheckItemCell *)cell{

@@ -7,7 +7,10 @@
 //
 
 #import "NDViewController.h"
-
+@class NDMacroListModel;
+@class NDMonitorModel;
 @interface NDMonitorUploadViewController : NDViewController
-
+@property (nonatomic, strong) CLLocation * location;
+@property (nonatomic, strong) NDMacroListModel * macroModel;
+@property (nonatomic, strong) NDMonitorModel * monitorModel;
 @end
