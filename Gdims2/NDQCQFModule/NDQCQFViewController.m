@@ -164,7 +164,7 @@
     return CGFLOAT_MIN;
 }
 #pragma mark - NDHeaderDelegate
--(void)ndHomeListHeader:(NDHomeListHeader *)header tappedAt:(NSInteger)index {
+- (void)ndHomeListHeader:(NDHomeListHeader *)header tappedAt:(NSInteger)index {
     if (self.tapIndex == -1) {
         self.tapIndex = index;
     } else {
@@ -177,7 +177,14 @@
     [self.tableView reloadData];
     
 }
-#pragma mark - ZXHeaderDelegate
+#pragma mark - NDHomeCheckHeaderDelegate填报
+- (void)ndHomeCheckItemCellReportAction:(NDHomeCheckItemCell *)cell{
+    
+}
+#pragma mark - NDHomeCheckHeaderDelegate查看
+- (void)ndHomeCheckItemCellReviewAction:(NDHomeCheckItemCell *)cell{
+    
+}
 //#pragma mark - ZXSettingDelegate
 //
 //- (void)zxSettingViewControllerDismissed {

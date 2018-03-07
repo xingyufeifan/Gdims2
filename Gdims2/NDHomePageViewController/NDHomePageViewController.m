@@ -8,12 +8,16 @@
 
 #import "NDHomePageViewController.h"
 #import "NDQCQFViewController.h"
+#import "NDAreaOfficerViewController.h"
+#import "NDGarrisonManViewController.h"
 #import "NDSettingViewController.h"
 #import "NDLocationSettingViewController.h"
 @interface NDHomePageViewController ()<NDSettingDelegate>
 @property (nonatomic, strong) CLLocation * location;
 @property (nonatomic, strong) NSTimer * timer;
 @property(nonatomic,strong) NDQCQFViewController *qcqfModule;
+@property(nonatomic,strong) NDAreaOfficerViewController *areaOfficeModule;
+@property(nonatomic,strong) NDGarrisonManViewController *garrisonManModule;
 @property(nonatomic,strong) NDSettingViewController *settingVC;
 @end
 
@@ -36,7 +40,16 @@
             [self addChildViewController:self.qcqfModule];
             [self.view addSubview:self.qcqfModule.view];
             break;
-            
+        case NDRouterTypePQ:
+            self.title =@"片区专管员";
+            [self addChildViewController:self.areaOfficeModule];
+            [self.view addSubview:self.areaOfficeModule.view];
+            break;
+        case NDRouterTypeZS:
+            self.title =@"驻守人员";
+            [self addChildViewController:self.garrisonManModule];
+            [self.view addSubview:self.garrisonManModule.view];
+            break;
         default:
             break;
     }
@@ -107,15 +120,13 @@
     if (_qcqfModule) {
         _qcqfModule.view.frame = oFrame;
     }
-//    if (_garrisonModule) {
-//        _garrisonModule.view.frame = oFrame;
-//    }
-//    if (_areaOfficerModule) {
-//        _areaOfficerModule.view.frame = oFrame;
-//    }
-//    if (_groundStationModule) {
-//        _groundStationModule.view.frame = oFrame;
-//    }
+    if (_garrisonManModule) {
+        _garrisonManModule.view.frame = oFrame;
+    }
+    if (_areaOfficeModule) {
+        _areaOfficeModule.view.frame = oFrame;
+    }
+    
 }
 
 -(NDQCQFViewController *)qcqfModule{
