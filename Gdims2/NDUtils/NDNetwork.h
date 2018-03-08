@@ -44,4 +44,24 @@ typedef void(^NDRequestCompletion)(id content,NSInteger status,BOOL success,NSSt
                                        params:(NSDictionary *)params
                                        method:(NDRequestMethodType)method
                                  NDCompletion:(NDRequestCompletion)zxCompletion;
+
+/**
+ 图片文件上传
+ 
+ @param resourceURL     资源接口地址
+ @param images          图片数组
+ @param fileNames       图片名称
+ @param name            接口字段名称（部分服务器框架要求保持一致）
+ @param qulity          压缩图片质量 0~1 0 最大压缩 1 不压缩
+ @param params          其他接口参数
+ @param completion    请求完成回调
+ @return return value description
+ */
++ (NSURLSessionDataTask *)uploadImageToResourceURL:(NSString *)resourceURL
+                                            images:(NSArray *)images
+                                         fileNames:(NSArray<NSString *> *)fileNames
+                                              name:(NSString *)name
+                                    compressQulity:(float)qulity
+                                            params:(NSDictionary *)params
+                                    NDCompletion:(NDRequestCompletion)completion;
 @end

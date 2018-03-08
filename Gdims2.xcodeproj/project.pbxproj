@@ -48,6 +48,15 @@
 		18EB3705204FDA68008B66B8 /* UIImage+ND.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB3704204FDA68008B66B8 /* UIImage+ND.m */; };
 		18EB3709204FF30D008B66B8 /* NDDailyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB3707204FF30D008B66B8 /* NDDailyListCell.m */; };
 		18EB370A204FF30D008B66B8 /* NDDailyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB3708204FF30D008B66B8 /* NDDailyListCell.xib */; };
+		68393F8E2050C5DA005B091E /* NDSingleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68393F8C2050C5DA005B091E /* NDSingleImageCell.m */; };
+		68393F8F2050C5DA005B091E /* NDSingleImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68393F8D2050C5DA005B091E /* NDSingleImageCell.xib */; };
+		68393F932050C617005B091E /* NDImageCheckCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68393F912050C617005B091E /* NDImageCheckCollectionViewCell.m */; };
+		68393F942050C617005B091E /* NDImageCheckCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68393F922050C617005B091E /* NDImageCheckCollectionViewCell.xib */; };
+		68393F982050CB58005B091E /* NDUnSafeHouseNumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68393F952050CB58005B091E /* NDUnSafeHouseNumCell.m */; };
+		68393F992050CB58005B091E /* NDUnSafeHouseNumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68393F962050CB58005B091E /* NDUnSafeHouseNumCell.xib */; };
+		68393F9D2050CDF9005B091E /* NDDateCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68393F9B2050CDF9005B091E /* NDDateCheckViewController.m */; };
+		68393F9E2050CDF9005B091E /* NDDateCheckViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68393F9C2050CDF9005B091E /* NDDateCheckViewController.xib */; };
+		68393FA12050D016005B091E /* NSDate+ND.m in Sources */ = {isa = PBXBuildFile; fileRef = 68393FA02050D016005B091E /* NSDate+ND.m */; };
 		684210DF204E8BDC00DC1BAD /* NDGarrisonManViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210DD204E8BDC00DC1BAD /* NDGarrisonManViewController.m */; };
 		684210E0204E8BDC00DC1BAD /* NDGarrisonManViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 684210DE204E8BDC00DC1BAD /* NDGarrisonManViewController.xib */; };
 		684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684210E2204E8C0A00DC1BAD /* NDDailyUploadViewController.m */; };
@@ -157,6 +166,20 @@
 		18EB3708204FF30D008B66B8 /* NDDailyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDDailyListCell.xib; sourceTree = "<group>"; };
 		26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gdims2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.debug.xcconfig"; sourceTree = "<group>"; };
+		68393F8B2050C5DA005B091E /* NDSingleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSingleImageCell.h; sourceTree = "<group>"; };
+		68393F8C2050C5DA005B091E /* NDSingleImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSingleImageCell.m; sourceTree = "<group>"; };
+		68393F8D2050C5DA005B091E /* NDSingleImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDSingleImageCell.xib; sourceTree = "<group>"; };
+		68393F902050C617005B091E /* NDImageCheckCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDImageCheckCollectionViewCell.h; sourceTree = "<group>"; };
+		68393F912050C617005B091E /* NDImageCheckCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDImageCheckCollectionViewCell.m; sourceTree = "<group>"; };
+		68393F922050C617005B091E /* NDImageCheckCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDImageCheckCollectionViewCell.xib; sourceTree = "<group>"; };
+		68393F952050CB58005B091E /* NDUnSafeHouseNumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDUnSafeHouseNumCell.m; sourceTree = "<group>"; };
+		68393F962050CB58005B091E /* NDUnSafeHouseNumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDUnSafeHouseNumCell.xib; sourceTree = "<group>"; };
+		68393F972050CB58005B091E /* NDUnSafeHouseNumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDUnSafeHouseNumCell.h; sourceTree = "<group>"; };
+		68393F9A2050CDF9005B091E /* NDDateCheckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDDateCheckViewController.h; sourceTree = "<group>"; };
+		68393F9B2050CDF9005B091E /* NDDateCheckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDDateCheckViewController.m; sourceTree = "<group>"; };
+		68393F9C2050CDF9005B091E /* NDDateCheckViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDDateCheckViewController.xib; sourceTree = "<group>"; };
+		68393F9F2050D016005B091E /* NSDate+ND.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+ND.h"; sourceTree = "<group>"; };
+		68393FA02050D016005B091E /* NSDate+ND.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ND.m"; sourceTree = "<group>"; };
 		684210DC204E8BDC00DC1BAD /* NDGarrisonManViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDGarrisonManViewController.h; sourceTree = "<group>"; };
 		684210DD204E8BDC00DC1BAD /* NDGarrisonManViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDGarrisonManViewController.m; sourceTree = "<group>"; };
 		684210DE204E8BDC00DC1BAD /* NDGarrisonManViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDGarrisonManViewController.xib; sourceTree = "<group>"; };
@@ -243,6 +266,11 @@
 				68D790A3204FC2B900626671 /* NDTableViewCell.m */,
 				18EB3703204FDA68008B66B8 /* UIImage+ND.h */,
 				18EB3704204FDA68008B66B8 /* UIImage+ND.m */,
+				68393F9A2050CDF9005B091E /* NDDateCheckViewController.h */,
+				68393F9B2050CDF9005B091E /* NDDateCheckViewController.m */,
+				68393F9C2050CDF9005B091E /* NDDateCheckViewController.xib */,
+				68393F9F2050D016005B091E /* NSDate+ND.h */,
+				68393FA02050D016005B091E /* NSDate+ND.m */,
 			);
 			path = NDCommon;
 			sourceTree = "<group>";
@@ -414,6 +442,9 @@
 		68A1628C204F76D80093D4FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				68393F972050CB58005B091E /* NDUnSafeHouseNumCell.h */,
+				68393F952050CB58005B091E /* NDUnSafeHouseNumCell.m */,
+				68393F962050CB58005B091E /* NDUnSafeHouseNumCell.xib */,
 				18EB3706204FF30D008B66B8 /* NDDailyListCell.h */,
 				18EB3707204FF30D008B66B8 /* NDDailyListCell.m */,
 				18EB3708204FF30D008B66B8 /* NDDailyListCell.xib */,
@@ -426,6 +457,12 @@
 				68D790AD204FC7E200626671 /* NDSingleTextHeader.h */,
 				68D790AE204FC7E200626671 /* NDSingleTextHeader.m */,
 				68D790B0204FC7FD00626671 /* NDSingleTextHeader.xib */,
+				68393F8B2050C5DA005B091E /* NDSingleImageCell.h */,
+				68393F8C2050C5DA005B091E /* NDSingleImageCell.m */,
+				68393F8D2050C5DA005B091E /* NDSingleImageCell.xib */,
+				68393F902050C617005B091E /* NDImageCheckCollectionViewCell.h */,
+				68393F912050C617005B091E /* NDImageCheckCollectionViewCell.m */,
+				68393F922050C617005B091E /* NDImageCheckCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -606,6 +643,7 @@
 				18A937A3204D3D4300E890E2 /* NDSettingViewController.xib in Resources */,
 				684210E0204E8BDC00DC1BAD /* NDGarrisonManViewController.xib in Resources */,
 				18A937A9204D467800E890E2 /* NDSettingCell.xib in Resources */,
+				68393F8F2050C5DA005B091E /* NDSingleImageCell.xib in Resources */,
 				68CCFF4E2047E6F1002E72D0 /* LaunchScreen.storyboard in Resources */,
 				18EB36FF204FC73F008B66B8 /* NDMonitorCell.xib in Resources */,
 				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
@@ -613,13 +651,16 @@
 				68A16291204F77260093D4FA /* NDMenuCell.xib in Resources */,
 				684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */,
 				18EB36E7204F7FAD008B66B8 /* NDLocationSettingViewController.xib in Resources */,
+				68393F9E2050CDF9005B091E /* NDDateCheckViewController.xib in Resources */,
 				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
 				A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */,
 				A02BDF86204FD9A400ECFDDA /* NDWeekLogListViewController.xib in Resources */,
 				18EB370A204FF30D008B66B8 /* NDDailyListCell.xib in Resources */,
 				A02BDF7E204FBD1100ECFDDA /* NDWeekLogUploadViewController.xib in Resources */,
+				68393F942050C617005B091E /* NDImageCheckCollectionViewCell.xib in Resources */,
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
 				684210EF204E8C5900DC1BAD /* NDDailyListViewController.xib in Resources */,
+				68393F992050CB58005B091E /* NDUnSafeHouseNumCell.xib in Resources */,
 				68CCFF4B2047E6F1002E72D0 /* Assets.xcassets in Resources */,
 				18EB36F9204FC4DA008B66B8 /* NDMonitorUploadViewController.xib in Resources */,
 				189E42C3204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib in Resources */,
@@ -704,10 +745,13 @@
 				68778F42204F7FAF005FA697 /* NDGarrisonModel.m in Sources */,
 				A02BDF81204FBDE500ECFDDA /* NDAreaWeekModel.m in Sources */,
 				684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */,
+				68393F8E2050C5DA005B091E /* NDSingleImageCell.m in Sources */,
 				68D790A4204FC2B900626671 /* NDTableViewCell.m in Sources */,
 				A025C16E204E900E00B1A5E5 /* NDLocationUtils.m in Sources */,
+				68393FA12050D016005B091E /* NSDate+ND.m in Sources */,
 				189E42B8204E486600D3DF4B /* NDMonitorModel.m in Sources */,
 				18EB36EC204F8E2A008B66B8 /* NDMacroUploadViewController.m in Sources */,
+				68393F932050C617005B091E /* NDImageCheckCollectionViewCell.m in Sources */,
 				189E42AC204E1FAA00D3DF4B /* NDDimmingPresentaionController.m in Sources */,
 				684210E9204E8C3B00DC1BAD /* NDDisasterUploadViewController.m in Sources */,
 				189E42B0204E3D7100D3DF4B /* NDHomeListHeader.m in Sources */,
@@ -718,6 +762,7 @@
 				68A16290204F77260093D4FA /* NDMenuCell.m in Sources */,
 				189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */,
 				189E42B5204E482100D3DF4B /* NDMacroListModel.m in Sources */,
+				68393F9D2050CDF9005B091E /* NDDateCheckViewController.m in Sources */,
 				A02BDF85204FD9A400ECFDDA /* NDWeekLogListViewController.m in Sources */,
 				68DFE015204920230076B228 /* NDRouter.m in Sources */,
 				189E42BE204E49C100D3DF4B /* NSString+NDTimeString.m in Sources */,
@@ -733,6 +778,7 @@
 				68D790AF204FC7E200626671 /* NDSingleTextHeader.m in Sources */,
 				68CCFF512047E6F1002E72D0 /* main.m in Sources */,
 				18A93797204D2ACC00E890E2 /* NDHomePageViewController.m in Sources */,
+				68393F982050CB58005B091E /* NDUnSafeHouseNumCell.m in Sources */,
 				18A93793204D263400E890E2 /* NDViewController.m in Sources */,
 				18EB36F8204FC4DA008B66B8 /* NDMonitorUploadViewController.m in Sources */,
 				189E42A9204E1F8500D3DF4B /* NDSlideOutAnimationController.m in Sources */,
@@ -870,7 +916,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X75YXM4C3;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/qingsong/xcode/Gdims2/Gdims2/NDPrefixHeader.pch;
 				INFOPLIST_FILE = Gdims2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -888,7 +934,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X75YXM4C3;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/qingsong/xcode/Gdims2/Gdims2/NDPrefixHeader.pch;
 				INFOPLIST_FILE = Gdims2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

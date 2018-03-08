@@ -170,6 +170,65 @@
     }];
 }
 
++ (void)garrison_SaveDisaterByName:(NSString *)userName
+                          userType:(NDUserType)type
+                          phoneNum:(NSString *)phoneNum
+                        happenTime:(NSString *)happenTime
+                          township:(NSString *)township
+                           village:(NSString *)village
+                             group:(NSString *)group
+                       disasterNum:(NSString *)disasterNum
+                            dieNum:(NSString *)dieNum
+                        missingNum:(NSString *)missingNum
+                        injuredNum:(NSString *)injuredNum
+                          houseNum:(NSString *)houseNum
+                         peopleNum:(NSString *)peopleNum
+                             notes:(NSString *)notes
+                            images:(NSArray<UIImage *> *)images
+                         fileNames:(NSArray<NSString *> *)fileNames
+                        completion:(void (^)(NSInteger, BOOL, NSString *))completion {
+    NSMutableDictionary * dicP = [NSMutableDictionary dictionary];
+    [dicP setObject:phoneNum ? : @"" forKey:@"phoneNum"];
+    [dicP setObject:@(type) forKey:@"phoneID"];
+    [dicP setObject:userName ? : @"" forKey:@"userName"];
+    [dicP setObject:happenTime ? : @"" forKey:@"happenTime"];
+    [dicP setObject:township ? : @"" forKey:@"township"];
+    [dicP setObject:village ? : @"" forKey:@"village"];
+    [dicP setObject:group ? : @"" forKey:@"group"];
+    [dicP setObject:disasterNum ? : @"" forKey:@"disasterNum"];
+    [dicP setObject:dieNum ? : @"" forKey:@"dieNum"];
+    [dicP setObject:missingNum ? : @"" forKey:@"missingNum"];
+    [dicP setObject:injuredNum ? : @"" forKey:@"injuredNum"];
+    [dicP setObject:houseNum ? : @"" forKey:@"houseNum"];
+    [dicP setObject:peopleNum ? : @"" forKey:@"peopleNum"];
+    [dicP setObject:notes ? : @"" forKey:@"notes"];
+    if (images && images.count > 0) {
+        [NDNetwork uploadImageToResourceURL:NDAPI_Address(NDAPI_GARRISON_SAVE_DISATER, NDApiTypeLog) images:images fileNames:fileNames name:@"upload" compressQulity:0.8 params:dicP NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 200) {
+                if (completion) {
+                    completion(status,true,@"");
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg);
+                }
+            }
+        }];
+    } else {
+        [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_GARRISON_SAVE_DISATER, NDApiTypeLog) params:dicP method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 200) {
+                if (completion) {
+                    completion(status,true,@"");
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg);
+                }
+            }
+        }];
+    }
+}
+
 + (void)garrison_DaliyListByMobile:(NSString *)mobile
                         completion:(void (^)(BOOL, NSArray<NDGarrisonDailyModel *> *, NSString *))completion {
     NSMutableDictionary * dicp = [NSMutableDictionary dictionary];
