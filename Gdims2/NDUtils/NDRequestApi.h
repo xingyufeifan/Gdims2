@@ -74,6 +74,44 @@ typedef enum: NSUInteger{
 
 
 /**
+ 驻守人员-灾情速报上报接口
+ 
+ @param userName userName description
+ @param type userType
+ @param phoneNum phoneNum description
+ @param happenTime happenTime description
+ @param township 乡/镇
+ @param village 村
+ @param group 组
+ @param disasterNum 受灾人数
+ @param dieNum 死亡人数
+ @param missingNum 失踪人数
+ @param injuredNum 受伤人数
+ @param houseNum 潜在威胁户数
+ @param peopleNum 潜在威胁人数
+ @param notes 备注
+ @param images 图片文件
+ @param fileNames 图片名称
+ @param completion completion description
+ */
++ (void)garrison_SaveDisaterByName:(NSString *)userName
+                          userType:(NDUserType)type
+                          phoneNum:(NSString *)phoneNum
+                        happenTime:(NSString *)happenTime
+                          township:(NSString *)township
+                           village:(NSString *)village
+                             group:(NSString *)group
+                       disasterNum:(NSString *)disasterNum
+                            dieNum:(NSString *)dieNum
+                        missingNum:(NSString *)missingNum
+                        injuredNum:(NSString *)injuredNum
+                          houseNum:(NSString *)houseNum
+                         peopleNum:(NSString *)peopleNum
+                             notes:(NSString *)notes
+                            images:(NSArray<UIImage *> *)images
+                         fileNames:(NSArray<NSString *> *)fileNames
+                        completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
+/**
  驻守人员 日报列表
  
  @param mobile mobile description

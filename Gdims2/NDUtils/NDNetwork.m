@@ -73,6 +73,60 @@ extern NSString * NDAPI_Address(NSString * module,NDApiType apiType){
         }
     }
 }
+
++ (NSURLSessionDataTask *)uploadImageToResourceURL:(NSString *)resourceURL
+                                            images:(NSArray *)images
+                                         fileNames:(NSArray<NSString *> *)fileNames
+                                              name:(NSString *)name
+                                    compressQulity:(float)qulity
+                                            params:(NSDictionary *)params
+                                      NDCompletion:(NDRequestCompletion)completion{
+    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = NDAPI_TIMEOUT_INTREVAL;
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",
+                                                         @"text/html",
+                                                         @"image/jpeg",
+                                                         @"image/png",
+                                                         @"application/octet-stream",
+                                                         @"text/json",
+                                                         nil];
+    if (ND_SHOW_LOG) {
+        NSLog(@"------------uploadImageToResourceURL开始------------");
+        NSLog(@"请求地址:%@",resourceURL);
+        NSLog(@"请求参数:\n%@",params);
+    }
+    NSURLSessionDataTask * task = [manager POST:resourceURL parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> _Nonnull formData) {
+        NSInteger count = [images count];
+        for (NSInteger idx = 0; idx < count; idx ++) {
+            UIImage *  image = images[idx];
+            NSString * fileName = nil;
+            if (idx < fileNames.count) {
+                fileName = fileNames[idx];
+            }
+            if (fileName == nil) {
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                formatter.dateFormat =@"yyyyMMddHHmmssSSS";
+                NSString * str = [formatter stringFromDate:[NSDate date]];
+                fileName = [NSString stringWithFormat:@"%@.jpg", str];
+            }
+            [formData appendPartWithFileData:UIImageJPEGRepresentation(image, qulity)
+                                        name:name
+                                    fileName:fileName
+                                    mimeType:@"image/jpeg"];
+        }
+    } progress:^(NSProgress *_Nonnull uploadProgress) {
+        //打印下上传进度
+    } success:^(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject) {
+        //上传成功
+        [self commonProcess:responseObject NDCompletion:completion];
+    } failure:^(NSURLSessionDataTask *_Nullable task, NSError * _Nonnull error) {
+        //上传失败
+        [self httpError:error NDCompletion:completion];
+    }];
+    return task;
+}
+
+
 +(NSURLSessionDataTask *)asycnRequestWithURL:(NSString *)url
                                       params:(NSDictionary *)params
                                       method:(NDRequestMethodType)method

@@ -7,7 +7,9 @@
 //
 
 #import "NDViewController.h"
-
+@class NDDisasterModel;
 @interface NDDisasterUploadViewController : NDViewController
+
+@property(nonatomic,strong)NDDisasterModel * model;
 
 @end
