@@ -174,7 +174,7 @@
     return 3;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section ==0) {//现象展示
+    if (section == 0) {//现象展示
         NSInteger count = self.arrMacroModelList.count;
         if (count > 0) {
             return count;
@@ -298,7 +298,8 @@
             } else {
                 [model clearCache];
             }
-            [cell.imageView setImage:[UIImage imageNamed:@"zx-img-default"]];
+            [cell.imgView setImage:[UIImage imageNamed:@"zx-img-default"]];
+            
         }
         if (model.zx_isOther) {//控制其他现象输入框显示
             [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -344,7 +345,7 @@
     }];
 }
 - (NDImagePickerUtils *)imagePicker{
-    if (_imagePicker) {
+    if (_imagePicker == nil) {
         _imagePicker = [[NDImagePickerUtils alloc] init];
     }
     return _imagePicker;
