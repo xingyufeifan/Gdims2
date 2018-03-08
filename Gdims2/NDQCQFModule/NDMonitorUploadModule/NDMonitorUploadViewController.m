@@ -145,11 +145,9 @@
 }
 
 - (void)takePhoto {
-    NSLog(@"takePhoto");
     __weak typeof(self) weakSelf = self;
     [self.imagePicker takePhotoUponVC:self callBack:^(UIImage *image, ZXTakePhotoStatus status, NSString *errorMsg) {
         [weakSelf setNeedsStatusBarAppearanceUpdate];
-        
         if (status == ZXPSuccess) {
             [weakSelf setImageAction:image];
         } else {
@@ -191,6 +189,12 @@
             [NDHUD MBShowFailureInView:[NDRouter window] text:@"图片处理失败,请重拍照" delay:NDHUD_DELAY_TIME];
         }
     }];
+}
+- (NDImagePickerUtils *)imagePicker{
+    if (_imagePicker == nil) {
+        _imagePicker = [[NDImagePickerUtils alloc] init];
+    }
+    return _imagePicker;
 }
 - (IBAction)btnSaveClick {
     [self.view endEditing:true];

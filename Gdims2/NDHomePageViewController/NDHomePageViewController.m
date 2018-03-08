@@ -158,8 +158,8 @@
     if (_qcqfModule) {
         _qcqfModule.location = self.location;
     }
-//    if (_garrisonModule) {
-//        _garrisonModule.location = self.location;
+//    if (_garrisonManModule) {
+//        _garrisonManModule.location = self.location;
 //    }
 //    if (_areaOfficerModule) {
 //        _areaOfficerModule.location = self.location;

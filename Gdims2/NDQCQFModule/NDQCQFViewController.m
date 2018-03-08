@@ -12,6 +12,7 @@
 #import "NDMacroListModel.h"
 #import "NDMonitorModel.h"
 #import "NDMonitorUploadViewController.h"
+#import "NDMacroUploadViewController.h"
 #import <MJRefresh/MJRefresh.h>
 @interface NDQCQFViewController ()<UITableViewDelegate,UITableViewDataSource,NDHomeListHeaderDelegate,NDHomeCheckItemCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -182,10 +183,10 @@
 - (void)ndHomeCheckItemCellReportAction:(NDHomeCheckItemCell *)cell{
     NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
     if (indexPath.row == 0) {//宏观观测
-//        ZXMacroUploadViewController * macroUpload = [[ZXMacroUploadViewController alloc] init];
-//        macroUpload.location = self.location;
-//        macroUpload.listModel = self.arrMacroList[indexPath.section];
-//        [self.navigationController pushViewController:macroUpload animated:true];
+        NDMacroUploadViewController * macroUpload = [[NDMacroUploadViewController alloc] init];
+        macroUpload.location = self.location;
+        macroUpload.listModel = self.arrMacroList[indexPath.section];
+        [self.navigationController pushViewController:macroUpload animated:true];
     } else {//定量监测
         NSInteger index = indexPath.row - 1;
         if (index >= 0) {
