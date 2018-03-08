@@ -78,6 +78,7 @@
         self.situation = nil;
         self.remarks = nil;
         self.log_content = nil;
+        NSLog(@"username = %@ ,remarks = %@ ,log_content =%@",self.user_name,self.remarks,self.log_content);
     }
     return self;
 }
