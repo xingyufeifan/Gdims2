@@ -69,6 +69,7 @@
 - (IBAction)saveAction:(id)sender {
     [self.view endEditing:true];
     if (self.model) {
+        NSLog(@"model = %@",self.model);
         NSString * str = [self.model un_inputMsg];
         if (str) {
             [NDHUD MBShowFailureInView:self.view text:str delay:NDHUD_DELAY_TIME];
@@ -289,18 +290,21 @@
             switch (indexPath.row) {
                 case 0://记录人员
                 {
+                    NSLog(@"user_name = %@",text);
                     self.model.user_name = text;
                     self.memberInfo.user_name = text;
                 }
                     break;
                 case 1://工作类型
                 {
+                        NSLog(@"work_type = %@",text);
                     self.model.work_type = text;
                     self.memberInfo.work_type = text;
                 }
                     break;
                 case 2://在岗情况
                 {
+                        NSLog(@"situation = %@",text);
                     self.model.situation = text;
                     self.memberInfo.situation = text;
                 }
@@ -311,8 +315,10 @@
         }
     } else if ([cell isKindOfClass:[NDRemarkInputCell class]]) {
         if (indexPath.section == 1) {//日报
+            NSLog(@"logCOntent = %@",text);
             self.model.log_content = text;
         } else if (indexPath.section == 2) {//备注
+             NSLog(@"remarks = %@",text);
             self.model.remarks = text;
         }
     }
