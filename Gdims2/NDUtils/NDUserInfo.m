@@ -44,6 +44,11 @@ static NDUserInfo * userInfo = nil;
     if ([type isKindOfClass:[NSString class]] && [type length] > 0) {
         _type = [type integerValue];
     }
+    
+    id name = [[NSUserDefaults standardUserDefaults] objectForKey:NDUUSER_NAME];
+    if([name isKindOfClass:[NSString class]] && [name length] > 0){
+        _name = name;
+    }
 }
 - (BOOL)hasCache{
     if (self.mobile.length > 0) {
@@ -62,10 +67,19 @@ static NDUserInfo * userInfo = nil;
     [[NSUserDefaults standardUserDefaults] setInteger:type forKey:NDUSER_TYPE_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+- (void)setName:(NSString *)name {
+    _name = name;
+    [[NSUserDefaults standardUserDefaults] setObject:_name forKey:NDUUSER_NAME];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+}
 -(void)loginOut:(void (^)(void))callBack{
     self.mobile = nil;
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:NDMOBILE_KEY];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:NDUSER_TYPE_KEY];
+    [[NSUserDefaults standardUserDefaults]
+     removeObjectForKey:NDUUSER_NAME];
     [[NSUserDefaults standardUserDefaults] synchronize];
     if (callBack) {
         callBack();

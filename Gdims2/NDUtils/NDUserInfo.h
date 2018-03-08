@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #define NDMOBILE_KEY        @"NDUserMobile"
 #define NDUSER_TYPE_KEY     @"NDUserType"
+#define NDUUSER_NAME        @"NDUserName"
+
 @interface NDUserInfo : NSObject
 @property(nonatomic,strong) NSString *mobile;
 @property(nonatomic,strong) NSString *name;
