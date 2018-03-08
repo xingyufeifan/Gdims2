@@ -44,6 +44,7 @@
     // Configure the view for the selected state
 }
 - (IBAction)btnCheckBoxClick:(UIButton *)sender {
+    [sender setSelected:!sender.isSelected];
     if (_delegate && [_delegate respondsToSelector:@selector(ndMacroCell:checked:)]) {
         [_delegate ndMacroCell:self checked:sender.selected];
     }

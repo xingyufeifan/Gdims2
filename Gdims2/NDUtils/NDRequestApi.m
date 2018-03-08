@@ -21,6 +21,12 @@
             if ([content isKindOfClass:[NSDictionary class]]) {
                id info = [[content objectForKey:@"info"] mj_JSONObject];
                 if ([info isKindOfClass:[NSDictionary class]] && [info count]) {
+                    NSString * name = info[@"name"];
+                    if (name && [name isKindOfClass:[NSString class]]) {
+                        [NDUserInfo sharedInstance].name = name;
+                    } else {
+                        [NDUserInfo sharedInstance].name = nil;
+                    }
                     if (completion) {
                         completion(true,@"登录成功");
                     }

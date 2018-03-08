@@ -12,6 +12,7 @@
 #import "NDGarrisonManViewController.h"
 #import "NDSettingViewController.h"
 #import "NDLocationSettingViewController.h"
+
 @interface NDHomePageViewController ()<NDSettingDelegate>
 @property (nonatomic, strong) CLLocation * location;
 @property (nonatomic, strong) NSTimer * timer;
@@ -54,6 +55,7 @@
             break;
     }
 }
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     if (!self.onceLoad) {
@@ -70,6 +72,7 @@
 //        }];
     }
 }
+
 - (void)preLoad{
     //定位信息检测
     [NDLocationUtils checkService:^(BOOL success, NSString *errorMsg) {
@@ -85,6 +88,7 @@
         }
     }];
 }
+
 /**
  定位时间周期变化
  */
@@ -95,6 +99,7 @@
     _timer = [NSTimer scheduledTimerWithTimeInterval: minute * 60 target:self selector:@selector(uploadLocationInbackground) userInfo:nil repeats:true];
     [_timer setFireDate:[NSDate date]];
 }
+
 /**
  后台上传定位数据
  */
@@ -148,18 +153,28 @@
     }
     return _garrisonManModule;
 }
+
+- (NDAreaOfficerViewController *)areaOfficeModule {
+    if (_areaOfficeModule == nil) {
+        _areaOfficeModule = [[NDAreaOfficerViewController alloc] init];
+    }
+    return _areaOfficeModule;
+}
+
 -(void)leftMenuButtonAction{
     [self presentViewController:self.settingVC animated:YES completion:nil];
 }
+
 -(void)ndSettingViewControllerDismissed{
     
 }
+
 - (void)updateSubVCLocations {
     if (_qcqfModule) {
         _qcqfModule.location = self.location;
     }
-//    if (_garrisonModule) {
-//        _garrisonModule.location = self.location;
+//    if (_garrisonManModule) {
+//        _garrisonManModule.location = self.location;
 //    }
 //    if (_areaOfficerModule) {
 //        _areaOfficerModule.location = self.location;

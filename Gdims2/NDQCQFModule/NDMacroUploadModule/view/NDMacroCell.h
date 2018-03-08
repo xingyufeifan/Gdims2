@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class NDMacroCell;
 @class NDMacroModel;
-@protocol NDMacroCellDlegate<NSObject>
+@protocol NDMacroCellDelegate<NSObject>
 @optional
 - (void)ndMacroCell:(NDMacroCell *)cell checked:(BOOL)checked;
 - (void)ndMacroCellTakePhoto:(NDMacroCell *)cell;
@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UIButton *btnCheckBox;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
-@property (nonatomic, weak) id<NDMacroCellDlegate> delegate;
+@property (nonatomic, weak) id<NDMacroCellDelegate> delegate;
 
 - (void) reloadData:(NDMacroModel *) model;
 @end
