@@ -13,6 +13,8 @@
 #import "NDMonitorModel.h"
 #import "NDMonitorUploadViewController.h"
 #import "NDMacroUploadViewController.h"
+#import "NDVideoUploadViewController.h"
+#import "NDQCQFHistoryViewController.h"
 #import <MJRefresh/MJRefresh.h>
 @interface NDQCQFViewController ()<UITableViewDelegate,UITableViewDataSource,NDHomeListHeaderDelegate,NDHomeCheckItemCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -25,7 +27,8 @@
 
 @implementation NDQCQFViewController
 - (IBAction)btnRecordClick {
-    //todo
+    NDVideoUploadViewController *videoVC = [[NDVideoUploadViewController alloc] init];
+    [self.navigationController pushViewController:videoVC animated:YES];
 }
 /**
  灾害点-定量检测数据分组
@@ -201,13 +204,30 @@
 }
 #pragma mark - NDHomeCheckHeaderDelegate查看
 - (void)ndHomeCheckItemCellReviewAction:(NDHomeCheckItemCell *)cell{
-    
+    NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
+    NDMacroListModel * macroListModel = self.arrMacroList[indexPath.section];
+    if (indexPath.row == 0) {//宏观观测
+        NDQCQFHistoryViewController * macroHistoryList = [[NDQCQFHistoryViewController alloc] init];
+        macroHistoryList.type = NDQCQFDetailTypeMacro;
+        macroHistoryList.disNo = macroListModel.unifiedNumber;
+        macroHistoryList.monitorNo = @"";
+        [self.navigationController pushViewController:macroHistoryList animated:true];
+    } else {//定量监测
+        NSInteger index = indexPath.row - 1;
+        if (index >= 0) {
+            NDQCQFHistoryViewController * monitorHistoryList = [[NDQCQFHistoryViewController alloc] init];
+            monitorHistoryList.type = NDQCQFDetailTypeMonitor;
+            monitorHistoryList.disNo = macroListModel.unifiedNumber;
+            monitorHistoryList.monitorNo = macroListModel.monitorList[index].monPointNumber;
+            [self.navigationController pushViewController:monitorHistoryList animated:true];
+        }
+    }
 }
-//#pragma mark - ZXSettingDelegate
-//
-//- (void)zxSettingViewControllerDismissed {
-//    [self setNeedsStatusBarAppearanceUpdate];
-//}
+#pragma mark - ZXSettingDelegate
+
+- (void)zxSettingViewControllerDismissed {
+    [self setNeedsStatusBarAppearanceUpdate];
+}
 
 
 

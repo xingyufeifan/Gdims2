@@ -10,7 +10,7 @@
 @class NDMacroListModel;
 @class NDMonitorModel;
 @class NDGarrisonDailyModel;
-
+@class NDQCQFDetailModel;
 typedef enum: NSUInteger{
     NDUserTypeQCQF = 0,
     NDUserTypeZS = 1,
@@ -82,6 +82,56 @@ typedef enum : NSUInteger {
                              phone:(NSString *)phone
                           userType:(NDUserType)type
                         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
+
+/**
+ 宏观观测数据上报
+ @param requestIndex 用户回调
+ @param mobile mobile description
+ @param serialNo serialNo description
+ @param longitude longitude description
+ @param latitude latitude description
+ @param macroscopicPhenomenon 灾害现象名称
+ @param unifiedNumber 灾害点编号
+ @param monPointDate 当前时间
+ @param totalCount 宏观现象总数
+ @param image 图片（otherPhenomena空时，必传）
+ @param otherPhenomena 其他现象值
+ @param remarks 备注
+ @param completion completion description
+ */
++ (void)uploadMacroMoDataWithRIndex:(NSInteger)requestIndex
+                             mobile:(NSString *)mobile
+                           serialNo:(NSString *)serialNo
+                          longitude:(NSString *)longitude
+                           latitude:(NSString *)latitude
+              macroscopicPhenomenon:(NSString *)macroscopicPhenomenon
+                      unifiedNumber:(NSString *)unifiedNumber
+                       monPointDate:(NSString *)monPointDate
+                         totalCount:(NSString *)totalCount
+                              image:(UIImage *)image
+                           fileName:(NSString *)fileName
+                     otherPhenomena:(NSString *)otherPhenomena
+                            remarks:(NSString *)remarks
+                         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg,NSInteger requestIndex))completion;
+/**
+ QCQF 已上报历史记录
+ 
+ @param type ZXQCQFDetailType
+ @param mobile mobile description
+ @param startTime startTime description
+ @param endTime endTime description
+ @param disNo 灾害点编号
+ @param monitorNo 监测点编号
+ @param completion completion description
+ */
++ (void)qcqfHistoryListType:(NDQCQFDetailType)type
+                     mobile:(NSString *)mobile
+                  startTime:(NSString *)startTime
+                    endTime:(NSString *)endTime
+                      disNo:(NSString *)disNo
+                  monitorNo:(NSString *)monitorNo
+                 completion:(void(^)(BOOL success,NSArray<NDQCQFDetailModel *> * list,NSString * errorMsg))completion;
+
 /**
  上传定量监测/雨量监测数据
  

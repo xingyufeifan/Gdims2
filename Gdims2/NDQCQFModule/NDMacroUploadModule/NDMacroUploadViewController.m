@@ -163,12 +163,181 @@
 }
 #warning 保存信息
 - (IBAction)btnSaveClick {
-    
+    [self.view endEditing:true];
+    [self setNeedsStatusBarAppearanceUpdate];
+    self.saved = false;
+    if (self.listModel && self.arrMacroModelList.count > 0) {
+        NSMutableArray<NDMacroModel *> * arrCheckedModel = [NSMutableArray array];
+        for (NDMacroModel * model in self.arrMacroModelList) {
+            if (model.zx_hasValue){
+                [arrCheckedModel addObject:model];
+            }
+        }
+        if (arrCheckedModel.count) {//宏观现象、其他现象 有值
+            for (NDMacroModel * model in arrCheckedModel) {
+                if (model.zx_hasValue) {//图片改为选填
+                    [model save];
+                }
+            }
+            [self saveRemark];
+            [NDHUD MBShowSuccessInView:[NDRouter window] text:@"保存成功" delay:NDHUD_DELAY_TIME];
+            self.saved = true;
+        } else {
+            if (self.strRemark && ![self.strRemark zx_isEmpty]) {//备注有值
+                [self saveRemark];
+                [NDHUD MBShowSuccessInView:[NDRouter window] text:@"保存成功" delay:NDHUD_DELAY_TIME];
+                self.saved = true;
+            } else {
+                [NDHUD MBShowFailureInView:[NDRouter window] text:@"请选择需要保存的数据或图片" delay:NDHUD_DELAY_TIME];
+            }
+        }
+    } else {
+        [NDHUD MBShowFailureInView:[NDRouter window] text:@"观测数据不存在" delay:NDHUD_DELAY_TIME];
+    }
 }
 #warning 上传信息
 - (IBAction)btnUploadClick {
-    
+    [self setNeedsStatusBarAppearanceUpdate];
+    [self.view endEditing:true];
+    if (self.listModel == nil) {
+        [NDHUD MBShowFailureInView:[NDRouter window] text:@"宏观数据不存在" delay:NDHUD_DELAY_TIME];
+        return;
+    }
+    [_arrNeedUpload removeAllObjects];
+    self.successCount = 0;
+    //搜集填写了值的Model
+    for (NDMacroModel * model in self.arrMacroModelList) {
+        if (model.zx_hasValue){//if (model.imageFileName && model.checked) 修改无无图也可以上传
+            [_arrNeedUpload addObject:model];
+        }
+    }
+    NSInteger totalCount = [_arrNeedUpload count];
+    if (totalCount > 0) {
+        if (!self.saved) {
+            [NDHUD MBShowFailureInView:[NDRouter window] text:@"上传前,请先保存数据" delay:NDHUD_DELAY_TIME];
+            return;
+        }
+        NSString * latitude = nil;
+        NSString * longitude = nil;
+        if (self.location != nil) {
+            latitude = [NSString stringWithFormat:@"%f",self.location.coordinate.latitude];
+            longitude = [NSString stringWithFormat:@"%f",self.location.coordinate.longitude];
+        }
+        NSString * date = [NSString zx_currentDateString];
+        NSString * serialNo = [NSString zx_serialNumber];
+        //[ZXHUD MBShowLoadingInView:[ZXRouter window] text:@"数据上传中..." delay:0];
+        self.hud = [NDHUD MBShowLoadingInView:[NDRouter window] text:@"数据上传中..." delay:0];
+        [self startLoadWithIndex:0 totalCount:totalCount serialNo:serialNo latitude:latitude longitude:longitude date:date];//逐条
+    }else{
+        if (self.strRemark && ![self.strRemark zx_isEmpty] && !self.saved) {//有备注
+            [NDHUD MBShowFailureInView:[NDRouter window] text:@"上传前,请先保存数据" delay:NDHUD_DELAY_TIME];
+            return;
+        }
+        NSString * latitude = nil;
+        NSString * longitude = nil;
+        if (self.location != nil) {
+            latitude = [NSString stringWithFormat:@"%f",self.location.coordinate.latitude];
+            longitude = [NSString stringWithFormat:@"%f",self.location.coordinate.longitude];
+        }
+        [NDHUD MBShowLoadingInView:[NDRouter window] text:@"数据上传中..." delay:0];
+        [NDRequestApi uploadMacroMoDataWithRIndex:-1
+                                           mobile:[NDUserInfo sharedInstance].mobile
+                                         serialNo:[NSString zx_serialNumber]
+                                        longitude:longitude
+                                         latitude:latitude
+                            macroscopicPhenomenon:@"无异常"
+                                    unifiedNumber:self.listModel.unifiedNumber
+                                     monPointDate:[NSString zx_currentDateString]
+                                       totalCount:@"0"
+                                            image:nil
+                                         fileName:nil
+                                   otherPhenomena:nil
+                                          remarks:self.strRemark
+                                       completion:^(NSInteger status, BOOL success, NSString *errorMsg, NSInteger requestIndex) {
+                                           [NDHUD MBHideForView:[NDRouter window] animate:false];
+                                           if (success) {
+                                               [self clearRemark];
+                                               [NDHUD MBShowSuccessInView:[NDRouter window] text:@"数据上传成功" delay:NDHUD_DELAY_TIME];
+                                               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                   [self.navigationController popViewControllerAnimated:true];
+                                               });
+                                           } else {
+                                               [NDHUD MBShowFailureInView:[NDRouter window] text:@"数据上传失败,请重试" delay:2.0];
+                                           }
+                                       }];
+    }
 }
+- (void)startLoadWithIndex:(NSInteger)index
+                totalCount:(NSInteger)totalCount
+                  serialNo:(NSString *)serialNo
+                  latitude:(NSString *)latitude
+                 longitude:(NSString *)longitude
+                      date:(NSString *)date{
+    if (index < totalCount && index >= 0 ) {
+        if (self.hud) {
+            self.hud.label.text = [NSString stringWithFormat:@"数据上传中:%ld/%ld",(long)index,(long)totalCount];
+        }
+        NDMacroModel * model = [_arrNeedUpload objectAtIndex:index];
+        UIImage * image = [UIImage imageWithContentsOfFile:model.zx_imageAbsolutePath];
+        
+        [NDRequestApi uploadMacroMoDataWithRIndex:index
+                                            mobile:[NDUserInfo sharedInstance].mobile
+                                          serialNo:serialNo
+                                         longitude:longitude
+                                          latitude:latitude
+                             macroscopicPhenomenon:model.name
+                                     unifiedNumber:model.unifiedNumber
+                                      monPointDate:date
+                                        totalCount:[NSString stringWithFormat:@"%ld",(long)totalCount]
+                                            image:image
+                                          fileName:model.imageFileName
+                                    otherPhenomena:self.otherMacroModel.zx_otherData
+                                           remarks:self.strRemark
+                                        completion:^(NSInteger status, BOOL success, NSString *errorMsg, NSInteger requestIndex) {
+                                            if (success) {
+                                                [self uploadSuccessWithIndex:requestIndex];
+                                                if ((requestIndex + 1) < totalCount) {
+                                                    [self startLoadWithIndex:(requestIndex + 1) totalCount:totalCount serialNo:serialNo latitude:latitude longitude:longitude date:date];
+                                                }
+                                            } else {
+                                                //必须保证全部成功
+                                                [NDHUD MBHideForView:[NDRouter window] animate:true];
+                                                self.successCount = 0;
+                                                [NDHUD MBShowFailureInView:[NDRouter window] text: @"上传失败,请重新上传" delay:NDHUD_DELAY_TIME];
+                                            }
+                                        }];
+    } else {
+        [NDHUD MBHideForView:[NDRouter window] animate:YES];
+    }
+}
+
+
+- (void)uploadSuccessWithIndex:(NSInteger)index {
+    if (_arrNeedUpload.count > 0) {
+        self.successCount += 1;
+    }
+    [self checkEndAction];
+}
+
+- (void)checkEndAction {
+    NSInteger totalCount = _arrNeedUpload.count;
+    if (totalCount > 0) {
+        if (self.successCount == totalCount) {
+            [NDHUD MBHideForView:[NDRouter window] animate:NO];
+            [NDHUD MBShowSuccessInView:[NDRouter window] text:@"数据上传成功" delay:NDHUD_DELAY_TIME];
+            for (NDMacroModel * model in _arrNeedUpload) {
+                [model clearCache];
+            }
+            [self clearRemark];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.45 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self.navigationController popViewControllerAnimated:YES];
+            });
+        }
+    } else {
+        [NDHUD MBHideForView:[NDRouter window] animate:YES];
+    }
+}
+
 #pragma mark tableView数据源方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 3;

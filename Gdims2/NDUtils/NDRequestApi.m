@@ -11,6 +11,7 @@
 #import "NDMacroListModel.h"
 #import "NDMonitorModel.h"
 #import "NDGarrisonModel.h"
+#import "NDQCQFDetailModel.h"
 @implementation NDRequestApi
 +(void)loginWithMobile:(NSString *)mobile userType:(NDUserType)type completion:(void (^)(BOOL, NSString *))completion{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -176,6 +177,60 @@
     }];
 }
 
++ (void)uploadMacroMoDataWithRIndex:(NSInteger)requestIndex
+                             mobile:(NSString *)mobile
+                           serialNo:(NSString *)serialNo
+                          longitude:(NSString *)longitude
+                           latitude:(NSString *)latitude
+              macroscopicPhenomenon:(NSString *)macroscopicPhenomenon
+                      unifiedNumber:(NSString *)unifiedNumber
+                       monPointDate:(NSString *)monPointDate
+                         totalCount:(NSString *)totalCount
+                              image:(UIImage *)image
+                           fileName:(NSString *)fileName
+                     otherPhenomena:(NSString *)otherPhenomena
+                            remarks:(NSString *)remarks
+                         completion:(void (^)(NSInteger, BOOL, NSString *, NSInteger))completion{
+    NSMutableDictionary * dicP = [NSMutableDictionary dictionary];
+    //无值 字段必传
+    [dicP setObject:serialNo ? serialNo : @"" forKey:@"serialNo"];
+    [dicP setObject:mobile ? mobile : @"" forKey:@"mobile"];
+    [dicP setObject:longitude ? longitude : @"" forKey:@"xpoint"];
+    [dicP setObject:latitude ? latitude : @"" forKey:@"ypoint"];
+    [dicP setObject:totalCount ? totalCount : @"" forKey:@"count"];
+    [dicP setObject:@"宏观观测" forKey:@"monitorType"];
+    [dicP setObject:unifiedNumber ? unifiedNumber : @"" forKey:@"unifiedNumber"];
+    [dicP setObject:macroscopicPhenomenon ? macroscopicPhenomenon : @"" forKey:@"macroscopicPhenomenon"];
+    [dicP setObject:monPointDate ? monPointDate : @"" forKey:@"monPointDate"];
+    [dicP setObject:otherPhenomena ? otherPhenomena : @"" forKey:@"otherPhenomena"];
+    [dicP setObject:remarks ? remarks : @"" forKey:@"remarks"];
+    if (image) {
+        [NDNetwork uploadImageToResourceURL:NDAPI_Address(NDAPI_UPLOAD_DATA, NDApiTypeQCQF) images:@[image] fileNames:@[fileName] name:@"uploads" compressQulity:0.8 params:dicP NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 1) {
+                if (completion) {
+                    completion(status,true,@"",requestIndex);
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg,requestIndex);
+                }
+            }
+        }];
+    }else{
+        [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_UPLOAD_DATA, NDApiTypeQCQF) params:dicP method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 1) {
+                if (completion) {
+                    completion(status,true,@"",requestIndex);
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg,requestIndex);
+                }
+            }
+        }];
+    }
+}
+
 + (void)uploadMonitorDataWithMobile:(NSString *)mobile
                                type:(NDDataUploadType)type
                           serialNum:(NSString *)serialNum
@@ -257,6 +312,44 @@
             }
         }];
     }
+}
++ (void)qcqfHistoryListType:(NDQCQFDetailType)type
+                     mobile:(NSString *)mobile
+                  startTime:(NSString *)startTime
+                    endTime:(NSString *)endTime
+                      disNo:(NSString *)disNo
+                  monitorNo:(NSString *)monitorNo
+                 completion:(void (^)(BOOL, NSArray *, NSString *))completion{
+    NSMutableDictionary * dicP = [NSMutableDictionary dictionary];
+    [dicP setObject:@(type) forKey:@"monitorOrMacro"];
+    [dicP setObject:mobile ? : @"" forKey:@"mobile"];
+    [dicP setObject:startTime ? : @"" forKey:@"startTime"];
+    [dicP setObject:endTime ? : @"" forKey:@"endTime"];
+    [dicP setObject:disNo ? : @"" forKey:@"disNo"];
+    [dicP setObject:monitorNo ? : @"" forKey:@"monitorNo"];
+    [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_QCQF_HISTORY, NDApiTypeLog) params:dicP method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            id info = [[content objectForKey:@"data"] mj_JSONObject];
+            if ([info isKindOfClass:[NSArray class]] && [info count] > 0) {
+                NSMutableArray<NDQCQFDetailModel *> * arrList = [NSMutableArray array];
+                for (id obj in info) {
+                    [arrList addObject:[NDQCQFDetailModel mj_objectWithKeyValues:obj]];
+                }
+                if (completion) {
+                    completion(true, arrList, @"");
+                }
+            } else {
+                if (completion) {
+                    completion(true, @[], @"无相关历史记录");
+                }
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
+            }
+        }
+    }];
+    
 }
 
 + (void)garrison_SaveDisaterByName:(NSString *)userName

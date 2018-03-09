@@ -1,12 +1,27 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 48;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
 
 /* Begin PBXBuildFile section */
+		181ED86420522CA5003ECD81 /* NDQCQFHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED86220522CA5003ECD81 /* NDQCQFHistoryViewController.m */; };
+		181ED86520522CA5003ECD81 /* NDQCQFHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED86320522CA5003ECD81 /* NDQCQFHistoryViewController.xib */; };
+		181ED86820525B94003ECD81 /* NDQCQFDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED86720525B94003ECD81 /* NDQCQFDetailModel.m */; };
+		181ED86D20525E0C003ECD81 /* NDQCQFHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED86B20525E0C003ECD81 /* NDQCQFHistoryCell.m */; };
+		181ED86E20525E0C003ECD81 /* NDQCQFHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED86C20525E0C003ECD81 /* NDQCQFHistoryCell.xib */; };
+		181ED872205272D2003ECD81 /* NDMacroDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED870205272D2003ECD81 /* NDMacroDetailViewController.m */; };
+		181ED873205272D2003ECD81 /* NDMacroDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED871205272D2003ECD81 /* NDMacroDetailViewController.xib */; };
+		181ED87720527478003ECD81 /* NDMacrHistoryImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED87520527478003ECD81 /* NDMacrHistoryImageCell.m */; };
+		181ED87820527478003ECD81 /* NDMacrHistoryImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED87620527478003ECD81 /* NDMacrHistoryImageCell.xib */; };
+		181ED87C2052756F003ECD81 /* NDImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED87A2052756F003ECD81 /* NDImageCollectionViewCell.m */; };
+		181ED87D2052756F003ECD81 /* NDImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED87B2052756F003ECD81 /* NDImageCollectionViewCell.xib */; };
+		181ED88120527F9A003ECD81 /* NDMonitorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED87F20527F9A003ECD81 /* NDMonitorDetailViewController.m */; };
+		181ED88220527F9A003ECD81 /* NDMonitorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED88020527F9A003ECD81 /* NDMonitorDetailViewController.xib */; };
+		181ED8862052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED8842052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m */; };
+		181ED8872052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED8852052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib */; };
 		187BEE732049403B008796E6 /* UIColor+ND.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BEE722049403B008796E6 /* UIColor+ND.m */; };
 		189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42A5204E1EF700D3DF4B /* NDSlideInAnimationController.m */; };
 		189E42A9204E1F8500D3DF4B /* NDSlideOutAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42A8204E1F8500D3DF4B /* NDSlideOutAnimationController.m */; };
@@ -105,6 +120,29 @@
 
 /* Begin PBXFileReference section */
 		041CC65576F1B5D02A82D434 /* Pods-Gdims2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.release.xcconfig"; sourceTree = "<group>"; };
+		181ED86120522CA5003ECD81 /* NDQCQFHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDQCQFHistoryViewController.h; sourceTree = "<group>"; };
+		181ED86220522CA5003ECD81 /* NDQCQFHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDQCQFHistoryViewController.m; sourceTree = "<group>"; };
+		181ED86320522CA5003ECD81 /* NDQCQFHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDQCQFHistoryViewController.xib; sourceTree = "<group>"; };
+		181ED86620525B94003ECD81 /* NDQCQFDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDQCQFDetailModel.h; sourceTree = "<group>"; };
+		181ED86720525B94003ECD81 /* NDQCQFDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDQCQFDetailModel.m; sourceTree = "<group>"; };
+		181ED86A20525E0C003ECD81 /* NDQCQFHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDQCQFHistoryCell.h; sourceTree = "<group>"; };
+		181ED86B20525E0C003ECD81 /* NDQCQFHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDQCQFHistoryCell.m; sourceTree = "<group>"; };
+		181ED86C20525E0C003ECD81 /* NDQCQFHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDQCQFHistoryCell.xib; sourceTree = "<group>"; };
+		181ED86F205272D2003ECD81 /* NDMacroDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMacroDetailViewController.h; sourceTree = "<group>"; };
+		181ED870205272D2003ECD81 /* NDMacroDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMacroDetailViewController.m; sourceTree = "<group>"; };
+		181ED871205272D2003ECD81 /* NDMacroDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMacroDetailViewController.xib; sourceTree = "<group>"; };
+		181ED87420527478003ECD81 /* NDMacrHistoryImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMacrHistoryImageCell.h; sourceTree = "<group>"; };
+		181ED87520527478003ECD81 /* NDMacrHistoryImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMacrHistoryImageCell.m; sourceTree = "<group>"; };
+		181ED87620527478003ECD81 /* NDMacrHistoryImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMacrHistoryImageCell.xib; sourceTree = "<group>"; };
+		181ED8792052756F003ECD81 /* NDImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDImageCollectionViewCell.h; sourceTree = "<group>"; };
+		181ED87A2052756F003ECD81 /* NDImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDImageCollectionViewCell.m; sourceTree = "<group>"; };
+		181ED87B2052756F003ECD81 /* NDImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		181ED87E20527F9A003ECD81 /* NDMonitorDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMonitorDetailViewController.h; sourceTree = "<group>"; };
+		181ED87F20527F9A003ECD81 /* NDMonitorDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMonitorDetailViewController.m; sourceTree = "<group>"; };
+		181ED88020527F9A003ECD81 /* NDMonitorDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMonitorDetailViewController.xib; sourceTree = "<group>"; };
+		181ED8832052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMonitorHistoryImageCellTableViewCell.h; sourceTree = "<group>"; };
+		181ED8842052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMonitorHistoryImageCellTableViewCell.m; sourceTree = "<group>"; };
+		181ED8852052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMonitorHistoryImageCellTableViewCell.xib; sourceTree = "<group>"; };
 		187BEE712049403B008796E6 /* UIColor+ND.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ND.h"; sourceTree = "<group>"; };
 		187BEE722049403B008796E6 /* UIColor+ND.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ND.m"; sourceTree = "<group>"; };
 		189E42A4204E1EF700D3DF4B /* NDSlideInAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSlideInAnimationController.h; sourceTree = "<group>"; };
@@ -265,17 +303,53 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        68CCFF382047E6F1002E72D0 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                A5391E3DA1CBE29299BF12F8 /* libPods-Gdims2.a in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		68CCFF382047E6F1002E72D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5391E3DA1CBE29299BF12F8 /* libPods-Gdims2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181ED86020522C4C003ECD81 /* NDQCQFHistoryModule */ = {
+			isa = PBXGroup;
+			children = (
+				181ED86920525DE6003ECD81 /* view */,
+				181ED86120522CA5003ECD81 /* NDQCQFHistoryViewController.h */,
+				181ED86220522CA5003ECD81 /* NDQCQFHistoryViewController.m */,
+				181ED86320522CA5003ECD81 /* NDQCQFHistoryViewController.xib */,
+				181ED86F205272D2003ECD81 /* NDMacroDetailViewController.h */,
+				181ED870205272D2003ECD81 /* NDMacroDetailViewController.m */,
+				181ED871205272D2003ECD81 /* NDMacroDetailViewController.xib */,
+				181ED87E20527F9A003ECD81 /* NDMonitorDetailViewController.h */,
+				181ED87F20527F9A003ECD81 /* NDMonitorDetailViewController.m */,
+				181ED88020527F9A003ECD81 /* NDMonitorDetailViewController.xib */,
+			);
+			path = NDQCQFHistoryModule;
+			sourceTree = "<group>";
+		};
+		181ED86920525DE6003ECD81 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				181ED86A20525E0C003ECD81 /* NDQCQFHistoryCell.h */,
+				181ED86B20525E0C003ECD81 /* NDQCQFHistoryCell.m */,
+				181ED86C20525E0C003ECD81 /* NDQCQFHistoryCell.xib */,
+				181ED87420527478003ECD81 /* NDMacrHistoryImageCell.h */,
+				181ED87520527478003ECD81 /* NDMacrHistoryImageCell.m */,
+				181ED87620527478003ECD81 /* NDMacrHistoryImageCell.xib */,
+				181ED8792052756F003ECD81 /* NDImageCollectionViewCell.h */,
+				181ED87A2052756F003ECD81 /* NDImageCollectionViewCell.m */,
+				181ED87B2052756F003ECD81 /* NDImageCollectionViewCell.xib */,
+				181ED8832052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.h */,
+				181ED8842052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m */,
+				181ED8852052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		187BEE7020493FE1008796E6 /* NDCommon */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +406,8 @@
 				68778F41204F7FAF005FA697 /* NDGarrisonModel.m */,
 				A02BDF7F204FBDE500ECFDDA /* NDAreaWeekModel.h */,
 				A02BDF80204FBDE500ECFDDA /* NDAreaWeekModel.m */,
+				181ED86620525B94003ECD81 /* NDQCQFDetailModel.h */,
+				181ED86720525B94003ECD81 /* NDQCQFDetailModel.m */,
 			);
 			path = NDModel;
 			sourceTree = "<group>";
@@ -348,6 +424,7 @@
 		18A93798204D2C1E00E890E2 /* NDQCQFModule */ = {
 			isa = PBXGroup;
 			children = (
+				181ED86020522C4C003ECD81 /* NDQCQFHistoryModule */,
 				18EB36F4204FC499008B66B8 /* NDMonitorUploadModule */,
 				18EB36E8204F8DD2008B66B8 /* NDMacroUploadModule */,
 				189E42AD204E3CBD00D3DF4B /* view */,
@@ -644,58 +721,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        68CCFF3A2047E6F1002E72D0 /* Gdims2 */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 68CCFF542047E6F1002E72D0 /* Build configuration list for PBXNativeTarget "Gdims2" */;
-            buildPhases = (
-                A07987B551B1ED1CA5A29416 /* [CP] Check Pods Manifest.lock */,
-                68CCFF372047E6F1002E72D0 /* Sources */,
-                68CCFF382047E6F1002E72D0 /* Frameworks */,
-                68CCFF392047E6F1002E72D0 /* Resources */,
-                46B376DD3540F1B64885AC63 /* [CP] Embed Pods Frameworks */,
-                FCC83DAE2168E351396FCB50 /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = Gdims2;
-            productName = Gdims2;
-            productReference = 68CCFF3B2047E6F1002E72D0 /* Gdims2.app */;
-            productType = "com.apple.product-type.application";
-        };
+		68CCFF3A2047E6F1002E72D0 /* Gdims2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68CCFF542047E6F1002E72D0 /* Build configuration list for PBXNativeTarget "Gdims2" */;
+			buildPhases = (
+				A07987B551B1ED1CA5A29416 /* [CP] Check Pods Manifest.lock */,
+				68CCFF372047E6F1002E72D0 /* Sources */,
+				68CCFF382047E6F1002E72D0 /* Frameworks */,
+				68CCFF392047E6F1002E72D0 /* Resources */,
+				46B376DD3540F1B64885AC63 /* [CP] Embed Pods Frameworks */,
+				FCC83DAE2168E351396FCB50 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gdims2;
+			productName = Gdims2;
+			productReference = 68CCFF3B2047E6F1002E72D0 /* Gdims2.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        68CCFF332047E6F1002E72D0 /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                CLASSPREFIX = ND;
-                LastUpgradeCheck = 0920;
-                ORGANIZATIONNAME = name;
-                TargetAttributes = {
-                    68CCFF3A2047E6F1002E72D0 = {
-                        CreatedOnToolsVersion = 9.2;
-                        ProvisioningStyle = Automatic;
-                    };
-                };
-            };
-            buildConfigurationList = 68CCFF362047E6F1002E72D0 /* Build configuration list for PBXProject "Gdims2" */;
-            compatibilityVersion = "Xcode 8.0";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 68CCFF322047E6F1002E72D0;
-            productRefGroup = 68CCFF3C2047E6F1002E72D0 /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                68CCFF3A2047E6F1002E72D0 /* Gdims2 */,
-            );
-        };
+		68CCFF332047E6F1002E72D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ND;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = name;
+				TargetAttributes = {
+					68CCFF3A2047E6F1002E72D0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 68CCFF362047E6F1002E72D0 /* Build configuration list for PBXProject "Gdims2" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68CCFF322047E6F1002E72D0;
+			productRefGroup = 68CCFF3C2047E6F1002E72D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68CCFF3A2047E6F1002E72D0 /* Gdims2 */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -703,6 +780,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181ED87D2052756F003ECD81 /* NDImageCollectionViewCell.xib in Resources */,
 				18EB36F3204FBDF0008B66B8 /* NDMacroCell.xib in Resources */,
 				68DFE01220491FC50076B228 /* NDLoginViewController.xib in Resources */,
 				18A937A3204D3D4300E890E2 /* NDSettingViewController.xib in Resources */,
@@ -711,17 +789,21 @@
 				68393F8F2050C5DA005B091E /* NDSingleImageCell.xib in Resources */,
 				68CCFF4E2047E6F1002E72D0 /* LaunchScreen.storyboard in Resources */,
 				18EB36FF204FC73F008B66B8 /* NDMonitorCell.xib in Resources */,
+				181ED87820527478003ECD81 /* NDMacrHistoryImageCell.xib in Resources */,
 				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
 				68D790B1204FC7FD00626671 /* NDSingleTextHeader.xib in Resources */,
 				68A16291204F77260093D4FA /* NDMenuCell.xib in Resources */,
+				181ED8872052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib in Resources */,
 				684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */,
 				68332EE520521B9A00716364 /* NDVideoCheckCell.xib in Resources */,
 				18EB36E7204F7FAD008B66B8 /* NDLocationSettingViewController.xib in Resources */,
 				68393F9E2050CDF9005B091E /* NDDateCheckViewController.xib in Resources */,
 				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
+				181ED86520522CA5003ECD81 /* NDQCQFHistoryViewController.xib in Resources */,
 				A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */,
 				A02BDF86204FD9A400ECFDDA /* NDWeekLogListViewController.xib in Resources */,
 				18EB370A204FF30D008B66B8 /* NDDailyListCell.xib in Resources */,
+				181ED86E20525E0C003ECD81 /* NDQCQFHistoryCell.xib in Resources */,
 				A02BDF7E204FBD1100ECFDDA /* NDWeekLogUploadViewController.xib in Resources */,
 				68393F942050C617005B091E /* NDImageCheckCollectionViewCell.xib in Resources */,
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
@@ -731,7 +813,9 @@
 				18EB36F9204FC4DA008B66B8 /* NDMonitorUploadViewController.xib in Resources */,
 				189E42C3204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib in Resources */,
 				18A93790204CF6F600E890E2 /* HUD.xcassets in Resources */,
+				181ED873205272D2003ECD81 /* NDMacroDetailViewController.xib in Resources */,
 				68332EE620521B9A00716364 /* NDVideoUploadViewController.xib in Resources */,
+				181ED88220527F9A003ECD81 /* NDMonitorDetailViewController.xib in Resources */,
 				18A9379D204D2DF800E890E2 /* NDQCQFViewController.xib in Resources */,
 				18EB36ED204F8E2A008B66B8 /* NDMacroUploadViewController.xib in Resources */,
 				68D790A9204FC30900626671 /* NDRemarkInputCell.xib in Resources */,
@@ -742,58 +826,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-        46B376DD3540F1B64885AC63 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        A07987B551B1ED1CA5A29416 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-Gdims2-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        FCC83DAE2168E351396FCB50 /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-resources.sh",
-                "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
-                "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-            );
-            name = "[CP] Copy Pods Resources";
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
+		46B376DD3540F1B64885AC63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A07987B551B1ED1CA5A29416 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gdims2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCC83DAE2168E351396FCB50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -809,15 +893,18 @@
 				18EB3705204FDA68008B66B8 /* UIImage+ND.m in Sources */,
 				68D790A8204FC30900626671 /* NDRemarkInputCell.m in Sources */,
 				68332EE720521B9A00716364 /* NDVideoModel.m in Sources */,
+				181ED87720527478003ECD81 /* NDMacrHistoryImageCell.m in Sources */,
 				18A937A8204D467800E890E2 /* NDSettingCell.m in Sources */,
 				68332ED720521AE600716364 /* KZVideoPlayer.m in Sources */,
 				68778F42204F7FAF005FA697 /* NDGarrisonModel.m in Sources */,
 				A02BDF81204FBDE500ECFDDA /* NDAreaWeekModel.m in Sources */,
 				684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */,
 				68332ED820521AE600716364 /* KZVideoSupport.m in Sources */,
+				181ED872205272D2003ECD81 /* NDMacroDetailViewController.m in Sources */,
 				68393F8E2050C5DA005B091E /* NDSingleImageCell.m in Sources */,
 				68D790A4204FC2B900626671 /* NDTableViewCell.m in Sources */,
 				A025C16E204E900E00B1A5E5 /* NDLocationUtils.m in Sources */,
+				181ED86420522CA5003ECD81 /* NDQCQFHistoryViewController.m in Sources */,
 				68393FA12050D016005B091E /* NSDate+ND.m in Sources */,
 				189E42B8204E486600D3DF4B /* NDMonitorModel.m in Sources */,
 				18EB36EC204F8E2A008B66B8 /* NDMacroUploadViewController.m in Sources */,
@@ -828,18 +915,22 @@
 				68DFE01120491FC50076B228 /* NDLoginViewController.m in Sources */,
 				18EB36E6204F7FAD008B66B8 /* NDLocationSettingViewController.m in Sources */,
 				18A9378E204CDCE200E890E2 /* NDRequestApi.m in Sources */,
+				181ED87C2052756F003ECD81 /* NDImageCollectionViewCell.m in Sources */,
 				68CCFF492047E6F1002E72D0 /* Gdims2.xcdatamodeld in Sources */,
 				68A16290204F77260093D4FA /* NDMenuCell.m in Sources */,
+				181ED8862052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m in Sources */,
 				189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */,
 				189E42B5204E482100D3DF4B /* NDMacroListModel.m in Sources */,
 				68393F9D2050CDF9005B091E /* NDDateCheckViewController.m in Sources */,
 				A02BDF85204FD9A400ECFDDA /* NDWeekLogListViewController.m in Sources */,
 				68DFE015204920230076B228 /* NDRouter.m in Sources */,
+				181ED86820525B94003ECD81 /* NDQCQFDetailModel.m in Sources */,
 				189E42BE204E49C100D3DF4B /* NSString+NDTimeString.m in Sources */,
 				18EB3702204FD8D8008B66B8 /* NDImagePickerUtils.m in Sources */,
 				18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */,
 				A025C173204E915500B1A5E5 /* NDAreaOfficerViewController.m in Sources */,
 				A02BDF7D204FBD1100ECFDDA /* NDWeekLogUploadViewController.m in Sources */,
+				181ED88120527F9A003ECD81 /* NDMonitorDetailViewController.m in Sources */,
 				18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */,
 				18EB36FE204FC73F008B66B8 /* NDMonitorCell.m in Sources */,
 				68332ED620521AE600716364 /* KZVideoConfig.m in Sources */,
@@ -848,6 +939,7 @@
 				68CCFF5A2047F8D0002E72D0 /* NDHUD.m in Sources */,
 				68D790AF204FC7E200626671 /* NDSingleTextHeader.m in Sources */,
 				68CCFF512047E6F1002E72D0 /* main.m in Sources */,
+				181ED86D20525E0C003ECD81 /* NDQCQFHistoryCell.m in Sources */,
 				68332ED920521AE600716364 /* KZVideoViewController.m in Sources */,
 				18A93797204D2ACC00E890E2 /* NDHomePageViewController.m in Sources */,
 				68393F982050CB58005B091E /* NDUnSafeHouseNumCell.m in Sources */,
@@ -867,332 +959,192 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-        68CCFF4C2047E6F1002E72D0 /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                68CCFF4D2047E6F1002E72D0 /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		68CCFF4C2047E6F1002E72D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68CCFF4D2047E6F1002E72D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        68CCFF522047E6F1002E72D0 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-            };
-            name = Debug;
-        };
-        68CCFF532047E6F1002E72D0 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        68CCFF552047E6F1002E72D0 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 4X75YXM4C3;
-                GCC_PRECOMPILE_PREFIX_HEADER = NO;
-                GCC_PREFIX_HEADER = /Users/qingsong/xcode/Gdims2/Gdims2/NDPrefixHeader.pch;
-                INFOPLIST_FILE = Gdims2/Info.plist;
-                IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.nandi.Gdims2;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        68CCFF562047E6F1002E72D0 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 041CC65576F1B5D02A82D434 /* Pods-Gdims2.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 4X75YXM4C3;
-                GCC_PRECOMPILE_PREFIX_HEADER = NO;
-                GCC_PREFIX_HEADER = /Users/qingsong/xcode/Gdims2/Gdims2/NDPrefixHeader.pch;
-                INFOPLIST_FILE = Gdims2/Info.plist;
-                IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.nandi.Gdims2;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
-        68CCFF522047E6F1002E72D0 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-            };
-            name = Debug;
-        };
-        68CCFF532047E6F1002E72D0 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        68CCFF552047E6F1002E72D0 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 4X75YXM4C3;
-                GCC_PRECOMPILE_PREFIX_HEADER = NO;
-                GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
-                INFOPLIST_FILE = Gdims2/Info.plist;
-                IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.nandi.Gdims2;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        68CCFF562047E6F1002E72D0 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 041CC65576F1B5D02A82D434 /* Pods-Gdims2.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 4X75YXM4C3;
-                GCC_PRECOMPILE_PREFIX_HEADER = NO;
-                GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
-                INFOPLIST_FILE = Gdims2/Info.plist;
-                IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.nandi.Gdims2;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
+		68CCFF522047E6F1002E72D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68CCFF532047E6F1002E72D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68CCFF552047E6F1002E72D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X75YXM4C3;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
+				INFOPLIST_FILE = Gdims2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nandi.Gdims2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68CCFF562047E6F1002E72D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 041CC65576F1B5D02A82D434 /* Pods-Gdims2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4X75YXM4C3;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
+				INFOPLIST_FILE = Gdims2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nandi.Gdims2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        68CCFF362047E6F1002E72D0 /* Build configuration list for PBXProject "Gdims2" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                68CCFF522047E6F1002E72D0 /* Debug */,
-                68CCFF532047E6F1002E72D0 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        68CCFF542047E6F1002E72D0 /* Build configuration list for PBXNativeTarget "Gdims2" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                68CCFF552047E6F1002E72D0 /* Debug */,
-                68CCFF562047E6F1002E72D0 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		68CCFF362047E6F1002E72D0 /* Build configuration list for PBXProject "Gdims2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68CCFF522047E6F1002E72D0 /* Debug */,
+				68CCFF532047E6F1002E72D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68CCFF542047E6F1002E72D0 /* Build configuration list for PBXNativeTarget "Gdims2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68CCFF552047E6F1002E72D0 /* Debug */,
+				68CCFF562047E6F1002E72D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-        68CCFF472047E6F1002E72D0 /* Gdims2.xcdatamodeld */ = {
-            isa = XCVersionGroup;
-            children = (
-                68CCFF482047E6F1002E72D0 /* Gdims2.xcdatamodel */,
-            );
-            currentVersion = 68CCFF482047E6F1002E72D0 /* Gdims2.xcdatamodel */;
-            path = Gdims2.xcdatamodeld;
-            sourceTree = "<group>";
-            versionGroupType = wrapper.xcdatamodel;
-        };
+		68CCFF472047E6F1002E72D0 /* Gdims2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68CCFF482047E6F1002E72D0 /* Gdims2.xcdatamodel */,
+			);
+			currentVersion = 68CCFF482047E6F1002E72D0 /* Gdims2.xcdatamodel */;
+			path = Gdims2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 /* End XCVersionGroup section */
-    };
-    rootObject = 68CCFF332047E6F1002E72D0 /* Project object */;
+	};
+	rootObject = 68CCFF332047E6F1002E72D0 /* Project object */;
 }
