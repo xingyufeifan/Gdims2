@@ -181,6 +181,181 @@
     }];
 }
 
++ (void)uploadMacroMoDataWithRIndex:(NSInteger)requestIndex
+                             mobile:(NSString *)mobile
+                           serialNo:(NSString *)serialNo
+                          longitude:(NSString *)longitude
+                           latitude:(NSString *)latitude
+              macroscopicPhenomenon:(NSString *)macroscopicPhenomenon
+                      unifiedNumber:(NSString *)unifiedNumber
+                       monPointDate:(NSString *)monPointDate
+                         totalCount:(NSString *)totalCount
+                              image:(UIImage *)image
+                           fileName:(NSString *)fileName
+                     otherPhenomena:(NSString *)otherPhenomena
+                            remarks:(NSString *)remarks
+                         completion:(void (^)(NSInteger, BOOL, NSString *, NSInteger))completion{
+    NSMutableDictionary * dicP = [NSMutableDictionary dictionary];
+    //无值 字段必传
+    [dicP setObject:serialNo ? serialNo : @"" forKey:@"serialNo"];
+    [dicP setObject:mobile ? mobile : @"" forKey:@"mobile"];
+    [dicP setObject:longitude ? longitude : @"" forKey:@"xpoint"];
+    [dicP setObject:latitude ? latitude : @"" forKey:@"ypoint"];
+    [dicP setObject:totalCount ? totalCount : @"" forKey:@"count"];
+    [dicP setObject:@"宏观观测" forKey:@"monitorType"];
+    [dicP setObject:unifiedNumber ? unifiedNumber : @"" forKey:@"unifiedNumber"];
+    [dicP setObject:macroscopicPhenomenon ? macroscopicPhenomenon : @"" forKey:@"macroscopicPhenomenon"];
+    [dicP setObject:monPointDate ? monPointDate : @"" forKey:@"monPointDate"];
+    [dicP setObject:otherPhenomena ? otherPhenomena : @"" forKey:@"otherPhenomena"];
+    [dicP setObject:remarks ? remarks : @"" forKey:@"remarks"];
+    if (image) {
+        [NDNetwork uploadImageToResourceURL:NDAPI_Address(NDAPI_UPLOAD_DATA, NDApiTypeQCQF) images:@[image] fileNames:@[fileName] name:@"uploads" compressQulity:0.8 params:dicP NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 1) {
+                if (completion) {
+                    completion(status,true,@"",requestIndex);
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg,requestIndex);
+                }
+            }
+        }];
+    }else{
+        [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_UPLOAD_DATA, NDApiTypeQCQF) params:dicP method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 1) {
+                if (completion) {
+                    completion(status,true,@"",requestIndex);
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg,requestIndex);
+                }
+            }
+        }];
+    }
+}
+
++ (void)uploadMonitorDataWithMobile:(NSString *)mobile
+                               type:(NDDataUploadType)type
+                          serialNum:(NSString *)serialNum
+                          longitude:(NSString *)longitude
+                           latitude:(NSString *)latitude
+                      unifiedNumber:(NSString *)unifiedNumber
+                     monPointNumber:(NSString *)monPointNumber
+                       monPointDate:(NSString *)monPointDate
+                      resetRailfall:(BOOL)reset
+                       measuredData:(NSString *)measuredData
+                              image:(UIImage *)image
+                           fileName:(NSString *)fileName
+                         completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:@"" forKey:@"serialNo"];
+    [params setObject:@"" forKey:@"mobile"];
+    [params setObject:@"" forKey:@"xpoint"];
+    [params setObject:@"" forKey:@"ypoint"];
+    [params setObject:@"" forKey:@"monitorType"];
+    [params setObject:@"" forKey:@"unifiedNumber"];
+    [params setObject:@"" forKey:@"monPointNumber"];
+    [params setObject:@"" forKey:@"resets"];
+    [params setObject:@"" forKey:@"monPointDate"];
+    [params setObject:@"" forKey:@"measuredData"];
+    if (serialNum) {
+        [params setObject:serialNum forKey:@"serialNo"];
+    }
+    if (mobile) {
+        [params setObject:mobile forKey:@"mobile"];
+    }
+    if (longitude) {
+        [params setObject:longitude forKey:@"xpoint"];
+    }
+    if (latitude) {
+        [params setObject:latitude forKey:@"ypoint"];
+    }
+    [params setObject:[self valueOfType:type] forKey:@"monitorType"];
+    if (unifiedNumber) {
+        [params setObject:unifiedNumber forKey:@"unifiedNumber"];
+    }
+    if (monPointNumber) {
+        [params setObject:monPointNumber forKey:@"monPointNumber"];
+    }
+    if (type == NDDataUploadRainFallMonitor) {
+        if (reset) {
+            [params setObject:@"1" forKey:@"resets"];
+        } else {
+            [params setObject:@"0" forKey:@"resets"];
+        }
+    }
+    if (monPointDate) {
+        [params setObject:monPointDate forKey:@"monPointDate"];
+    }
+    if (measuredData) {
+        [params setObject:measuredData forKey:@"measuredData"];
+    }
+    if (image) {
+        [NDNetwork uploadImageToResourceURL:NDAPI_Address(NDAPI_UPLOAD_DATA, NDApiTypeQCQF) images:@[image] fileNames:@[fileName] name:@"uploads" compressQulity:0.8 params:params NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 1) {
+                if (completion) {
+                    completion(status,true,@"");
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg);
+                }
+            }
+        }];
+    }else{
+        [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_UPLOAD_DATA, NDApiTypeQCQF) params:params method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 1) {
+                if (completion) {
+                    completion(status,true,@"");
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg);
+                }
+            }
+        }];
+    }
+}
++ (void)qcqfHistoryListType:(NDQCQFDetailType)type
+                     mobile:(NSString *)mobile
+                  startTime:(NSString *)startTime
+                    endTime:(NSString *)endTime
+                      disNo:(NSString *)disNo
+                  monitorNo:(NSString *)monitorNo
+                 completion:(void (^)(BOOL, NSArray *, NSString *))completion{
+    NSMutableDictionary * dicP = [NSMutableDictionary dictionary];
+    [dicP setObject:@(type) forKey:@"monitorOrMacro"];
+    [dicP setObject:mobile ? : @"" forKey:@"mobile"];
+    [dicP setObject:startTime ? : @"" forKey:@"startTime"];
+    [dicP setObject:endTime ? : @"" forKey:@"endTime"];
+    [dicP setObject:disNo ? : @"" forKey:@"disNo"];
+    [dicP setObject:monitorNo ? : @"" forKey:@"monitorNo"];
+    [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_QCQF_HISTORY, NDApiTypeLog) params:dicP method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            id info = [[content objectForKey:@"data"] mj_JSONObject];
+            if ([info isKindOfClass:[NSArray class]] && [info count] > 0) {
+                NSMutableArray<NDQCQFDetailModel *> * arrList = [NSMutableArray array];
+                for (id obj in info) {
+                    [arrList addObject:[NDQCQFDetailModel mj_objectWithKeyValues:obj]];
+                }
+                if (completion) {
+                    completion(true, arrList, @"");
+                }
+            } else {
+                if (completion) {
+                    completion(true, @[], @"无相关历史记录");
+                }
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
+            }
+        }
+    }];
+    
+}
+
 + (void)garrison_SaveDisaterByName:(NSString *)userName
                           userType:(NDUserType)type
                           phoneNum:(NSString *)phoneNum
@@ -297,6 +472,28 @@
         }
     }];
 }
+
++ (void)uploadVideo:(NSArray<NSData *> *)videos
+          fileNames:(NSArray<NSString *> *)fileNames
+             mobile:(NSString *)mobile
+           userType:(NDUserType)type
+         completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    NSMutableDictionary * dicp = [NSMutableDictionary dictionary];
+    dicp[@"mobile"] = mobile ? mobile : @"";
+    dicp[@"type"] = @(type);
+    [NDNetwork uploadVideoToResourceURL:NDAPI_Address(NDAPI_VIDEO_UPLOAD, NDApiCommonType) videos:videos fileNames:fileNames params:dicp NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            if (completion) {
+                completion(status,true,@"");
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
+            }
+        }
+    }];
+}
+
 
 + (NSString *)errorMessageBy:(NSInteger)code {
     switch (code) {

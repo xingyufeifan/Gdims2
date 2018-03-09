@@ -64,4 +64,21 @@ typedef void(^NDRequestCompletion)(id content,NSInteger status,BOOL success,NSSt
                                     compressQulity:(float)qulity
                                             params:(NSDictionary *)params
                                     NDCompletion:(NDRequestCompletion)completion;
+
+/**
+ 视频文件上传
+ 
+ @param resourceURL resourceURL description
+ @param videos 接口限制最多5个，每个最长10秒
+ @param fileNames fileNames
+ @param params params description
+ @param  completion
+ @return return value description
+ */
++ (NSURLSessionDataTask *)uploadVideoToResourceURL:(NSString *)resourceURL
+                                            videos:(NSArray<NSData *> *)videos
+                                          fileNames:(NSArray<NSString *> *)fileNames
+                                            params:(NSDictionary *)params
+                                      NDCompletion:(NDRequestCompletion)completion;
+
 @end

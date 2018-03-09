@@ -228,8 +228,65 @@
         [NDHUD MBShowFailureInView:[NDRouter window] text:@"监测点数据不存在" delay:NDHUD_DELAY_TIME];
     }
 }
+#warning 上传功能
 - (IBAction)btnUploadClick {
-    //todo
+    [self.view endEditing:YES];
+    if (self.monitorModel) {
+        if (self.monitorModel.zx_isMonitorRainValue) {//雨量监测
+            UITableViewCell * rainfallCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:2]];//雨量监测
+            if (rainfallCell && [rainfallCell isKindOfClass:[NDMonitorCell class]]) {
+                self.resetRailfall = [(NDMonitorCell *)rainfallCell zx_isResetRainFall];
+            }
+            self.monitorModel.zx_resetRainFall = self.resetRailfall;
+        }
+        UITableViewCell * inputCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:3]];//输入值
+        NSString * inputValue = nil;
+        if (inputCell && [inputCell isKindOfClass:[NDMonitorCell class]]) {
+            inputValue = [(NDMonitorCell *)inputCell zx_inputValue];
+        }
+        if (inputValue == nil) {
+            [NDHUD MBShowFailureInView:[NDRouter window] text:@"信息填写不完整" delay:NDHUD_DELAY_TIME];
+            return;
+        }
+        self.monitorModel.zx_inputData = inputValue;
+        if (!self.saved) {
+            [NDHUD MBShowFailureInView:[NDRouter window] text:@"上传前,请先保存数据" delay:NDHUD_DELAY_TIME];
+            return;
+        }
+        NSString * latitude = nil;
+        NSString * longitude = nil;
+        if (self.location != nil) {
+            latitude = [NSString stringWithFormat:@"%f",self.location.coordinate.latitude];
+            longitude = [NSString stringWithFormat:@"%f",self.location.coordinate.longitude];
+        }
+        [NDHUD MBShowLoadingInView:[NDRouter window] text:@"正在上传数据..." delay:0];
+        [NDRequestApi uploadMonitorDataWithMobile:[NDUserInfo sharedInstance].mobile
+                                             type:self.monitorModel.zx_isMonitorRainValue ? NDDataUploadRainFallMonitor : NDDataUploadQuantiativeMonitor
+                                        serialNum:[NSString zx_serialNumber]
+                                        longitude:longitude
+                                         latitude:latitude
+                                    unifiedNumber:self.monitorModel.unifiedNumber
+                                   monPointNumber:self.monitorModel.monPointNumber
+                                     monPointDate:self.strDate
+                                    resetRailfall:self.resetRailfall
+                                     measuredData:inputValue
+                                            image:self.imgPhoto.image
+                                         fileName:self.monitorModel.imageFileName
+                                       completion:^(NSInteger status, BOOL success, NSString *errorMsg) {
+                                           [NDHUD MBHideForView:[NDRouter window] animate:false];
+                                           if (success) {
+                                               [NDHUD MBShowSuccessInView:[NDRouter window] text:@"数据上传成功" delay:NDHUD_DELAY_TIME];
+                                               [self.monitorModel clearCache];
+                                               dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                   [self.navigationController popViewControllerAnimated:true];
+                                               });
+                                           } else {
+                                               [NDHUD MBShowFailureInView:[NDRouter window] text:errorMsg delay:NDHUD_DELAY_TIME];
+                                           }
+                                       }];
+    }else{
+         [NDHUD MBShowFailureInView:[NDRouter window] text:@"监测点数据不存在" delay:NDHUD_DELAY_TIME];
+    }
 }
 #pragma mark - UITableViewDelegate
 
