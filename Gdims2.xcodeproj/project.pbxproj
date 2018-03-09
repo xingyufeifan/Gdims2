@@ -7,21 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		181ED86420522CA5003ECD81 /* NDQCQFHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED86220522CA5003ECD81 /* NDQCQFHistoryViewController.m */; };
-		181ED86520522CA5003ECD81 /* NDQCQFHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED86320522CA5003ECD81 /* NDQCQFHistoryViewController.xib */; };
-		181ED86820525B94003ECD81 /* NDQCQFDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED86720525B94003ECD81 /* NDQCQFDetailModel.m */; };
-		181ED86D20525E0C003ECD81 /* NDQCQFHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED86B20525E0C003ECD81 /* NDQCQFHistoryCell.m */; };
-		181ED86E20525E0C003ECD81 /* NDQCQFHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED86C20525E0C003ECD81 /* NDQCQFHistoryCell.xib */; };
-		181ED872205272D2003ECD81 /* NDMacroDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED870205272D2003ECD81 /* NDMacroDetailViewController.m */; };
-		181ED873205272D2003ECD81 /* NDMacroDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED871205272D2003ECD81 /* NDMacroDetailViewController.xib */; };
-		181ED87720527478003ECD81 /* NDMacrHistoryImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED87520527478003ECD81 /* NDMacrHistoryImageCell.m */; };
-		181ED87820527478003ECD81 /* NDMacrHistoryImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED87620527478003ECD81 /* NDMacrHistoryImageCell.xib */; };
-		181ED87C2052756F003ECD81 /* NDImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED87A2052756F003ECD81 /* NDImageCollectionViewCell.m */; };
-		181ED87D2052756F003ECD81 /* NDImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED87B2052756F003ECD81 /* NDImageCollectionViewCell.xib */; };
-		181ED88120527F9A003ECD81 /* NDMonitorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED87F20527F9A003ECD81 /* NDMonitorDetailViewController.m */; };
-		181ED88220527F9A003ECD81 /* NDMonitorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED88020527F9A003ECD81 /* NDMonitorDetailViewController.xib */; };
-		181ED8862052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181ED8842052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m */; };
-		181ED8872052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181ED8852052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib */; };
 		187BEE732049403B008796E6 /* UIColor+ND.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BEE722049403B008796E6 /* UIColor+ND.m */; };
 		189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42A5204E1EF700D3DF4B /* NDSlideInAnimationController.m */; };
 		189E42A9204E1F8500D3DF4B /* NDSlideOutAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E42A8204E1F8500D3DF4B /* NDSlideOutAnimationController.m */; };
@@ -63,15 +48,6 @@
 		18EB3705204FDA68008B66B8 /* UIImage+ND.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB3704204FDA68008B66B8 /* UIImage+ND.m */; };
 		18EB3709204FF30D008B66B8 /* NDDailyListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB3707204FF30D008B66B8 /* NDDailyListCell.m */; };
 		18EB370A204FF30D008B66B8 /* NDDailyListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB3708204FF30D008B66B8 /* NDDailyListCell.xib */; };
-		68332ED620521AE600716364 /* KZVideoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 68332ECF20521AE600716364 /* KZVideoConfig.m */; };
-		68332ED720521AE600716364 /* KZVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68332ED120521AE600716364 /* KZVideoPlayer.m */; };
-		68332ED820521AE600716364 /* KZVideoSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 68332ED320521AE600716364 /* KZVideoSupport.m */; };
-		68332ED920521AE600716364 /* KZVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68332ED520521AE600716364 /* KZVideoViewController.m */; };
-		68332EE320521B9A00716364 /* NDVideoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68332EDA20521B9900716364 /* NDVideoUploadViewController.m */; };
-		68332EE420521B9A00716364 /* NDVideoCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68332EDD20521B9900716364 /* NDVideoCheckCell.m */; };
-		68332EE520521B9A00716364 /* NDVideoCheckCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68332EDE20521B9900716364 /* NDVideoCheckCell.xib */; };
-		68332EE620521B9A00716364 /* NDVideoUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68332EDF20521B9900716364 /* NDVideoUploadViewController.xib */; };
-		68332EE720521B9A00716364 /* NDVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68332EE120521B9A00716364 /* NDVideoModel.m */; };
 		68393F8E2050C5DA005B091E /* NDSingleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68393F8C2050C5DA005B091E /* NDSingleImageCell.m */; };
 		68393F8F2050C5DA005B091E /* NDSingleImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68393F8D2050C5DA005B091E /* NDSingleImageCell.xib */; };
 		68393F932050C617005B091E /* NDImageCheckCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68393F912050C617005B091E /* NDImageCheckCollectionViewCell.m */; };
@@ -120,29 +96,6 @@
 
 /* Begin PBXFileReference section */
 		041CC65576F1B5D02A82D434 /* Pods-Gdims2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.release.xcconfig"; sourceTree = "<group>"; };
-		181ED86120522CA5003ECD81 /* NDQCQFHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDQCQFHistoryViewController.h; sourceTree = "<group>"; };
-		181ED86220522CA5003ECD81 /* NDQCQFHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDQCQFHistoryViewController.m; sourceTree = "<group>"; };
-		181ED86320522CA5003ECD81 /* NDQCQFHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDQCQFHistoryViewController.xib; sourceTree = "<group>"; };
-		181ED86620525B94003ECD81 /* NDQCQFDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDQCQFDetailModel.h; sourceTree = "<group>"; };
-		181ED86720525B94003ECD81 /* NDQCQFDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDQCQFDetailModel.m; sourceTree = "<group>"; };
-		181ED86A20525E0C003ECD81 /* NDQCQFHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDQCQFHistoryCell.h; sourceTree = "<group>"; };
-		181ED86B20525E0C003ECD81 /* NDQCQFHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDQCQFHistoryCell.m; sourceTree = "<group>"; };
-		181ED86C20525E0C003ECD81 /* NDQCQFHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDQCQFHistoryCell.xib; sourceTree = "<group>"; };
-		181ED86F205272D2003ECD81 /* NDMacroDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMacroDetailViewController.h; sourceTree = "<group>"; };
-		181ED870205272D2003ECD81 /* NDMacroDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMacroDetailViewController.m; sourceTree = "<group>"; };
-		181ED871205272D2003ECD81 /* NDMacroDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMacroDetailViewController.xib; sourceTree = "<group>"; };
-		181ED87420527478003ECD81 /* NDMacrHistoryImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMacrHistoryImageCell.h; sourceTree = "<group>"; };
-		181ED87520527478003ECD81 /* NDMacrHistoryImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMacrHistoryImageCell.m; sourceTree = "<group>"; };
-		181ED87620527478003ECD81 /* NDMacrHistoryImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMacrHistoryImageCell.xib; sourceTree = "<group>"; };
-		181ED8792052756F003ECD81 /* NDImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDImageCollectionViewCell.h; sourceTree = "<group>"; };
-		181ED87A2052756F003ECD81 /* NDImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDImageCollectionViewCell.m; sourceTree = "<group>"; };
-		181ED87B2052756F003ECD81 /* NDImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDImageCollectionViewCell.xib; sourceTree = "<group>"; };
-		181ED87E20527F9A003ECD81 /* NDMonitorDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMonitorDetailViewController.h; sourceTree = "<group>"; };
-		181ED87F20527F9A003ECD81 /* NDMonitorDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMonitorDetailViewController.m; sourceTree = "<group>"; };
-		181ED88020527F9A003ECD81 /* NDMonitorDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMonitorDetailViewController.xib; sourceTree = "<group>"; };
-		181ED8832052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDMonitorHistoryImageCellTableViewCell.h; sourceTree = "<group>"; };
-		181ED8842052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDMonitorHistoryImageCellTableViewCell.m; sourceTree = "<group>"; };
-		181ED8852052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDMonitorHistoryImageCellTableViewCell.xib; sourceTree = "<group>"; };
 		187BEE712049403B008796E6 /* UIColor+ND.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ND.h"; sourceTree = "<group>"; };
 		187BEE722049403B008796E6 /* UIColor+ND.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ND.m"; sourceTree = "<group>"; };
 		189E42A4204E1EF700D3DF4B /* NDSlideInAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSlideInAnimationController.h; sourceTree = "<group>"; };
@@ -213,22 +166,6 @@
 		18EB3708204FF30D008B66B8 /* NDDailyListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDDailyListCell.xib; sourceTree = "<group>"; };
 		26FB47ABDC635AFC17670754 /* libPods-Gdims2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gdims2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3C2D190FBD49C793ED6269 /* Pods-Gdims2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gdims2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gdims2/Pods-Gdims2.debug.xcconfig"; sourceTree = "<group>"; };
-		68332ECE20521AE600716364 /* KZVideoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVideoConfig.h; sourceTree = "<group>"; };
-		68332ECF20521AE600716364 /* KZVideoConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZVideoConfig.m; sourceTree = "<group>"; };
-		68332ED020521AE600716364 /* KZVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVideoPlayer.h; sourceTree = "<group>"; };
-		68332ED120521AE600716364 /* KZVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZVideoPlayer.m; sourceTree = "<group>"; };
-		68332ED220521AE600716364 /* KZVideoSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVideoSupport.h; sourceTree = "<group>"; };
-		68332ED320521AE600716364 /* KZVideoSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZVideoSupport.m; sourceTree = "<group>"; };
-		68332ED420521AE600716364 /* KZVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZVideoViewController.h; sourceTree = "<group>"; };
-		68332ED520521AE600716364 /* KZVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZVideoViewController.m; sourceTree = "<group>"; };
-		68332EDA20521B9900716364 /* NDVideoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDVideoUploadViewController.m; sourceTree = "<group>"; };
-		68332EDC20521B9900716364 /* NDVideoCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDVideoCheckCell.h; sourceTree = "<group>"; };
-		68332EDD20521B9900716364 /* NDVideoCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDVideoCheckCell.m; sourceTree = "<group>"; };
-		68332EDE20521B9900716364 /* NDVideoCheckCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDVideoCheckCell.xib; sourceTree = "<group>"; };
-		68332EDF20521B9900716364 /* NDVideoUploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDVideoUploadViewController.xib; sourceTree = "<group>"; };
-		68332EE020521B9A00716364 /* NDVideoUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDVideoUploadViewController.h; sourceTree = "<group>"; };
-		68332EE120521B9A00716364 /* NDVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDVideoModel.m; sourceTree = "<group>"; };
-		68332EE220521B9A00716364 /* NDVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDVideoModel.h; sourceTree = "<group>"; };
 		68393F8B2050C5DA005B091E /* NDSingleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDSingleImageCell.h; sourceTree = "<group>"; };
 		68393F8C2050C5DA005B091E /* NDSingleImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDSingleImageCell.m; sourceTree = "<group>"; };
 		68393F8D2050C5DA005B091E /* NDSingleImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NDSingleImageCell.xib; sourceTree = "<group>"; };
@@ -314,42 +251,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		181ED86020522C4C003ECD81 /* NDQCQFHistoryModule */ = {
-			isa = PBXGroup;
-			children = (
-				181ED86920525DE6003ECD81 /* view */,
-				181ED86120522CA5003ECD81 /* NDQCQFHistoryViewController.h */,
-				181ED86220522CA5003ECD81 /* NDQCQFHistoryViewController.m */,
-				181ED86320522CA5003ECD81 /* NDQCQFHistoryViewController.xib */,
-				181ED86F205272D2003ECD81 /* NDMacroDetailViewController.h */,
-				181ED870205272D2003ECD81 /* NDMacroDetailViewController.m */,
-				181ED871205272D2003ECD81 /* NDMacroDetailViewController.xib */,
-				181ED87E20527F9A003ECD81 /* NDMonitorDetailViewController.h */,
-				181ED87F20527F9A003ECD81 /* NDMonitorDetailViewController.m */,
-				181ED88020527F9A003ECD81 /* NDMonitorDetailViewController.xib */,
-			);
-			path = NDQCQFHistoryModule;
-			sourceTree = "<group>";
-		};
-		181ED86920525DE6003ECD81 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				181ED86A20525E0C003ECD81 /* NDQCQFHistoryCell.h */,
-				181ED86B20525E0C003ECD81 /* NDQCQFHistoryCell.m */,
-				181ED86C20525E0C003ECD81 /* NDQCQFHistoryCell.xib */,
-				181ED87420527478003ECD81 /* NDMacrHistoryImageCell.h */,
-				181ED87520527478003ECD81 /* NDMacrHistoryImageCell.m */,
-				181ED87620527478003ECD81 /* NDMacrHistoryImageCell.xib */,
-				181ED8792052756F003ECD81 /* NDImageCollectionViewCell.h */,
-				181ED87A2052756F003ECD81 /* NDImageCollectionViewCell.m */,
-				181ED87B2052756F003ECD81 /* NDImageCollectionViewCell.xib */,
-				181ED8832052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.h */,
-				181ED8842052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m */,
-				181ED8852052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		187BEE7020493FE1008796E6 /* NDCommon */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,8 +307,6 @@
 				68778F41204F7FAF005FA697 /* NDGarrisonModel.m */,
 				A02BDF7F204FBDE500ECFDDA /* NDAreaWeekModel.h */,
 				A02BDF80204FBDE500ECFDDA /* NDAreaWeekModel.m */,
-				181ED86620525B94003ECD81 /* NDQCQFDetailModel.h */,
-				181ED86720525B94003ECD81 /* NDQCQFDetailModel.m */,
 			);
 			path = NDModel;
 			sourceTree = "<group>";
@@ -424,7 +323,6 @@
 		18A93798204D2C1E00E890E2 /* NDQCQFModule */ = {
 			isa = PBXGroup;
 			children = (
-				181ED86020522C4C003ECD81 /* NDQCQFHistoryModule */,
 				18EB36F4204FC499008B66B8 /* NDMonitorUploadModule */,
 				18EB36E8204F8DD2008B66B8 /* NDMacroUploadModule */,
 				189E42AD204E3CBD00D3DF4B /* view */,
@@ -521,45 +419,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		68332ECA205219A800716364 /* NDVideoUploadModel */ = {
-			isa = PBXGroup;
-			children = (
-				68332EDB20521B9900716364 /* View */,
-				68332EE220521B9A00716364 /* NDVideoModel.h */,
-				68332EE120521B9A00716364 /* NDVideoModel.m */,
-				68332EE020521B9A00716364 /* NDVideoUploadViewController.h */,
-				68332EDA20521B9900716364 /* NDVideoUploadViewController.m */,
-				68332EDF20521B9900716364 /* NDVideoUploadViewController.xib */,
-				68332ECD20521AE600716364 /* KZSmallVideoRecorder */,
-			);
-			path = NDVideoUploadModel;
-			sourceTree = "<group>";
-		};
-		68332ECD20521AE600716364 /* KZSmallVideoRecorder */ = {
-			isa = PBXGroup;
-			children = (
-				68332ECE20521AE600716364 /* KZVideoConfig.h */,
-				68332ECF20521AE600716364 /* KZVideoConfig.m */,
-				68332ED020521AE600716364 /* KZVideoPlayer.h */,
-				68332ED120521AE600716364 /* KZVideoPlayer.m */,
-				68332ED220521AE600716364 /* KZVideoSupport.h */,
-				68332ED320521AE600716364 /* KZVideoSupport.m */,
-				68332ED420521AE600716364 /* KZVideoViewController.h */,
-				68332ED520521AE600716364 /* KZVideoViewController.m */,
-			);
-			path = KZSmallVideoRecorder;
-			sourceTree = "<group>";
-		};
-		68332EDB20521B9900716364 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				68332EDC20521B9900716364 /* NDVideoCheckCell.h */,
-				68332EDD20521B9900716364 /* NDVideoCheckCell.m */,
-				68332EDE20521B9900716364 /* NDVideoCheckCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		684210DB204E8B9400DC1BAD /* NDGarrisonManModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,7 +489,6 @@
 		68CCFF3D2047E6F1002E72D0 /* Gdims2 */ = {
 			isa = PBXGroup;
 			children = (
-				68332ECA205219A800716364 /* NDVideoUploadModel */,
 				A025C16F204E90EC00B1A5E5 /* NDAreaOfficerModule */,
 				684210DB204E8B9400DC1BAD /* NDGarrisonManModule */,
 				18A9379E204D3D0800E890E2 /* NDSettingModule */,
@@ -780,7 +638,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181ED87D2052756F003ECD81 /* NDImageCollectionViewCell.xib in Resources */,
 				18EB36F3204FBDF0008B66B8 /* NDMacroCell.xib in Resources */,
 				68DFE01220491FC50076B228 /* NDLoginViewController.xib in Resources */,
 				18A937A3204D3D4300E890E2 /* NDSettingViewController.xib in Resources */,
@@ -789,21 +646,16 @@
 				68393F8F2050C5DA005B091E /* NDSingleImageCell.xib in Resources */,
 				68CCFF4E2047E6F1002E72D0 /* LaunchScreen.storyboard in Resources */,
 				18EB36FF204FC73F008B66B8 /* NDMonitorCell.xib in Resources */,
-				181ED87820527478003ECD81 /* NDMacrHistoryImageCell.xib in Resources */,
 				18A937B6204D490E00E890E2 /* NDSettingHeaderCell.xib in Resources */,
 				68D790B1204FC7FD00626671 /* NDSingleTextHeader.xib in Resources */,
 				68A16291204F77260093D4FA /* NDMenuCell.xib in Resources */,
-				181ED8872052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.xib in Resources */,
 				684210EA204E8C3B00DC1BAD /* NDDisasterUploadViewController.xib in Resources */,
-				68332EE520521B9A00716364 /* NDVideoCheckCell.xib in Resources */,
 				18EB36E7204F7FAD008B66B8 /* NDLocationSettingViewController.xib in Resources */,
 				68393F9E2050CDF9005B091E /* NDDateCheckViewController.xib in Resources */,
 				189E42B2204E3D8B00D3DF4B /* NDHomeListHeader.xib in Resources */,
-				181ED86520522CA5003ECD81 /* NDQCQFHistoryViewController.xib in Resources */,
 				A025C174204E915500B1A5E5 /* NDAreaOfficerViewController.xib in Resources */,
 				A02BDF86204FD9A400ECFDDA /* NDWeekLogListViewController.xib in Resources */,
 				18EB370A204FF30D008B66B8 /* NDDailyListCell.xib in Resources */,
-				181ED86E20525E0C003ECD81 /* NDQCQFHistoryCell.xib in Resources */,
 				A02BDF7E204FBD1100ECFDDA /* NDWeekLogUploadViewController.xib in Resources */,
 				68393F942050C617005B091E /* NDImageCheckCollectionViewCell.xib in Resources */,
 				18A06330204920DB0038E256 /* NDLoginViewController.xib in Resources */,
@@ -813,9 +665,6 @@
 				18EB36F9204FC4DA008B66B8 /* NDMonitorUploadViewController.xib in Resources */,
 				189E42C3204E6C8D00D3DF4B /* NDHomeCheckItemCell.xib in Resources */,
 				18A93790204CF6F600E890E2 /* HUD.xcassets in Resources */,
-				181ED873205272D2003ECD81 /* NDMacroDetailViewController.xib in Resources */,
-				68332EE620521B9A00716364 /* NDVideoUploadViewController.xib in Resources */,
-				181ED88220527F9A003ECD81 /* NDMonitorDetailViewController.xib in Resources */,
 				18A9379D204D2DF800E890E2 /* NDQCQFViewController.xib in Resources */,
 				18EB36ED204F8E2A008B66B8 /* NDMacroUploadViewController.xib in Resources */,
 				68D790A9204FC30900626671 /* NDRemarkInputCell.xib in Resources */,
@@ -892,19 +741,13 @@
 				18EB36F2204FBDF0008B66B8 /* NDMacroCell.m in Sources */,
 				18EB3705204FDA68008B66B8 /* UIImage+ND.m in Sources */,
 				68D790A8204FC30900626671 /* NDRemarkInputCell.m in Sources */,
-				68332EE720521B9A00716364 /* NDVideoModel.m in Sources */,
-				181ED87720527478003ECD81 /* NDMacrHistoryImageCell.m in Sources */,
 				18A937A8204D467800E890E2 /* NDSettingCell.m in Sources */,
-				68332ED720521AE600716364 /* KZVideoPlayer.m in Sources */,
 				68778F42204F7FAF005FA697 /* NDGarrisonModel.m in Sources */,
 				A02BDF81204FBDE500ECFDDA /* NDAreaWeekModel.m in Sources */,
 				684210E4204E8C0A00DC1BAD /* NDDailyUploadViewController.m in Sources */,
-				68332ED820521AE600716364 /* KZVideoSupport.m in Sources */,
-				181ED872205272D2003ECD81 /* NDMacroDetailViewController.m in Sources */,
 				68393F8E2050C5DA005B091E /* NDSingleImageCell.m in Sources */,
 				68D790A4204FC2B900626671 /* NDTableViewCell.m in Sources */,
 				A025C16E204E900E00B1A5E5 /* NDLocationUtils.m in Sources */,
-				181ED86420522CA5003ECD81 /* NDQCQFHistoryViewController.m in Sources */,
 				68393FA12050D016005B091E /* NSDate+ND.m in Sources */,
 				189E42B8204E486600D3DF4B /* NDMonitorModel.m in Sources */,
 				18EB36EC204F8E2A008B66B8 /* NDMacroUploadViewController.m in Sources */,
@@ -915,41 +758,32 @@
 				68DFE01120491FC50076B228 /* NDLoginViewController.m in Sources */,
 				18EB36E6204F7FAD008B66B8 /* NDLocationSettingViewController.m in Sources */,
 				18A9378E204CDCE200E890E2 /* NDRequestApi.m in Sources */,
-				181ED87C2052756F003ECD81 /* NDImageCollectionViewCell.m in Sources */,
 				68CCFF492047E6F1002E72D0 /* Gdims2.xcdatamodeld in Sources */,
 				68A16290204F77260093D4FA /* NDMenuCell.m in Sources */,
-				181ED8862052804B003ECD81 /* NDMonitorHistoryImageCellTableViewCell.m in Sources */,
 				189E42A6204E1EF700D3DF4B /* NDSlideInAnimationController.m in Sources */,
 				189E42B5204E482100D3DF4B /* NDMacroListModel.m in Sources */,
 				68393F9D2050CDF9005B091E /* NDDateCheckViewController.m in Sources */,
 				A02BDF85204FD9A400ECFDDA /* NDWeekLogListViewController.m in Sources */,
 				68DFE015204920230076B228 /* NDRouter.m in Sources */,
-				181ED86820525B94003ECD81 /* NDQCQFDetailModel.m in Sources */,
 				189E42BE204E49C100D3DF4B /* NSString+NDTimeString.m in Sources */,
 				18EB3702204FD8D8008B66B8 /* NDImagePickerUtils.m in Sources */,
 				18A93787204CD6FC00E890E2 /* NDUserInfo.m in Sources */,
 				A025C173204E915500B1A5E5 /* NDAreaOfficerViewController.m in Sources */,
 				A02BDF7D204FBD1100ECFDDA /* NDWeekLogUploadViewController.m in Sources */,
-				181ED88120527F9A003ECD81 /* NDMonitorDetailViewController.m in Sources */,
 				18A937B4204D48DF00E890E2 /* NDSettingHeaderCell.m in Sources */,
 				18EB36FE204FC73F008B66B8 /* NDMonitorCell.m in Sources */,
-				68332ED620521AE600716364 /* KZVideoConfig.m in Sources */,
 				189E42C2204E6C8D00D3DF4B /* NDHomeCheckItemCell.m in Sources */,
 				684210EE204E8C5900DC1BAD /* NDDailyListViewController.m in Sources */,
 				68CCFF5A2047F8D0002E72D0 /* NDHUD.m in Sources */,
 				68D790AF204FC7E200626671 /* NDSingleTextHeader.m in Sources */,
 				68CCFF512047E6F1002E72D0 /* main.m in Sources */,
-				181ED86D20525E0C003ECD81 /* NDQCQFHistoryCell.m in Sources */,
-				68332ED920521AE600716364 /* KZVideoViewController.m in Sources */,
 				18A93797204D2ACC00E890E2 /* NDHomePageViewController.m in Sources */,
 				68393F982050CB58005B091E /* NDUnSafeHouseNumCell.m in Sources */,
 				18A93793204D263400E890E2 /* NDViewController.m in Sources */,
 				18EB36F8204FC4DA008B66B8 /* NDMonitorUploadViewController.m in Sources */,
-				68332EE320521B9A00716364 /* NDVideoUploadViewController.m in Sources */,
 				189E42A9204E1F8500D3DF4B /* NDSlideOutAnimationController.m in Sources */,
 				68D790A1204FBC6B00626671 /* NDAlertUtils.m in Sources */,
 				18A9378B204CD8DC00E890E2 /* NDNetwork.m in Sources */,
-				68332EE420521B9A00716364 /* NDVideoCheckCell.m in Sources */,
 				18EB3709204FF30D008B66B8 /* NDDailyListCell.m in Sources */,
 				68CCFF402047E6F1002E72D0 /* AppDelegate.m in Sources */,
 				189E42BB204E493100D3DF4B /* NDFileUtils.m in Sources */,
@@ -1082,7 +916,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X75YXM4C3;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/baohongyan/IOSProjects/Gdims2/Gdims2/NDPrefixHeader.pch;
 				INFOPLIST_FILE = Gdims2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1100,7 +934,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X75YXM4C3;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = /Users/apple/work/iosworkspace/Gdims2/Gdims2/NDPrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/baohongyan/IOSProjects/Gdims2/Gdims2/NDPrefixHeader.pch;
 				INFOPLIST_FILE = Gdims2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

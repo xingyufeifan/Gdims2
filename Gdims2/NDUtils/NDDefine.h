@@ -25,9 +25,9 @@
 #define NDPORT3                 @"8090"
 
 #define NDAPI_LOGIN             @"/meteor/findFunCfg.do"         //登录
-#define NDAPI_UPLAOD_LOCATION   @"/meteor/uploadMeteorLongitudeAndLatitude.do"   //群测群防人员定位
-#define NDAPI_UPLAOD_LOCATION2  @"/meteor/receiveLonLat.do"                      //驻守人员及片区专管员定位
-#define NDAPI_UPLAOD_LOCATION3  @"/meteor/uploadAreaAdminLonLat.do"                      //片区专管员定位
+#define NDAPI_UPLAOD_LOCATION   @"/meteor/uploadMeteorLongitudeAndLatitude.do"   //群测群防员定位
+#define NDAPI_UPLAOD_LOCATION2  @"/meteor/receiveLonLat.do"                      //驻守人员定位
+#define NDAPI_UPLAOD_LOCATION3  @"/meteor/uploadAreaAdminLonLat.do"              //片区专管员定位
 #define NDAPI_HOTLINE_URL       @"/meteor/getHelpMobile.do"
 #define NDAPI_CHECK_UPADTE      @"/meteor/haveNewVersion.do"
 #define NDAPI_VIDEO_UPLOAD      @"/meteor/saveSurveyVideo.do"                    //视频上传

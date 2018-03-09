@@ -10,23 +10,14 @@
 @class NDMacroListModel;
 @class NDMonitorModel;
 @class NDGarrisonDailyModel;
-@class NDQCQFDetailModel;
+@class NDAreaWeekModel;
+
 typedef enum: NSUInteger{
     NDUserTypeQCQF = 0,
     NDUserTypeZS = 1,
     NDUserTypePQ = 2
-}NDUserType;
+} NDUserType;
 
-typedef enum : NSUInteger {
-    NDQCQFDetailTypeMacro   = 1,    //宏观
-    NDQCQFDetailTypeMonitor = 2     //定量
-} NDQCQFDetailType;//群测群防历史记录类型
-
-typedef enum : NSUInteger {
-    NDDataUploadMacroMonitor,
-    NDDataUploadQuantiativeMonitor,
-    NDDataUploadRainFallMonitor,
-} NDDataUploadType;
 @interface NDRequestApi : NSObject
 /**
  登录接口
@@ -230,16 +221,31 @@ typedef enum : NSUInteger {
                       completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
 
 /**
- 灾情视频上传
- 
- @param videos videos description
- @param mobile mobile description
- @param type type description
+ 片区专管员-周报上传
+ 参数包装成JsonString
+ @param userName 片区负责人
+ @param member member   传""
+ @param phoneNum phoneNum description
+ @param units 乡镇名称
+ @param jobContent 本周工作情况
+ @param recordTime recordTime description
  @param completion completion description
  */
-+ (void)uploadVideo:(NSArray<NSData *> *)videos
-          fileNames:(NSArray<NSString *> *)fileNames
-             mobile:(NSString *)mobile
-           userType:(NDUserType)type
-         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
++ (void)areaOfficer_SaveWeekLogByName:(NSString *)userName
+                               member:(NSString *)member
+                             phoneNum:(NSString *)phoneNum
+                                units:(NSString *)units
+                           jobContent:(NSString *)jobContent
+                           recordTime:(NSString *)recordTime
+                           completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
+
+/**
+ 片区管理员-周报列表
+ 
+ @param mobile mobile description
+ @param completion completion description
+ */
++ (void)areaOfficer_WeekListByMobile:(NSString *)mobile
+                          completion:(void(^)(BOOL success, NSArray<NDAreaWeekModel * > * list, NSString *errorMsg))completion;
+
 @end
