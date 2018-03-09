@@ -11,7 +11,10 @@
 #import "NDMacroListModel.h"
 #import "NDMonitorModel.h"
 #import "NDGarrisonModel.h"
+#import "NDAreaWeekModel.h"
+
 @implementation NDRequestApi
+
 +(void)loginWithMobile:(NSString *)mobile userType:(NDUserType)type completion:(void (^)(BOOL, NSString *))completion{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[@"mobile"] = mobile?mobile:@"";
@@ -155,10 +158,12 @@
                             phone:(NSString *)phone
                          userType:(NDUserType)type
                        completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    // 群测群防
     NSString *url = NDAPI_Address(NDAPI_UPLAOD_LOCATION, NDApiCommonType);
-    if (type == NDUserTypeZS) {
+    if (type == NDUserTypeZS) { //驻守人员
         url = NDAPI_Address(NDAPI_UPLAOD_LOCATION2, NDApiCommonType);
-    }else if(type == NDUserTypePQ){
+    }
+    else if(type == NDUserTypePQ){ //片区专管
         url = NDAPI_Address(NDAPI_UPLAOD_LOCATION3, NDApiCommonType);
     }
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
@@ -309,6 +314,69 @@
     }
     return nil;
 }
+
+//片区
++ (void)areaOfficer_SaveWeekLogByName:(NSString *)userName
+                               member:(NSString *)member
+                             phoneNum:(NSString *)phoneNum
+                                units:(NSString *)units
+                           jobContent:(NSString *)jobContent
+                           recordTime:(NSString *)recordTime
+                           completion:(void (^)(NSInteger, BOOL, NSString *))completion {
+    NSMutableDictionary * dataDic = [NSMutableDictionary dictionary];
+    [dataDic setObject:@"" forKey:@"member"];
+    [dataDic setObject:phoneNum ? : @"" forKey:@"phoneNum"];
+    [dataDic setObject:units ? : @"" forKey:@"units"];
+    [dataDic setObject:recordTime ? : @"" forKey:@"recordTime"];
+    [dataDic setObject:userName ? : @"" forKey:@"userName"];
+    [dataDic setObject:jobContent ? : @"" forKey:@"jobContent"];
+    
+    NSMutableDictionary * dicp = [NSMutableDictionary dictionary];
+    dicp[@"data"] = [dataDic mj_JSONString];
+    
+    [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_AREAOFFICER_SAVE_WEEK, NDApiTypeLog) params:dicp method:GET NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            if (completion) {
+                completion(status,true,@"");
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
+            }
+        }
+    }];
+}
+
++ (void)areaOfficer_WeekListByMobile:(NSString *)mobile
+                          completion:(void (^)(BOOL, NSArray<NDAreaWeekModel *> *, NSString *))completion {
+    NSMutableDictionary * dicp = [NSMutableDictionary dictionary];
+    dicp[@"mobile"] = mobile ? mobile : @"";
+    dicp[@"type"] = @"2";
+    
+    [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_DAILY_WEEK_LIST, NDApiCommonType) params:dicp method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            id info = [[content objectForKey:@"data"] mj_JSONObject];
+            if ([info isKindOfClass:[NSArray class]] && [info count]>0) {
+                NSMutableArray * arrList = [NSMutableArray array];
+                for (id obj in info) {
+                    [arrList addObject:[NDAreaWeekModel mj_objectWithKeyValues:obj]];
+                }
+                if (completion) {
+                    completion(true, arrList, @"");
+                }
+            } else {
+                if (completion) {
+                    completion(true, @[], @"无相关周报记录");
+                }
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
+            }
+        }
+    }];
+}
+
 
 
 @end
