@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZXVideoUploadViewController">
+            <connections>
+                <outlet property="btnRecord" destination="UtS-fa-9Hk" id="5V0-FA-J9O"/>
+                <outlet property="btnUpload" destination="WUy-Po-YAn" id="zjO-O2-dOk"/>
+                <outlet property="tblList" destination="eoV-t8-Suh" id="TC8-CK-S7o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JpP-Yk-Vzw">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtS-fa-9Hk">
+                            <rect key="frame" x="20" y="10" width="157.5" height="40"/>
+                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="录像">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="recordAction:" destination="-1" eventType="touchUpInside" id="Wa5-c1-Kgr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUy-Po-YAn">
+                            <rect key="frame" x="197.5" y="10" width="157.5" height="40"/>
+                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <state key="normal" title="上传">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="uploadAction:" destination="-1" eventType="touchUpInside" id="GIC-ZE-ERC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="UtS-fa-9Hk" firstAttribute="top" secondItem="JpP-Yk-Vzw" secondAttribute="top" constant="10" id="1Fa-qB-ggX"/>
+                        <constraint firstAttribute="bottom" secondItem="WUy-Po-YAn" secondAttribute="bottom" constant="10" id="AKp-vc-5Xv"/>
+                        <constraint firstAttribute="trailing" secondItem="WUy-Po-YAn" secondAttribute="trailing" constant="20" id="UZ6-h3-JQc"/>
+                        <constraint firstAttribute="height" constant="60" id="W0D-7L-QKK"/>
+                        <constraint firstItem="UtS-fa-9Hk" firstAttribute="leading" secondItem="JpP-Yk-Vzw" secondAttribute="leading" constant="20" id="aX3-t4-mGL"/>
+                        <constraint firstAttribute="bottom" secondItem="UtS-fa-9Hk" secondAttribute="bottom" constant="10" id="bk1-lN-bNb"/>
+                        <constraint firstItem="WUy-Po-YAn" firstAttribute="leading" secondItem="UtS-fa-9Hk" secondAttribute="trailing" constant="20" id="cIq-dR-Uzz"/>
+                        <constraint firstItem="WUy-Po-YAn" firstAttribute="top" secondItem="JpP-Yk-Vzw" secondAttribute="top" constant="10" id="eL8-dd-wOc"/>
+                        <constraint firstItem="WUy-Po-YAn" firstAttribute="width" secondItem="UtS-fa-9Hk" secondAttribute="width" id="qqu-pT-RIg"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eoV-t8-Suh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Kh2-SM-b0y"/>
+                        <outlet property="delegate" destination="-1" id="oT5-it-abd"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JpP-Yk-Vzw" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="7vZ-Rp-zi9"/>
+                <constraint firstItem="JpP-Yk-Vzw" firstAttribute="top" secondItem="eoV-t8-Suh" secondAttribute="bottom" id="CZZ-kM-pFH"/>
+                <constraint firstItem="JpP-Yk-Vzw" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="EkJ-Qb-eZp"/>
+                <constraint firstItem="eoV-t8-Suh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gqk-Ml-Owc"/>
+                <constraint firstItem="JpP-Yk-Vzw" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Zq5-TQ-rdW"/>
+                <constraint firstItem="eoV-t8-Suh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="dP4-Zx-glH"/>
+                <constraint firstItem="eoV-t8-Suh" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="u3u-jX-rsd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

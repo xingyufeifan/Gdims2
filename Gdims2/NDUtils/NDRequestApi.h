@@ -178,4 +178,18 @@ typedef enum : NSUInteger {
                       recordTime:(NSString *)recordTime
                         phoneNum:(NSString *)phoneNum
                       completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
+
+/**
+ 灾情视频上传
+ 
+ @param videos videos description
+ @param mobile mobile description
+ @param type type description
+ @param completion completion description
+ */
++ (void)uploadVideo:(NSArray<NSData *> *)videos
+          fileNames:(NSArray<NSString *> *)fileNames
+             mobile:(NSString *)mobile
+           userType:(NDUserType)type
+         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
 @end
