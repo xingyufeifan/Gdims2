@@ -16,6 +16,17 @@ typedef enum: NSUInteger{
     NDUserTypeZS = 1,
     NDUserTypePQ = 2
 }NDUserType;
+
+typedef enum : NSUInteger {
+    NDQCQFDetailTypeMacro   = 1,    //宏观
+    NDQCQFDetailTypeMonitor = 2     //定量
+} NDQCQFDetailType;//群测群防历史记录类型
+
+typedef enum : NSUInteger {
+    NDDataUploadMacroMonitor,
+    NDDataUploadQuantiativeMonitor,
+    NDDataUploadRainFallMonitor,
+} NDDataUploadType;
 @interface NDRequestApi : NSObject
 /**
  登录接口
@@ -71,7 +82,35 @@ typedef enum: NSUInteger{
                              phone:(NSString *)phone
                           userType:(NDUserType)type
                         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
-
+/**
+ 上传定量监测/雨量监测数据
+ 
+ @param mobile mobile description
+ @param type type description
+ @param serialNum serialNum description
+ @param longitude longitude description
+ @param latitude latitude description
+ @param unifiedNumber 灾害点变化
+ @param monPointNumber 监测点编号
+ @param monPointDate monPointDate description
+ @param reset 是否清空雨量
+ @param measuredData 计量值
+ @param image image description
+ @param completion completion description
+ */
++ (void)uploadMonitorDataWithMobile:(NSString *)mobile
+                               type:(NDDataUploadType)type
+                          serialNum:(NSString *)serialNum
+                          longitude:(NSString *)longitude
+                           latitude:(NSString *)latitude
+                      unifiedNumber:(NSString *)unifiedNumber
+                     monPointNumber:(NSString *)monPointNumber
+                       monPointDate:(NSString *)monPointDate
+                      resetRailfall:(BOOL)reset
+                       measuredData:(NSString *)measuredData
+                              image:(UIImage *)image
+                           fileName:(NSString *)fileName
+                         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
 
 /**
  驻守人员-灾情速报上报接口

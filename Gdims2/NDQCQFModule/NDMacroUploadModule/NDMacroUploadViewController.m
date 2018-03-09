@@ -161,11 +161,11 @@
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:[self remarkKey]];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
-#pragma mark 保存信息
+#warning 保存信息
 - (IBAction)btnSaveClick {
     
 }
-#pragma mark 上传信息
+#warning 上传信息
 - (IBAction)btnUploadClick {
     
 }
@@ -290,7 +290,6 @@
     if (indexpath) {
         NDMacroModel *model = self.arrMacroModelList[indexpath.row];
         model.checked = checked;
-        NSLog(@"cellCheck:%@",checked?@"YES":@"NO");
         if (checked == false) {//取消选中时，删除已选择的图片和缓存
             if (model.zx_isOther) {
                 [model otherUnCheckAction];
@@ -309,7 +308,6 @@
 //拍照
 - (void)ndMacroCellTakePhoto:(NDMacroCell *)cell{
     NSIndexPath * indexPath = [self.tableView indexPathForCell:cell];
-    NSLog(@"cellTakePhoto:%ld",indexPath.row);
     self.imageIndex = indexPath.row;
     [self takePhotoAciton];
 }

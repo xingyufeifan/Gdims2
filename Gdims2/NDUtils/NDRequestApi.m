@@ -176,6 +176,89 @@
     }];
 }
 
++ (void)uploadMonitorDataWithMobile:(NSString *)mobile
+                               type:(NDDataUploadType)type
+                          serialNum:(NSString *)serialNum
+                          longitude:(NSString *)longitude
+                           latitude:(NSString *)latitude
+                      unifiedNumber:(NSString *)unifiedNumber
+                     monPointNumber:(NSString *)monPointNumber
+                       monPointDate:(NSString *)monPointDate
+                      resetRailfall:(BOOL)reset
+                       measuredData:(NSString *)measuredData
+                              image:(UIImage *)image
+                           fileName:(NSString *)fileName
+                         completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:@"" forKey:@"serialNo"];
+    [params setObject:@"" forKey:@"mobile"];
+    [params setObject:@"" forKey:@"xpoint"];
+    [params setObject:@"" forKey:@"ypoint"];
+    [params setObject:@"" forKey:@"monitorType"];
+    [params setObject:@"" forKey:@"unifiedNumber"];
+    [params setObject:@"" forKey:@"monPointNumber"];
+    [params setObject:@"" forKey:@"resets"];
+    [params setObject:@"" forKey:@"monPointDate"];
+    [params setObject:@"" forKey:@"measuredData"];
+    if (serialNum) {
+        [params setObject:serialNum forKey:@"serialNo"];
+    }
+    if (mobile) {
+        [params setObject:mobile forKey:@"mobile"];
+    }
+    if (longitude) {
+        [params setObject:longitude forKey:@"xpoint"];
+    }
+    if (latitude) {
+        [params setObject:latitude forKey:@"ypoint"];
+    }
+    [params setObject:[self valueOfType:type] forKey:@"monitorType"];
+    if (unifiedNumber) {
+        [params setObject:unifiedNumber forKey:@"unifiedNumber"];
+    }
+    if (monPointNumber) {
+        [params setObject:monPointNumber forKey:@"monPointNumber"];
+    }
+    if (type == NDDataUploadRainFallMonitor) {
+        if (reset) {
+            [params setObject:@"1" forKey:@"resets"];
+        } else {
+            [params setObject:@"0" forKey:@"resets"];
+        }
+    }
+    if (monPointDate) {
+        [params setObject:monPointDate forKey:@"monPointDate"];
+    }
+    if (measuredData) {
+        [params setObject:measuredData forKey:@"measuredData"];
+    }
+    if (image) {
+        [NDNetwork uploadImageToResourceURL:NDAPI_Address(NDAPI_UPLOAD_DATA, NDApiTypeQCQF) images:@[image] fileNames:@[fileName] name:@"uploads" compressQulity:0.8 params:params NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 1) {
+                if (completion) {
+                    completion(status,true,@"");
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg);
+                }
+            }
+        }];
+    }else{
+        [NDNetwork asycnRequestWithURL:NDAPI_Address(NDAPI_UPLOAD_DATA, NDApiTypeQCQF) params:params method:POST NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+            if (status == 1) {
+                if (completion) {
+                    completion(status,true,@"");
+                }
+            } else {
+                if (completion) {
+                    completion(status,false,errorMsg);
+                }
+            }
+        }];
+    }
+}
+
 + (void)garrison_SaveDisaterByName:(NSString *)userName
                           userType:(NDUserType)type
                           phoneNum:(NSString *)phoneNum
@@ -309,6 +392,21 @@
     }
     return nil;
 }
-
++ (NSString *)valueOfType:(NDDataUploadType)type {
+    switch (type) {
+        case NDDataUploadMacroMonitor:
+            return @"宏观观测";
+            break;
+        case NDDataUploadQuantiativeMonitor:
+            return @"定量监测";
+            break;
+        case NDDataUploadRainFallMonitor:
+            return @"雨量监测";
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
 
 @end
