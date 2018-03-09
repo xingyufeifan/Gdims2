@@ -293,6 +293,28 @@
     }];
 }
 
++ (void)uploadVideo:(NSArray<NSData *> *)videos
+          fileNames:(NSArray<NSString *> *)fileNames
+             mobile:(NSString *)mobile
+           userType:(NDUserType)type
+         completion:(void (^)(NSInteger, BOOL, NSString *))completion{
+    NSMutableDictionary * dicp = [NSMutableDictionary dictionary];
+    dicp[@"mobile"] = mobile ? mobile : @"";
+    dicp[@"type"] = @(type);
+    [NDNetwork uploadVideoToResourceURL:NDAPI_Address(NDAPI_VIDEO_UPLOAD, NDApiCommonType) videos:videos fileNames:fileNames params:dicp NDCompletion:^(id content, NSInteger status, BOOL success, NSString *errorMsg) {
+        if (status == 200) {
+            if (completion) {
+                completion(status,true,@"");
+            }
+        } else {
+            if (completion) {
+                completion(status,false,errorMsg);
+            }
+        }
+    }];
+}
+
+
 + (NSString *)errorMessageBy:(NSInteger)code {
     switch (code) {
         case 900900:

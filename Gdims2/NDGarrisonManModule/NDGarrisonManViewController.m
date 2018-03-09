@@ -11,6 +11,7 @@
 #import "NDDisasterUploadViewController.h"
 #import "NDDailyListViewController.h"
 #import "NDMenuCell.h"
+#import "NDVideoUploadViewController.h"
 
 @interface NDGarrisonManViewController ()
 <UITableViewDelegate,UITableViewDataSource>
@@ -29,6 +30,8 @@
     [self.tblList registerNib:[UINib nibWithNibName:@"NDMenuCell" bundle:nil] forCellReuseIdentifier:@"NDMenuCell"];
 }
 - (IBAction)videoUpload:(id)sender {
+    NDVideoUploadViewController * videoUploadVC = [[NDVideoUploadViewController alloc] init];
+    [self.navigationController pushViewController:videoUploadVC animated:true];
     
 }
 #pragma mark - UITableView

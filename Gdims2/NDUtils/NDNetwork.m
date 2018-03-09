@@ -165,4 +165,54 @@ extern NSString * NDAPI_Address(NSString * module,NDApiType apiType){
     }
     return task;
 }
+
++ (NSURLSessionDataTask *)uploadVideoToResourceURL:(NSString *)resourceURL
+                                            videos:(NSArray<NSData *> *)videos
+                                         fileNames:(NSArray<NSString *> *)fileNames
+                                            params:(NSDictionary *)params
+                                      NDCompletion:(NDRequestCompletion)completion{
+    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = NDAPI_TIMEOUT_INTREVAL;
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",
+                                                         @"text/html",
+                                                         @"text/plain",
+                                                         @"application/octet-stream",
+                                                         @"text/json",
+                                                         nil];
+    if (ND_SHOW_LOG) {
+        NSLog(@"------------uploadVideoToResourceURL开始------------");
+        NSLog(@"请求地址:%@",resourceURL);
+        NSLog(@"请求参数:\n%@",params);
+    }
+    NSURLSessionDataTask * task = [manager POST:resourceURL parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> _Nonnull formData) {
+        NSInteger count = [videos count];
+        for (NSInteger idx = 0; idx < count; idx ++) {
+            NSData *  data = videos[idx];
+            NSString * fileName = nil;
+            if (idx < fileNames.count) {
+                fileName = fileNames[idx];
+            }
+            if (fileName == nil) {
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                formatter.dateFormat =@"yyyyMMddHHmmssSSS";
+                NSString * str = [formatter stringFromDate:[NSDate date]];
+                fileName = [NSString stringWithFormat:@"%@.mp4", str];
+            }
+            [formData appendPartWithFileData:data
+                                        name:@"file"
+                                    fileName:fileName
+                                    mimeType:@"video/mp4"];
+            
+        }
+    } progress:^(NSProgress *_Nonnull uploadProgress) {
+        //打印下上传进度
+    } success:^(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject) {
+        //上传成功
+        [self commonProcess:responseObject NDCompletion:completion];
+    } failure:^(NSURLSessionDataTask *_Nullable task, NSError * _Nonnull error) {
+        //上传失败
+        [self httpError:error NDCompletion:completion];
+    }];
+    return task;
+}
 @end
