@@ -118,7 +118,9 @@
             {
                 switch (indexPath.row) {
                     case 0://检查更新
+                    {
                         
+                    }
                         break;
                     case 1://参数设置
                         
@@ -139,10 +141,17 @@
             {
                 switch (indexPath.row) {
                     case 0://清除缓存
-                        
+                        [self clearCacheAction];
                         break;
                     case 1://注销登录
                     {//todo
+//                        [CloudPushSDK unbindAccount:^(CloudPushCallbackResult *res) {
+//                            if (res.success) {
+//                                NSLog(@"解除绑定");
+//                            } else {
+//                                NSLog(@"%@",[res.error localizedDescription]);
+//                            }
+//                        }];
                         [[NDUserInfo sharedInstance] loginOut:^{
                             [NDRouter setRootViewWithType:NDRouterTypeLogin];
                         }];
@@ -158,6 +167,19 @@
         }
     });
 }
-
+- (void)clearCacheAction {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定要清除以前和当前保存的照片吗?" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [NDHUD MBShowLoadingInView:self.view text:@"清除中..." delay:0];
+        [NDFileUtils deleteAllCaches:^{
+            [NDHUD MBHideForView:self.view animate:true];
+            [NDHUD MBShowSuccessInView:self.view text:@"已清除" delay:NDHUD_DELAY_TIME];
+        }];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [self presentViewController:alert animated:true completion:nil];
+}
 
 @end
