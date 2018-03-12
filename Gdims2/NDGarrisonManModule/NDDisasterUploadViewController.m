@@ -101,7 +101,7 @@
 }
 
 #pragma mark - NDMonitorCellDelegate
-- (void)NDMonitorCell:(UITableViewCell *)cell inputDoneWtih:(NSString *)text {
+- (void)ndMonitorCell:(UITableViewCell *)cell inputDoneWtih:(NSString *)text {
     NSIndexPath * indexPath = [self.tblList indexPathForCell:cell];
     switch (indexPath.section) {
         case 0://基础
@@ -165,16 +165,16 @@
 }
 
 #pragma mark - NDUnsafeHouseCellDelegate
-- (void)NDUnSafeHouseNumCell:(UITableViewCell *)cell houseNum:(NSString *)houseNum {
+- (void)ndUnSafeHouseNumCell:(UITableViewCell *)cell houseNum:(NSString *)houseNum {
     self.model.houseNum = houseNum;
 }
 
-- (void)NDUnSafeHouseNumCell:(UITableViewCell *)cell peopleNum:(NSString *)peopleNum {
+- (void)ndUnSafeHouseNumCell:(UITableViewCell *)cell peopleNum:(NSString *)peopleNum {
     self.model.peopleNum = peopleNum;
 }
 
 #pragma mark - NDImageCheckDelegate
-- (void)NDImageCheckDelegateTakePhotoAction:(NDSingleImageCell *)cell {
+- (void)ndImageCheckDelegateTakePhotoAction:(NDSingleImageCell *)cell {
     __weak typeof(self) weakSelf = self;
     [NDAlertUtils showActionSheetMsg:@"照片获取" title:nil buttonTexts:@[@"拍照",@"从相册取"] buttonAction:^(int buttonIndex) {
         __strong typeof(self) self = weakSelf;
@@ -187,7 +187,7 @@
     }];
 }
 
-- (void)NDImageCheckCell:(NDSingleImageCell *)cell delegateAt:(NSInteger)index {
+- (void)ndImageCheckCell:(NDSingleImageCell *)cell delegateAt:(NSInteger)index {
     if (self.model.imageNames && self.model.imageNames.count > 0) {
         [NDFileUtils deleteFileWithPath:self.model.nd_imagePaths[index]];
         [self.model.imageNames removeObjectAtIndex:index];
