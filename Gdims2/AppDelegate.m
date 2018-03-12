@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NDUserInfo.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
 @interface AppDelegate ()
 
@@ -19,7 +20,12 @@
     // Override point for customization after application launch.
     [NSThread sleepForTimeInterval:2];
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    [NDRouter setRootViewWithType:NDRouterTypeLogin];
+    if ([[NDUserInfo sharedInstance] hasCache]) {
+        [NDRouter setRootViewWithType:[NDUserInfo sharedInstance].routerType];
+    }else{
+        [NDRouter setRootViewWithType:NDRouterTypeLogin];
+    }
+    
     [self loadNavBarConfig];
     [_window makeKeyAndVisible];
     
