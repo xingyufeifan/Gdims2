@@ -9,6 +9,7 @@
 #import "NDAreaOfficerViewController.h"
 #import "NDWeekLogUploadViewController.h"
 #import "NDWeekLogListViewController.h"
+#import "NDVideoUploadViewController.h"
 #import "NDMenuCell.h"
 
 @interface NDAreaOfficerViewController ()
@@ -38,7 +39,8 @@
  * 应急视频按钮点击事件
  */
 - (IBAction)videoUploadAction:(id)sender {
-    
+    NDVideoUploadViewController * videoUploadVC = [[NDVideoUploadViewController alloc] init];
+    [self.navigationController pushViewController:videoUploadVC animated:true];
 }
 
 #pragma mark - UITableView
