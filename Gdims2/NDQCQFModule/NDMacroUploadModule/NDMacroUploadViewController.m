@@ -161,7 +161,7 @@
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:[self remarkKey]];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
-#warning 保存信息
+#pragma 保存信息
 - (IBAction)btnSaveClick {
     [self.view endEditing:true];
     [self setNeedsStatusBarAppearanceUpdate];
@@ -195,7 +195,7 @@
         [NDHUD MBShowFailureInView:[NDRouter window] text:@"观测数据不存在" delay:NDHUD_DELAY_TIME];
     }
 }
-#warning 上传信息
+#pragma 上传信息
 - (IBAction)btnUploadClick {
     [self setNeedsStatusBarAppearanceUpdate];
     [self.view endEditing:true];

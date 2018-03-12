@@ -74,7 +74,7 @@
         }
         [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             if (buttonAction) {
-                buttonAction(arrTexts.count);
+                buttonAction((int)arrTexts.count);
             }
         }]];
         [[self keyController] presentViewController:alert animated:true completion:nil];

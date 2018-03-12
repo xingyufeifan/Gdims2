@@ -356,7 +356,7 @@
                     endTime:(NSString *)endTime
                       disNo:(NSString *)disNo
                   monitorNo:(NSString *)monitorNo
-                 completion:(void (^)(BOOL, NSArray *, NSString *))completion{
+                 completion:(void (^)(BOOL success, NSArray<NDQCQFDetailModel*> * array, NSString * str))completion{
     NSMutableDictionary * dicP = [NSMutableDictionary dictionary];
     [dicP setObject:@(type) forKey:@"monitorOrMacro"];
     [dicP setObject:mobile ? : @"" forKey:@"mobile"];

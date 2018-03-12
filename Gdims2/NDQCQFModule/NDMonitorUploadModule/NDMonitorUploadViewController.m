@@ -228,7 +228,7 @@
         [NDHUD MBShowFailureInView:[NDRouter window] text:@"监测点数据不存在" delay:NDHUD_DELAY_TIME];
     }
 }
-#warning 上传功能
+#pragma  上传功能
 - (IBAction)btnUploadClick {
     [self.view endEditing:YES];
     if (self.monitorModel) {

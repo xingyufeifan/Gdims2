@@ -72,7 +72,7 @@ typedef void(^NDRequestCompletion)(id content,NSInteger status,BOOL success,NSSt
  @param videos 接口限制最多5个，每个最长10秒
  @param fileNames fileNames
  @param params params description
- @param  completion
+ @param  completion com
  @return return value description
  */
 + (NSURLSessionDataTask *)uploadVideoToResourceURL:(NSString *)resourceURL
