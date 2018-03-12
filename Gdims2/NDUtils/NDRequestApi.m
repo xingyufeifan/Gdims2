@@ -12,9 +12,42 @@
 #import "NDMonitorModel.h"
 #import "NDGarrisonModel.h"
 #import "NDAreaWeekModel.h"
-
+#import "NDQCQFDetailModel.h"
 @implementation NDRequestApi
 
++ (NSString *)valueOfType:(NDDataUploadType)type {
+    switch (type) {
+        case NDDataUploadMacroMonitor:
+            return @"宏观观测";
+            break;
+        case NDDataUploadQuantiativeMonitor:
+            return @"定量监测";
+            break;
+        case NDDataUploadRainFallMonitor:
+            return @"雨量监测";
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
+
++ (NSString *)errorMessageBy:(NSInteger)code {
+    switch (code) {
+        case 900900:
+            return @"接口数据格式错误";
+            break;
+        case -1001:
+            return @"请求超时";
+            break;
+        case 900901:
+            return @"此时无法访问服务器";
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
 +(void)loginWithMobile:(NSString *)mobile userType:(NDUserType)type completion:(void (^)(BOOL, NSString *))completion{
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[@"mobile"] = mobile?mobile:@"";
@@ -495,22 +528,7 @@
 }
 
 
-+ (NSString *)errorMessageBy:(NSInteger)code {
-    switch (code) {
-        case 900900:
-            return @"接口数据格式错误";
-            break;
-        case -1001:
-            return @"请求超时";
-            break;
-        case 900901:
-            return @"此时无法访问服务器";
-            break;
-        default:
-            break;
-    }
-    return nil;
-}
+
 
 //片区
 + (void)areaOfficer_SaveWeekLogByName:(NSString *)userName

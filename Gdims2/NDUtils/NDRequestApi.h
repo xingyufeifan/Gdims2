@@ -11,13 +11,22 @@
 @class NDMonitorModel;
 @class NDGarrisonDailyModel;
 @class NDAreaWeekModel;
-
+@class NDQCQFDetailModel;
 typedef enum: NSUInteger{
     NDUserTypeQCQF = 0,
     NDUserTypeZS = 1,
     NDUserTypePQ = 2
 } NDUserType;
+typedef enum : NSUInteger {
+    NDQCQFDetailTypeMacro   = 1,    //宏观
+    NDQCQFDetailTypeMonitor = 2     //定量
+} NDQCQFDetailType;//群测群防历史记录类型
 
+typedef enum : NSUInteger {
+    NDDataUploadMacroMonitor,
+    NDDataUploadQuantiativeMonitor,
+    NDDataUploadRainFallMonitor,
+} NDDataUploadType;
 @interface NDRequestApi : NSObject
 /**
  登录接口
@@ -154,6 +163,20 @@ typedef enum: NSUInteger{
                          completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
 
 /**
+ 灾情视频上传
+ 
+ @param videos videos description
+ @param mobile mobile description
+ @param type type description
+ @param completion completion description
+ */
++ (void)uploadVideo:(NSArray<NSData *> *)videos
+          fileNames:(NSArray<NSString *> *)fileNames
+             mobile:(NSString *)mobile
+           userType:(NDUserType)type
+         completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
+
+/**
  驻守人员-灾情速报上报接口
  
  @param userName userName description
@@ -219,6 +242,8 @@ typedef enum: NSUInteger{
                       recordTime:(NSString *)recordTime
                         phoneNum:(NSString *)phoneNum
                       completion:(void(^)(NSInteger status, BOOL success, NSString *errorMsg))completion;
+
+
 
 /**
  片区专管员-周报上传
