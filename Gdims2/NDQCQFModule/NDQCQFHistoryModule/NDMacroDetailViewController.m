@@ -136,11 +136,11 @@
                     break;
                 case 9://备注标题
                     [cell reloadLeftText:@"备 注 信 息:" rightText:nil type:NDMonitorCellTypeLLabel];
-                    [cell.lineView setHidden:false];
+                    [cell.lineView setHidden:YES];
                     break;
                 case 11://宏观标题
                     [cell reloadLeftText:@"宏 观 现 象:" rightText:nil type:NDMonitorCellTypeLLabel];
-                    [cell.lineView setHidden:false];
+                    [cell.lineView setHidden:YES];
                     break;
                 default:
                     break;

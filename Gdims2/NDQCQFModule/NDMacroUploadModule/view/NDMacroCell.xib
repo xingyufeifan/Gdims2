@@ -32,11 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqY-eL-Ywf">
-                        <rect key="frame" x="110" y="74.5" width="80" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="80" id="H2Y-Xc-s3x"/>
-                            <constraint firstAttribute="height" constant="22" id="ZQ5-uT-ADe"/>
-                        </constraints>
+                        <rect key="frame" x="110" y="68" width="80" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="是否发现" image="zx-uncheck-square">
                             <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,11 +63,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="SAf-sX-Q4z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4rU-gy-F50"/>
-                    <constraint firstAttribute="bottom" secondItem="LqY-eL-Ywf" secondAttribute="bottom" constant="15" id="7MC-5c-ZfG"/>
                     <constraint firstItem="b81-br-jem" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Dwk-36-ZSD"/>
+                    <constraint firstItem="LqY-eL-Ywf" firstAttribute="bottom" secondItem="SvW-kt-dtQ" secondAttribute="bottom" constant="-10" id="NjM-Nb-OzI"/>
                     <constraint firstAttribute="trailingMargin" secondItem="SAf-sX-Q4z" secondAttribute="trailing" constant="10" id="fFJ-Ka-CYK"/>
                     <constraint firstItem="SvW-kt-dtQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gBF-RL-LDZ"/>
-                    <constraint firstItem="LqY-eL-Ywf" firstAttribute="leading" secondItem="SvW-kt-dtQ" secondAttribute="trailing" constant="10" id="keL-R7-1x8"/>
+                    <constraint firstItem="LqY-eL-Ywf" firstAttribute="leading" secondItem="b81-br-jem" secondAttribute="leading" id="hED-O7-eL3"/>
                     <constraint firstItem="b81-br-jem" firstAttribute="leading" secondItem="SvW-kt-dtQ" secondAttribute="trailing" constant="10" id="lIW-C2-u6x"/>
                     <constraint firstItem="SvW-kt-dtQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="xIK-tb-90O"/>
                 </constraints>

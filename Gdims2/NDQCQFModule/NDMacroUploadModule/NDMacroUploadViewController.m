@@ -140,7 +140,7 @@
     }
 }
 - (NSString *)remarkKey{
-    return [NSString stringWithFormat:@"NDMacro%@_Remark",[NDUserInfo sharedInstance].mobile];
+    return [NSString stringWithFormat:@"NDMacro%@_%@_Remark",[NDUserInfo sharedInstance].mobile,self.listModel.unifiedNumber];
 }
 - (NSString *)remarkCache{
     id remark = [[NSUserDefaults standardUserDefaults] objectForKey:[self remarkKey]];
